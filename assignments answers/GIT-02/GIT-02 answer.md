@@ -11,7 +11,7 @@ Learn/study about markdown
 
 
 ### Overcome challanges
-gelukkig geen voor 1 keer
+behalve dat ik niet wist wat markdown was en de syntaxes niet wist, was het na 5 minuten googlen helemaal duidelijk
 
 
 
