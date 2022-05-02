@@ -5,7 +5,7 @@ Learning how to give permission to our peers
 FORK (clone repo) 
 
 
-## Exercise
+# Exercise
 ### Sources
 brain knowlegde
 op heel veel knopjes gedrukt en het allemaal een beetje uitproberen
