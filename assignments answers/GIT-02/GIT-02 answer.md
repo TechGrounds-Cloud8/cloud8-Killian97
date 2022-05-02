@@ -7,7 +7,7 @@ Learn/study about markdown
 
 ## Exercise
 ### Sources
-[title] (https://www.markdownguide.org/cheat-sheet/) (een cheatsheet voor markdown syntaxes)
+[cheatsheet] (https://www.markdownguide.org/cheat-sheet/) (een cheatsheet voor markdown syntaxes)
 
 
 ### Overcome challanges
