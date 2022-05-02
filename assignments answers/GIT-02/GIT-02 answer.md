@@ -1,3 +1,27 @@
+# GIT en Markdown
+Learn/study about markdown
+
+## Key terminology
+
+
+
+## Exercise
+### Sources
+[title] (https://www.markdownguide.org/cheat-sheet/) (een cheatsheet voor markdown syntaxes)
+
+
+### Overcome challanges
+gelukkig geen voor 1 keer
+
+
+
+
+
+
+
+
+
+### **Results**
 # Pannenkoeken recept :joy:
 ![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/Pannenkoek-met-aardbei.png)
 
