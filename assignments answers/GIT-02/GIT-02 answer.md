@@ -31,5 +31,5 @@ gelukkig geen voor 1 keer
 3. fruit
     - appel
     - banaan
-4. HEEL BELANGRIJK **KANEEL**
+4. heel belangrijk!!! **KANEEL**
 
