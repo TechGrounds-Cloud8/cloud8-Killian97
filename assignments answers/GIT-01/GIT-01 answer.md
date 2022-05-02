@@ -2,7 +2,7 @@
 Learning how to give permission to our peers
 
 ## Key terminology
-GIT
+FORK (clone repo) 
 
 
 ## Exercise
