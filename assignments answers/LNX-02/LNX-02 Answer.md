@@ -1,5 +1,5 @@
-# Title 
-what is assignment
+# Files and Directories
+Learn some basic commands to move around and create objects in SSH
 
 ## Key terminology
  - Absolute Path: dit is de pathing vanuit de root, hier string je het hele path aan me kaar.
