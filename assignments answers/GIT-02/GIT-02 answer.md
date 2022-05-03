@@ -3,7 +3,8 @@ Learn/study about markdown
 
 ## Key terminology
 - markdown en markdown Syntaxxes
-
+- WYSIWYG = "What you see is what you get". Word is an example WYSIWYG programm, it shows realtime changes while edditing.
+- WYSIWYM = "What you see is what you mean". Markdown is a example for this. The user writes the contents in a structured way, marking the content according to its meaning, its significance in the document, and leaves its final appearance up to one or more separate style sheets
 
 
 
