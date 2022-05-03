@@ -2,6 +2,8 @@
 Learn/study about markdown
 
 ## Key terminology
+- markdown en markdown Syntaxxes
+
 
 
 

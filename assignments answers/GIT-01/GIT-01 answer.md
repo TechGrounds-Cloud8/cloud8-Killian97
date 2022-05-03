@@ -2,7 +2,7 @@
 Learning how to give permission to our peers
 
 ## Key terminology
-FORK (clone repo) 
+FORK (clone repo)
 
 
 ## Exercise
