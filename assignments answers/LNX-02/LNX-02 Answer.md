@@ -2,8 +2,10 @@
 what is assignment
 
 ## Key terminology
- - Absolute Path: Like having the “Country, State, City, Street address, floor, room, toolbox, bottom shelf, right side” for directions to where the hammer is located. Which is fine, unless we carry our tool box to into another room, and then try to retrieve the hammer. Example C:\PowerShell\ActiveDirectory\Test-ADAuthentication.ps1
- -  Relative Path: relative path is… relative to the $PWD “present working directory” Like a tool box where as long as the whole tool box is moved, the hammer is always “bottom shelf, right side”, screw driver is “top shelf center”
+ - Absolute Path: dit is de pathing vanuit de root, hier string je het hele path aan me kaar.
+ - Relative Path: dit is de pathing als je naar een path wilt in je huidige locatie (de pwd)
+ - PWD (Present Working Directory)
+ - CD (change directory)
  
 
 
@@ -14,14 +16,17 @@ what is assignment
 3. [cmdlets](https://www.techtarget.com/whatis/definition/cmdlet#:~:text=A%20cmdlet%20%2D%2D%20pronounced%20command,coping%20files%20and%20changing%20directories.)
 4. [SSH creating files](https://help.dreamhost.com/hc/en-us/articles/115006413028-Creating-and-editing-a-file-via-SSH)
 5. [paths](https://hurst.systems/posts/powershell-understanding-paths/)
-6. 
 
 
 
 ### Overcome challanges
-heel lang gezocht naar cmdlets maar moest gewoon commands gebruiken.
+Heel lang gezocht naar cmdlets maar moest gewoon commands gebruiken.
+Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de pathing moest doen in relative en in absolute. maar snappen deedt ik het niet helemaal en daar raakte ik een beetje onzeker van, na in de avond gewoon wat gegoogled te hebben durf ik nu tezeggen dat ik het kan/snap en kan uitleggen aan iemand anders.
 
 
 
 ### Results
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/login%20bewijs.png)
+![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/currentdir.png)
+![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/listing.png)
+![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/txtfile.png)
+![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/pathing.png)
