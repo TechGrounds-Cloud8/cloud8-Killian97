@@ -9,12 +9,11 @@ Know how to change and give permissions and change ownership
 ## Exercise
 ### Sources
 1. [permissies](https://phoenixnap.com/kb/linux-file-permissions)
-2. 
 
 
 
 ### Overcome challenges
-
+een keertje niks, dit was nog duidelijk van de assesment dagen
 
 
 ### Results
