@@ -26,7 +26,7 @@ Learn how to create outputs and redirect them.
 
 
 ### Results
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/append.png)
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/append%20proof.png)
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/filter.png)
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/grepnewtxt.png)
+![SS](../../00_includes/LNX-03/append.png)
+![SS](../../00_includes/LNX-03/append%20proof.png)
+![SS](../../00_includes/LNX-03/filter.png)
+![SS](../../00_includes/LNX-03/grepnewtxt.png)

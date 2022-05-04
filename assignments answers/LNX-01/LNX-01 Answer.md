@@ -23,4 +23,4 @@ Heel erg gefrustreerd raken en boos op mezelf omdat "opdracht 1" me al niet lukt
 
 
 ### Results
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/login%20bewijs.png)
+![SS](../../00_includes/LNX-01/login%20bewijs.png)

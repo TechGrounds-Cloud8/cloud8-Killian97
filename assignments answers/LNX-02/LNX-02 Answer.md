@@ -26,7 +26,7 @@ Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de 
 
 
 ### Results
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/currentdir.png)
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/listing.png)
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/txtfile.png)
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/pathing.png)
+![SS](../../00_includes/LNX-02/currentdir.png)
+![SS](../../00_includes/LNX-02/listing.png)
+![SS](../../00_includes/LNX-02/txtfile.png)
+![SS](../../00_includes/LNX-02/pathing.png)
