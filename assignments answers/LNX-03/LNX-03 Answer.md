@@ -1,5 +1,5 @@
 # Working with text (CLI)
-what is assignment
+Learn how to create outputs and redirect them. 
 
 ## Key terminology
  - STDIN (standard input)
