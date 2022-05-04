@@ -19,3 +19,4 @@ Install tellnet, find information about tellnet on your machine and close tellne
 
 ### Results
 ![SS](../../00_includes/LNX-06/instaltellnet.png)
+![SS](../../00_includes/LNX-06/PID.png)
