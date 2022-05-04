@@ -1,4 +1,4 @@
-# Title 
+# Bash scripting 
 what is assignment
 
 ## Key terminology

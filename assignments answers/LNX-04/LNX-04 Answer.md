@@ -1,4 +1,4 @@
-# Title 
+# Working with text (CLI)
 what is assignment
 
 ## Key terminology
