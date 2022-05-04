@@ -8,7 +8,7 @@ Install tellnet, find information about tellnet on your machine and close tellne
 
 ## Exercise
 ### Sources
-1. [tellnet install](https://www.howtoforge.com/how-to-install-and-use-telnet-on-ubuntu/)
+1. [tellnet install and PID check](https://www.howtoforge.com/how-to-install-and-use-telnet-on-ubuntu/)
 
 
 
