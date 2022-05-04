@@ -1,4 +1,4 @@
-# Users and Group
+# Users and Groups
 what is assignment
 
 ## Key terminology
