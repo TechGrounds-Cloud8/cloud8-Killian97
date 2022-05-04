@@ -10,7 +10,7 @@ Create a new user with permissions and locate that new user in the users file
 ## Exercise
 ### Sources
 1. [add user to group](https://phoenixnap.com/kb/how-to-create-sudo-user-on-ubuntu)
-2. [hoe lees ik passwd file]([add user to group](https://phoenixnap.com/kb/how-to-create-sudo-user-on-ubuntu)
+2. [hoe lees ik passwd file](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)
 
 
 
