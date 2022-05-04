@@ -6,6 +6,7 @@ what is assignment
  - STDOUT (standard output)
  - Pipe (form of redirection)
  - append (add to end of file)
+
  
 
 
@@ -23,4 +24,5 @@ what is assignment
 
 
 ### Results
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/login%20bewijs.png)
+![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/append.png)
+![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/append%20proof.png)
