@@ -21,5 +21,5 @@ dit kost mij gewoon extra tijd en ook wat energie maar het lukt wel.
 
 
 ### Results
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/newusr.png)
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/pwproof.png)
+![SS](../../00_includes/LNX-04/newusr.png)
+![SS](../../00_includes/LNX-04/pwproof.png)
