@@ -1,5 +1,5 @@
 # Processes 
-what is assignment
+Install tellnet, find information about tellnet on your machine and close tellnet
 
 ## Key terminology
  - 
@@ -8,7 +8,8 @@ what is assignment
 
 ## Exercise
 ### Sources
-1. 
+1. [tellnet install](https://www.howtoforge.com/how-to-install-and-use-telnet-on-ubuntu/)
+
 
 
 
@@ -17,4 +18,4 @@ what is assignment
 
 
 ### Results
-![SS]
+![SS](../../00_includes/LNX-06/instaltellnet.png)
