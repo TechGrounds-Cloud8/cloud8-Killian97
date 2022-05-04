@@ -17,6 +17,7 @@ what is assignment
 3. [redirect to end of file](https://stackoverflow.com/questions/6207573/how-to-append-output-to-the-end-of-a-text-file)
 4. [filtering cat](https://www.tecmint.com/linux-file-operations-commands/)
 5. [grep](https://phoenixnap.com/kb/grep-command-linux-unix-examples)
+6. [more grep](https://fedingo.com/how-to-save-grep-output-to-file-in-linux/)
 
 
 
