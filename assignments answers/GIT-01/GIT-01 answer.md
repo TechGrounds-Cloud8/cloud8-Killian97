@@ -16,6 +16,6 @@ Github is confusing, ik probeerde mijn oude kennis van github te gebruiken en da
 Ik werd wel enorm ge side tracked omdat ik allemaal interesante knopjes zag en klikte en kwam daardoor een beetje in tijd nood.
 
 ### Results
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/permission%20proof.png)
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/push%20code%20proof.png)
-![alt text](https://github.com/TechGrounds-Cloud8/cloud8-Killian97/blob/main/00_includes/clone%20proof.png)
+![SS](../../00_includes/GIT-01/permission%20proof.png)
+![SS](../../00_includes/GIT-01/push%20code%20proof.png)
+![SS](../../00_includes/GIT-01/clone%20proof.png)
