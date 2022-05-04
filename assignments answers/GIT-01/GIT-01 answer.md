@@ -11,7 +11,7 @@ FORK (clone repo)
 2. Op heel veel knopjes gedrukt en het allemaal een beetje uitproberen
 3. Om de fotos op te loaden heb ik shika's template (raw code) gebruikt voor hoe het moest. 
 
-### Overcome challanges
+### Overcome challenges
 Github is confusing, ik probeerde mijn oude kennis van github te gebruiken en dacht er iets te "pfft easy" over na. Na die realisatie stapte ik opnieuw in de opdracht als complete newb en toen lukte het wel na gewoon dingen proberen.
 Ik werd wel enorm ge side tracked omdat ik allemaal interesante knopjes zag en klikte en kwam daardoor een beetje in tijd nood.
 

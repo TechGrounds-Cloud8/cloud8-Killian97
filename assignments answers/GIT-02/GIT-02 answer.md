@@ -13,7 +13,7 @@ Learn/study about markdown
 1. [cheatsheet](https://www.markdownguide.org/cheat-sheet/) (een cheatsheet voor markdown syntaxes)
 
 
-### Overcome challanges
+### Overcome challenges
 behalve dat ik niet wist wat markdown was en de syntaxes niet wist, was het na 5 minuten googlen helemaal duidelijk
 
 

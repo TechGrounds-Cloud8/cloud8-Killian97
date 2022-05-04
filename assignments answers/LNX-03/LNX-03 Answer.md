@@ -21,7 +21,7 @@ Learn how to create outputs and redirect them.
 
 
 
-### Overcome challanges
+### Overcome challenges
 
 
 

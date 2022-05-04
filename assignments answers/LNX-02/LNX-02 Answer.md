@@ -19,7 +19,7 @@ Learn some basic commands to move around and create objects in SSH
 
 
 
-### Overcome challanges
+### Overcome challenges
 Heel lang gezocht naar cmdlets maar moest gewoon commands gebruiken.
 Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de pathing moest doen in relative en in absolute. maar snappen deedt ik het niet helemaal en daar raakte ik een beetje onzeker van, na in de avond gewoon wat gegoogled te hebben durf ik nu tezeggen dat ik het kan/snap en kan uitleggen aan iemand anders.
 
