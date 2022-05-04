@@ -8,15 +8,17 @@ Install tellnet, find information about tellnet on your machine and close tellne
 
 ## Exercise
 ### Sources
-1. [tellnet install and PID check](https://www.howtoforge.com/how-to-install-and-use-telnet-on-ubuntu/)
+1. [tellnet install, PID check, memory check](https://www.howtoforge.com/how-to-install-and-use-telnet-on-ubuntu/)
 
 
 
 
 ### Overcome challenges
-
+moest leren over tellnet en wat het was. Elke keer als we telnet killde kwam er een nieuw process met een adere PID.
 
 
 ### Results
 ![SS](../../00_includes/LNX-06/instaltellnet.png)
 ![SS](../../00_includes/LNX-06/PID.png)
+![SS](../../00_includes/LNX-06/killtelnet.png)
+
