@@ -10,7 +10,7 @@ Create a cron job
 ### Sources
 1. [crontabs](https://www.freecodecamp.org/news/cron-jobs-in-linux/)
 2. a friend who works with servers and linux
-3. [diskapce check](http://blog.imm.cnr.it/content/linux-check-disk-space-command-view-system-disk-usage-df-and-du)
+3. [diskspace check](http://blog.imm.cnr.it/content/linux-check-disk-space-command-view-system-disk-usage-df-and-du)
 
 
 
