@@ -2,7 +2,7 @@
 Create a cron job
 
 ## Key terminology
- - 
+ - crontab (crontable) a list with all the commands that have to be executed scheduled.
  
 
 
