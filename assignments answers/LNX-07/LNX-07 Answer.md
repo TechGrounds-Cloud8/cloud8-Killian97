@@ -25,3 +25,4 @@ teveel fun hebben en teveel side tracken
 ### Results
 ![SS](../../00_includes/LNX-07/script.png)
 ![SS](../../00_includes/LNX-07/scriptexe.png)
+![SS](../../00_includes/LNX-07/scripstatus.png)
