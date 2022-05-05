@@ -1,8 +1,8 @@
 # Bash scripting 
-what is assignment
+learn scripting basics
 
 ## Key terminology
- - 
+ - Variable (can contain multiple values)
  
 
 
@@ -11,14 +11,15 @@ what is assignment
 1. [$PATH](https://opensource.com/article/17/6/set-path-linux)
 2. [bash scripting 101](https://linuxconfig.org/bash-scripting-tutorial)
 3. opdracht 3 sources over append
-4. 
+4. [install packages with scripts](https://blog.devgenius.io/create-a-bash-script-to-install-your-packages-automatically-55b7f0638f3e)
+5. [install, activate, enable](https://docs.rackspace.com/support/how-to/centos-7-apache-and-php-install/)
 
 
 
 
 
 ### Overcome challenges
-
+teveel fun hebben en teveel side tracken
 
 
 ### Results
