@@ -16,7 +16,7 @@ Install telnet, find information about tellnet on your machine and close tellnet
 
 
 ### Overcome challenges
-moest leren over tellnet en wat het was. Elke keer als we telnet killde kwam er een nieuw process met een andere PID.
+moest leren over telnet en wat het was. Elke keer als we telnet killde kwam er een nieuw process met een andere PID.
 
 
 ### Results
