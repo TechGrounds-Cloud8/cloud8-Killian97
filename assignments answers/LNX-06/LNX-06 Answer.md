@@ -1,5 +1,5 @@
 # Processes 
-Install tellnet, find information about tellnet on your machine and close tellnet
+Install telnet, find information about tellnet on your machine and close tellnet
 
 ## Key terminology
  - 
@@ -16,7 +16,7 @@ Install tellnet, find information about tellnet on your machine and close tellne
 
 
 ### Overcome challenges
-moest leren over tellnet en wat het was. Elke keer als we telnet killde kwam er een nieuw process met een adere PID.
+moest leren over tellnet en wat het was. Elke keer als we telnet killde kwam er een nieuw process met een andere PID.
 
 
 ### Results
