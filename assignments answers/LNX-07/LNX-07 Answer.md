@@ -24,7 +24,10 @@ teveel fun hebben in scripting en teveel side tracken
 
 
 ### Results
+
+1. Hier zie je mijn script om apache2 te instaleren, te starten en te enablen.
 ![SS](../../00_includes/LNX-07/script.png)
+
+2. 
 ![SS](../../00_includes/LNX-07/scriptexe.png)
 ![SS](../../00_includes/LNX-07/scriptstatus.png)
-s
