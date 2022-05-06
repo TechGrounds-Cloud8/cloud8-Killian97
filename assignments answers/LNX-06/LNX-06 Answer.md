@@ -4,7 +4,7 @@ Install telnet, find information about tellnet on your machine and close tellnet
 ## Key terminology
  - ***apt install packagename:*** Met deze command kan je iets instaleren
  - ***systemct1 status servicename:*** Met deze command kan je de status checken van een service
- - ***PID:*** Betkend Process ID.
+ - ***PID:*** Betekend Process ID.
  - ***kill PID:*** Hiermee kill je een process met het aangeven PID.
  - ***killall name*** Hiermee kill je alle processen met die naam.
  
