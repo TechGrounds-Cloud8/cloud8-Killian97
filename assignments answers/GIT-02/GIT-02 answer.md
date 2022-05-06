@@ -11,14 +11,16 @@ Learn/study about markdown and apply it.
 
 ## Exercise
 ### Sources
-1. [cheatsheet](https://www.markdownguide.org/cheat-sheet/) (een cheatsheet voor markdown syntaxes)
+1. [cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 
 
 ### Overcome challenges
-behalve dat ik niet wist wat markdown was en de syntaxes niet wist, was het na 5 minuten googlen helemaal duidelijk
+Behalve dat ik niet wist wat markdown was en de syntaxes niet wist, was het na 5 minuten googlen helemaal duidelijk.
 
 
 ### **Results**
+
+1. Ik heb hier een bestand gemaakt en een paar syntaxes gebruikt om een beetje te stylen.
 # Pannenkoeken recept :joy:
 ![Pannekoek](../../00_includes/GIT-02/Pannenkoek-met-aardbei.png)
 
