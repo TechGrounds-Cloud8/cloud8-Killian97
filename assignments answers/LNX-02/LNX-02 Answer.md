@@ -39,4 +39,5 @@ Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de 
 ![SS](../../00_includes/LNX-02/txtfile.png)
 
 - Hier gebruik ik absolute en relative pathing.
+
 ![SS](../../00_includes/LNX-02/pathing.png)
