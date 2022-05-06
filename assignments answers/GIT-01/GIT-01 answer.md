@@ -2,7 +2,7 @@
 Learn the basics about GITHUB and test this with your peers.
 
 ## Key terminology
-- ***GIT (Global Information Tracker):*** GIT controleert en houdt wijzingen bij in code. in het geval van een team kunnen team genoten hier door op hun lokale     - machine aan dezelfde code werken zonder elkaar in de weg tezitten zodra ze het uploaden naar GITHUB.
+- ***GIT (Global Information Tracker):*** GIT controleert en houdt wijzingen bij in code. in het geval van een team kunnen team genoten hier door op hun lokale machine aan dezelfde code werken zonder elkaar in de weg tezitten zodra ze het uploaden naar GITHUB.
 - ***GITHUB:*** een verzamel locatie op het web waar mensen hun werk opslaan en er aan kunnen werken met GIT met meerderen mensen, GITHUB is ook een soort netwerk waar je het werk van andere kan zien, kan reviewen of kan FORKEN.
 - ***FORK:*** clone een repo naar jou GITHUB. dus niet letterlijk dezelfde repo maar de zelfde repo met JOUW als eigenaar.
 - ***Collaborator:*** iemand die toegang heeft tot jou repo en er dingen in kan veranderen. een collega zo gezegd
@@ -27,6 +27,11 @@ GITHUB is confusing, ik probeerde mijn oude kennis van GITHUB te gebruiken en da
 Ik werd wel enorm ge side tracked omdat ik allemaal interesante knopjes zag en klikte en kwam daardoor een beetje in tijd nood.
 
 ### Results
+1. Hier onder is tezien dat ik mijn peers heb toegevoegd als collaborators.
 ![SS](../../00_includes/GIT-01/permission%20proof.png)
+
+2. In deze screenshot heb ik een file aan gepast op mijn local machine en heb ik die change ge pushed naar GITHUB.
 ![SS](../../00_includes/GIT-01/push%20code%20proof.png)
+
+3. Hier heb ik een repo van Tom ge pulled and een verandering in zijn repo ge commit en een pull request gedaan naar Tom zijn github.
 ![SS](../../00_includes/GIT-01/clone%20proof.png)
