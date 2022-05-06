@@ -2,10 +2,13 @@
 Learn some basic commands to move around and create objects in SSH
 
 ## Key terminology
- - Absolute Path: dit is de pathing vanuit de root, hier string je het hele path aan me kaar.
- - Relative Path: dit is de pathing als je naar een path wilt in je huidige locatie (de pwd)
- - PWD (Present Working Directory)
- - CD (change directory)
+ - ***Absolute Path:*** dit is de pathing vanuit de root, hier string je het hele path aan me kaar.
+ - ***Relative Path:*** dit is de pathing als je naar een path wilt in je huidige locatie (de pwd)
+ - ***PWD (Present Working Directory):*** Hiermee check je je huidige locatie.
+ - ***CD (change directory):*** Hiermee navigeer je naar andere locaties.
+ - ***LS (list):*** Hiermee list je alle bestanden in je huige directory.
+ - ***Mkdir (make directory):*** Hiermee maak je een nieuwe directory de command is "mkdir name"
+ - ***Nano:*** Nano is van de manieren om een file te maken, nano zelf is een text editor.
  
 
 
@@ -26,7 +29,14 @@ Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de 
 
 
 ### Results
+- Hier laat ik zien in welke PWD ik zit.
 ![SS](../../00_includes/LNX-02/currentdir.png)
+
+- Hier list ik de inhoud van een directory.
 ![SS](../../00_includes/LNX-02/listing.png)
+
+- Hier maak ik een nieuwe directory aan en een niew text bestand(hier gebruik ik nano voor)
 ![SS](../../00_includes/LNX-02/txtfile.png)
+
+- Hier gebruik ik absolute en relative pathing.
 ![SS](../../00_includes/LNX-02/pathing.png)
