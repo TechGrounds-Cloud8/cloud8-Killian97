@@ -2,8 +2,11 @@
 Understand how to connect via SSH.
 
 ## Key terminology
- - SSH client
- - SSH service
+ - ***SSH client:*** Dit is een programma waarmee je een beveiligde verbinding kan maken met de SSH Servers.
+ - ***Terminal:*** Hier control jij je remote machine mee, of connect je jou machine met een andere.
+ - ***Commandline:*** Dit is de regel in je terminal waar jij je commands typed om jou machine opdrachten te laten doen.
+ - ***Permissions:*** Wat mag een bestand/user.
+ 
  
 
 
