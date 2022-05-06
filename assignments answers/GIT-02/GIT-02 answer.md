@@ -1,5 +1,5 @@
 # GIT en Markdown
-Learn/study about markdown
+Learn/study about markdown and apply it.
 
 ## Key terminology
 - ***Markdown:*** Is een easy to read en write tool voor HTML. 
