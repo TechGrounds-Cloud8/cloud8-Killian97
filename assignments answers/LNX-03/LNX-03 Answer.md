@@ -1,5 +1,5 @@
 # Working with text (CLI)
-Learn how to create outputs and redirect them. 
+Learn how to print outputs and redirect them. 
 
 ## Key terminology
  - ***STDIN:*** Dit betekend standaard input
