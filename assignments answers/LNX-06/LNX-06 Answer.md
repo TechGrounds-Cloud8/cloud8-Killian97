@@ -2,7 +2,11 @@
 Install telnet, find information about tellnet on your machine and close tellnet
 
 ## Key terminology
- - 
+ - ***apt install packagename:*** Met deze command kan je iets instaleren
+ - ***systemct1 status servicename:*** Met deze command kan je de status checken van een service
+ - ***PID:*** Betkend Process ID.
+ - ***kill PID:*** Hiermee kill je een process met het aangeven PID.
+ - ***killall name*** Hiermee kill je alle processen met die naam.
  
 
 
@@ -20,7 +24,13 @@ moest leren over telnet en wat het was. Elke keer als we telnet killde kwam er e
 
 
 ### Results
+
+1. Hier installeer ik een daemon en daarna check ik de status van die daemon.
 ![SS](../../00_includes/LNX-06/instaltellnet.png)
+
+2. Hier zie je het onderste stukje van results 1 en check ik de PID en zie ik de use of memory.
 ![SS](../../00_includes/LNX-06/PID.png)
+
+3. Hier kill ik alle processen van de inet daemon
 ![SS](../../00_includes/LNX-06/killtelnet.png)
 
