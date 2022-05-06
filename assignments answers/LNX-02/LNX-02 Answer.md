@@ -40,4 +40,4 @@ Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de 
 
 - Hier gebruik ik absolute en relative pathing.
 
-![SS](../../00_includes/LNX-02/pathing.png)
+    ![SS](../../00_includes/LNX-02/pathing.png)
