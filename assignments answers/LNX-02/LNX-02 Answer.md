@@ -29,15 +29,15 @@ Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de 
 
 
 ### Results
-- Hier laat ik zien in welke PWD ik zit.
+1. Hier laat ik zien in welke PWD ik zit.
 ![SS](../../00_includes/LNX-02/currentdir.png)
 
-- Hier list ik de inhoud van een directory.
+2. Hier list ik de inhoud van een directory.
 ![SS](../../00_includes/LNX-02/listing.png)
 
-- Hier maak ik een nieuwe directory aan en een niew text bestand(hier gebruik ik nano voor)
+3. Hier maak ik een nieuwe directory aan en een niew text bestand(hier gebruik ik nano voor)
 ![SS](../../00_includes/LNX-02/txtfile.png)
 
-- Hier gebruik ik absolute en relative pathing.
+4. Hier gebruik ik absolute en relative pathing.
 
     ![SS](../../00_includes/LNX-02/pathing.png)
