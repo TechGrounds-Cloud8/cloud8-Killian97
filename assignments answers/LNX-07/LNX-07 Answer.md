@@ -8,6 +8,7 @@ learn scripting basics
  - ***systemctl start programma:*** Met deze command start je een programma wat op je machine staat.
  - ***systemctl enable programma:*** Met deze command enable je een programma.
  - ***systemctl status programma.service:*** Met deze command print je de status van een service
+ - ***if, then, else:*** Met een if statement in een script kan je een script iets laten doen IF iets word gehaald en anders doet het script de else.
  
 
 
