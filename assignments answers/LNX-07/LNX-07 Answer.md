@@ -7,7 +7,7 @@ learn scripting basics
  - ***apt-get install programma:*** Met deze command pak je een programma en installeer je dat op jou locale machine.
  - ***systemctl start programma:*** Met deze command start je een programma wat op je machine staat.
  - ***systemctl enable programma:*** Met deze command enable je een programma.
- ***systemctl status programma
+ - ***systemctl status programma.service:*** Met deze command print je de status van een service
  
 
 
@@ -38,4 +38,10 @@ teveel fun hebben in scripting en teveel side tracken
 
 3. Hier zie je dat mijn httpd scripts is gelukt.
 ![SS](../../00_includes/LNX-07/scriptstatus.png)
+
+4. Hier zie je mijn script om een random nummer te generen en het resultaat te appenden naar een text bestand maar met een voorwaarde.
+![SS](../../00_includes/LNX-07/rngscript.png)
+
+5. Hier zie je dat mijn script van result 4 werkt.
+![SS](../../00_includes/LNX-07/rngresult.png)
 
