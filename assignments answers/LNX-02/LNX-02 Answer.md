@@ -2,13 +2,13 @@
 Learn some basic commands to move around and create objects in SSH
 
 ## Key terminology
- - ***Absolute Path:*** dit is de pathing vanuit de root, hier string je het hele path aan me kaar.
+ - ***Absolute Path:*** dit is de pathing vanuit de root, hier string je het hele path aan elkaar.
  - ***Relative Path:*** dit is de pathing als je naar een path wilt in je huidige locatie (de pwd)
  - ***PWD (Present Working Directory):*** Hiermee check je je huidige locatie.
  - ***CD (change directory):*** Hiermee navigeer je naar andere locaties.
- - ***LS (list):*** Hiermee list je alle bestanden in je huige directory.
+ - ***LS (list):*** Hiermee list je alle bestanden in je huidige directory.
  - ***Mkdir (make directory):*** Hiermee maak je een nieuwe directory de command is "mkdir name"
- - ***Nano:*** Nano is van de manieren om een file te maken, nano zelf is een text editor.
+ - ***Nano:*** Nano is een van de manieren om een file te maken, nano zelf is een text editor.
  
 
 
@@ -24,7 +24,7 @@ Learn some basic commands to move around and create objects in SSH
 
 ### Overcome challenges
 Heel lang gezocht naar cmdlets maar moest gewoon commands gebruiken.
-Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de pathing moest doen in relative en in absolute. maar snappen deedt ik het niet helemaal en daar raakte ik een beetje onzeker van, na in de avond gewoon wat gegoogled te hebben durf ik nu tezeggen dat ik het kan/snap en kan uitleggen aan iemand anders.
+Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de pathing moest doen in relative en in absolute. maar snappen deed ik het niet helemaal en daar raakte ik een beetje onzeker van, na in de avond gewoon wat gegoogled te hebben durf ik nu te zeggen dat ik het kan/snap en kan uitleggen aan iemand anders.
 
 
 
@@ -35,7 +35,7 @@ Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de 
 2. Hier list ik de inhoud van een directory.
 ![SS](../../00_includes/LNX-02/listing.png)
 
-3. Hier maak ik een nieuwe directory aan en een niew text bestand(hier gebruik ik nano voor)
+3. Hier maak ik een nieuwe directory aan en een nieuw text bestand(hier gebruik ik nano voor)
 ![SS](../../00_includes/LNX-02/txtfile.png)
 
 4. Hier gebruik ik absolute en relative pathing.
