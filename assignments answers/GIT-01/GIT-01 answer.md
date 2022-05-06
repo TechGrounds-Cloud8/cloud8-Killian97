@@ -33,5 +33,5 @@ Ik werd wel enorm ge side tracked omdat ik allemaal interesante knopjes zag en k
 2. In deze screenshot heb ik een file aan gepast op mijn local machine en heb ik die change ge pushed naar GITHUB.
 ![SS](../../00_includes/GIT-01/push%20code%20proof.png)
 
-3. Hier heb ik een repo van Tom ge pulled and een verandering in zijn repo ge commit en een pull request gedaan naar Tom zijn github.
+3. Hier heb ik een repo van Tom ge pulled en een verandering in zijn repo ge commit en een pull request gedaan naar Tom zijn github.
 ![SS](../../00_includes/GIT-01/clone%20proof.png)
