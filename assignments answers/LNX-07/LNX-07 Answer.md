@@ -2,6 +2,7 @@
 learn scripting basics
 
 ## Key terminology
+ - ***$PATH:*** Het path variable waar je je server mee verteld waar het naar executable files moet zoeken.
  - ***Variable:*** Een variable is iets wat je vult met een value en later weer kan oproepen
  - ***.sh:*** Een .sh bestand is een script. 
  - ***apt-get install programma:*** Met deze command pak je een programma en installeer je dat op jou locale machine.
