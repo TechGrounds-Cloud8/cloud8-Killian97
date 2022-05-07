@@ -7,6 +7,7 @@ Install telnet, find information about tellnet on your machine and close tellnet
  - ***PID:*** Betekend Process ID.
  - ***kill PID:*** Hiermee kill je een process met het aangeven PID.
  - ***killall name*** Hiermee kill je alle processen met die naam.
+ - ***Daemon:*** Een daemon is een process dat runt in de background.
  
 
 
