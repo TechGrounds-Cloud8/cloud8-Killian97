@@ -1,4 +1,4 @@
-# Setting Up 
+# Setting Up  TEST
 Understand how to connect via SSH.
 
 ## Key terminology
