@@ -4,18 +4,17 @@ Learn how to accees your router and find information inside.
 
 ## Key terminology
 - ***Multiport:*** When a device uses more then 1 port for input and output.
-- ***MAC adresses (Media Access Control):*** This is a physical adress and is connected to a single device. MAC adresses are in the datalink layer. A device can have multiple MAC adresses.
-- ***Bridge forwarding:*** 
-- ***Bridge Learning:*** 
-- ***Star topology:***
-- ***Collision Domain:***
-- ***Broadcast Domain:*** 
+- ***MAC adresses (Media Access Control):*** This is a physical adress and is connected to a single device. MAC adresses are in the datalink layer. A device can have multiple MAC adresses.s
+- ***Star topology:*** This is a topology where all network components are pshysically connected to a central node, for example a router or a switch.
+- ***Collision Domain:*** A collision domain defines a set of devices on wich their frames could collide. its a network segment connected by a shared medium or repeaters where data transmissions can collide. a collision happens when two seperate devices send a packet on the shared network segment at the same time, both devices need to resend their package.
+- ***Broadcast Domain:*** This is a logical division of a computer network. Here nodes can reach eachother at the data link layer. In this domain are all devices which can reach eachother with the help of broadcast.
 
 
 
 ## Exercise
 ### Sources
 1. [network devices](https://www.geeksforgeeks.org/network-devices-hub-repeater-bridge-switch-router-gateways/)
+2. [DHCPconfig](https://en.wikiversity.org/wiki/Computer_Networks/Ipconfig/DHCP_Options#:~:text=Open%20a%20command%20prompt.,when%20it%20shows%20Lease%20Expires.)
 
 
 ### Overcome challenges
@@ -48,4 +47,8 @@ Een nog existing challenge, ik kan mijn router niet in.
     8. **NIC:** NIC or network interface card is a network adapter that is used to connect the computer to the network. It is installed in the computer to establish a LAN.  It has a unique id that is written on the chip, and it has a connector to connect the cable to it. The cable acts as an interface between the computer and router or modem. NIC card is a layer 2 device which means that it works on both physical and data link layer of the network model.
 
 
-    
+    --Vind een lijst met alle verbonden apparaten aan je router, kan pas als ik in mijn router kan.--
+
+    De screenshot hier onder is mijn DHCP IP config in mijn CMD.
+    Ik heb een leased IP adress meaning it will expire daily and i will need to request new ip adresses over time.
+    ![SS](../../00_includes/NTW-02/DHCPconfig.png)s
