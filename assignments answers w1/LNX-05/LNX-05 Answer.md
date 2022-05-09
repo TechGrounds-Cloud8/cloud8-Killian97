@@ -5,6 +5,7 @@ Know how to change and give permissions and change ownership
  - ***LS -l:*** Met deze command kan je de permissions van alle files in je huidige directory laten zien.
  - ***chown:*** Met deze command kan je de permissies aanpassen van: de user, de group en others.
  - ***chgrp:*** Met deze command kan je de group aanpassen van een file.
+ - ***chmod:*** Met deze command kan je de permissies aanpassen.
 
  
 

@@ -30,5 +30,5 @@ ik had ook wel struggles met de manier van de cron tab invullen met * * * * etce
 2. Hier zie je dat mijn script heeft gewerkt en mijn date elke minuut word ge print en ge append naar date.txt
 ![SS](../../00_includes/LNX-08/datepm.png)
 
-3. Hier voeg ik mijn volgende script toe om elke vrijdag de disk space van de remote server en dat word ook ge append naar diskspace.sh
+3. Hier voeg ik mijn volgende script toe om elke vrijdag de disk space van de remote server en dat word ook ge append naar diskspace.txt
 ![SS](../../00_includes/LNX-08/diskspace.png)
