@@ -10,15 +10,15 @@ Study about the OSI model and the TCP/IP model.
 ## Exercise
 ### Sources
 1. [OSI layers](https://linuxhint.com/network-osi-layers-explained/#:~:text=Open%20System%20Interconnection%20OSI%20model,performed%20on%20each%20abstract%20layer.)
-2. 
-![SS of layers](../../00_includes/NTW-01/7layers.png)
-3. 
+2. [Intranet](https://www.techtarget.com/whatis/definition/intranet)
+3. [OSI model](https://www.linux.org/threads/open-systems-interconnect-osi-model.9095/)
+4. [TCP/IP](https://www.avg.com/nl/signal/what-is-tcp-ip)
+5. 
 ![SS of difference](../../00_includes/NTW-01/TCP.png)
-4. [OSI model](https://www.linux.org/threads/open-systems-interconnect-osi-model.9095/)
-5. [Intranet](https://www.techtarget.com/whatis/definition/intranet)
-6. [TCP/IP](https://www.avg.com/nl/signal/what-is-tcp-ip)
+6. 
+![TCP](../../00_includes/NTW-01/examplemodel.png)
 7. 
-![TCP](../../00_includes/NTW-01/TCP.png)
+![SS of layers](../../00_includes/NTW-01/7layers.png)
 
 
 ### Overcome challenges
