@@ -22,6 +22,9 @@ Deze opdracht is voor mij alleen maar lezen. Voor mezelf de opdracht gemaakt sch
 ### Results
 
 - ### The OSI model
+
+    When Data gets send from layer 7 every layer will add a header to the data before sending it to the next layer, in these headers the layer puts information needed for the next layer. When receiving data the headers are checked processed and removed before sending it to the next layer. This process repeats until all data is send and received.
+
 1. **Layer 7 (Application layer):** This is the layer closest to the user and as the name of the layer suggests, it is the layer that displays the data, it is also the only layer that has direct interaction with the user. Layer 7 creates connections between the end to end users, a example for this is "HTTP". HTTP enables internet connection.
 
 2. **Layer 6 (presentation layer):** This layer Compresses date it gets from layer 7 making the data smaller and creating more efficient communincation. This also goes the other way, when this layer receives compressed data it translates/converts it and makes it presentable for layer 7.
@@ -40,4 +43,18 @@ Deze opdracht is voor mij alleen maar lezen. Voor mezelf de opdracht gemaakt sch
 - LAN, Local Area Network. If the destination is same LAN the destination adress will be copied from layer 4.
 - WAN, Wide Area Network. If the destination is WAN the packets will be send to a gateway (for example a router), in this case the destination should always be the receivers gateway adress since it has to go to a different LAN. When the destinated "router" receives the packets it will transmit them to the LAN.
 
-6. **layer 2 (Data Link):** 
+6. **layer 2 (Data Link):** The data link breaks the data packets from layer 3  into even smaller pieces called frames before sending them to their destination. The data link is responsible for the commuincation of physically connected nodes(nodes on the same intra-network). The date network also applies flow and error control on the communication inside in the intre-network.   
+
+7. **Layer 1 (Physical layer):** In this layer the data frames are converted into bitstreams, These bitstreams consist of 1s and 0s. Layer 1 sends these bitstreams to a physical device trough physical resources for example: "cables (with electrical pulses)" or "hubs(with frequencies)". when the receiver received all the data in bitstream form, it will flow back to layer 7 and apear on his device for example a email.
+
+    ***A example for this process is:***
+A writes an email to B. A uses an email application to compose the message on a laptop and sends it.
+The application sends the message to the application layer.
+Layer 7 selects a protocol (SMTP) and passes the data to layer 6.
+The presentation layer compresses the data and passes it to layer 5.
+The session layer initializes the communication session and sends A’s data to layer 4.
+The transport layer segments the data in the message and passes them to layer 3.
+The network layer breaks the segments into packets and sends them to layer 2.
+The data link layer breaks the packets down even further into frames and delivers them layer 1.
+The physical layer converts the email data into a bitstream of 1s and 0s and transmits it through a cable or other physical medium.
+B’s computer receives the bitstream physically through a wifi or other physical medium, and the email data begins to flow back through the same series of layers in the opposite order on B’s device.
