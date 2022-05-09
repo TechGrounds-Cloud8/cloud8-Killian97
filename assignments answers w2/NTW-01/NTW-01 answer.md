@@ -2,7 +2,7 @@
 Study about the OSI model and the TCP/IP model.
 
 ## Key terminology
-- i will explain most keyterms in sources
+- i will explain most keyterms in results.
 
 
 
