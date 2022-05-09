@@ -3,6 +3,7 @@ Study about Networkdevices and explain commonly found functions.
 Learn how to accees your router and find information inside.
 
 ## Key terminology
+- ***DCHP (Dynamic Host Configuration Protocol):*** The DCHP server is a build in server on for example a router and automatically gives private Ip adresses to every divice given to this router.
 - ***Multiport:*** When a device uses more then 1 port for input and output.
 - ***MAC adresses (Media Access Control):*** This is a physical adress and is connected to a single device. MAC adresses are in the datalink layer. A device can have multiple MAC adresses.s
 - ***Star topology:*** This is a topology where all network components are pshysically connected to a central node, for example a router or a switch.
@@ -15,6 +16,7 @@ Learn how to accees your router and find information inside.
 ### Sources
 1. [network devices](https://www.geeksforgeeks.org/network-devices-hub-repeater-bridge-switch-router-gateways/)
 2. [DHCPconfig](https://en.wikiversity.org/wiki/Computer_Networks/Ipconfig/DHCP_Options#:~:text=Open%20a%20command%20prompt.,when%20it%20shows%20Lease%20Expires.)
+3. Uitleg van een klas genoot over LCP/IP
 
 
 ### Overcome challenges
@@ -46,9 +48,12 @@ Een nog existing challenge, ik kan mijn router niet in.
 
     8. **NIC:** NIC or network interface card is a network adapter that is used to connect the computer to the network. It is installed in the computer to establish a LAN.  It has a unique id that is written on the chip, and it has a connector to connect the cable to it. The cable acts as an interface between the computer and router or modem. NIC card is a layer 2 device which means that it works on both physical and data link layer of the network model.
 
-
-    --Vind een lijst met alle verbonden apparaten aan je router, kan pas als ik in mijn router kan.--
+    Hier onder kan je de lijst zien met apparaten die verbonden zijn aan de router. Dit kan je vinden op de home page bij het inloggen op je router. De informatie die er bij staat is de naam van de apparaten zoals mijn desktop en mijn HP printer. Zoals zichtbaar staat de naam er niet altijd bij. Het gegeven IP adress staat er wel altijd bij.
+    ![Homepage](../../00_includes/NTW-02/applist.png)
 
     De screenshot hier onder is mijn DHCP IP config in mijn CMD.
-    Ik heb een leased IP adress meaning it will expire daily and i will need to request new ip adresses over time.
-    ![SS](../../00_includes/NTW-02/DHCPconfig.png)s
+    Ik heb een leased IP adress meaning it will expire daily and i will need to request new ip adresses over time, this is done automatically.
+    ![SS](../../00_includes/NTW-02/DHCPconfig.png)
+
+    Hier onder laat ik de config zien van mijn DCHP server op mijn router. Je kan hier zien dat de IP adressen die gegeven zullen worden aan alle apparaten zullen rangen van 192.168.2.1 tot en met 200.
+    ![SS](../../00_includes/NTW-02/routerdchp.png)

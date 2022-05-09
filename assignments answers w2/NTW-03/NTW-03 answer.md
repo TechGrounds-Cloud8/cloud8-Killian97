@@ -1,5 +1,5 @@
-# OSI stack
-Learn the basics about GITHUB and test this with your peers.
+# Protocols
+Find protocols and connect them to the OSI model. Learn about wireshark.
 
 ## Key terminology
 - ***
