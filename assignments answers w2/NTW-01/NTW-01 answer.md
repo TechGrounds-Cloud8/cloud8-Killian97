@@ -10,9 +10,12 @@ Study about the OSI model and the TCP/IP model.
 ## Exercise
 ### Sources
 1. [OSI layers](https://linuxhint.com/network-osi-layers-explained/#:~:text=Open%20System%20Interconnection%20OSI%20model,performed%20on%20each%20abstract%20layer.)
-2. ![SS of layers](../../00_includes/NTW-01/7layers.png)
-3. [OSI model](https://www.linux.org/threads/open-systems-interconnect-osi-model.9095/)
-4. [Intranet](https://www.techtarget.com/whatis/definition/intranet)
+2. 
+![SS of layers](../../00_includes/NTW-01/7layers.png)
+3. 
+![SS of difference](../../00_includes/NTW-01/TCP.png)
+4. [OSI model](https://www.linux.org/threads/open-systems-interconnect-osi-model.9095/)
+5. [Intranet](https://www.techtarget.com/whatis/definition/intranet)
 
 
 ### Overcome challenges
@@ -58,3 +61,7 @@ The network layer breaks the segments into packets and sends them to layer 2.
 The data link layer breaks the packets down even further into frames and delivers them layer 1.
 The physical layer converts the email data into a bitstream of 1s and 0s and transmits it through a cable or other physical medium.
 B’s computer receives the bitstream physically through a wifi or other physical medium, and the email data begins to flow back through the same series of layers in the opposite order on B’s device.
+
+- ### The TCP/IP model
+
+    
