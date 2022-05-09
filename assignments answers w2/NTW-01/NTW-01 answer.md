@@ -13,6 +13,7 @@ Study about the OSI model and the TCP/IP model.
 2. [Intranet](https://www.techtarget.com/whatis/definition/intranet)
 3. [OSI model](https://www.linux.org/threads/open-systems-interconnect-osi-model.9095/)
 4. [TCP/IP](https://www.avg.com/nl/signal/what-is-tcp-ip)
+
 5. 
 ![SS of difference](../../00_includes/NTW-01/TCP.png)
 6. 
@@ -67,12 +68,13 @@ B’s computer receives the bitstream physically through a wifi or other physica
 
 - ### The TCP/IP model
 
-    The TCP and IP are seperate computer network protocols together they are a suite of protocols consisting of 4 layers. HTTP, FTP, and SMTP are 3 command the most used protocols. In this model the IP sorts the mail and finds the IP adress where the data needs to go and TCP sends and receives it.
+    The TCP and IP are seperate computer network protocols together they are a suite of protocols consisting of 4 layers. HTTP, FTP, and SMTP are 3 command the most used protocols. In this model the IP sorts the mail and finds the IP adress where the data needs to go and TCP sends and receives it. A 
 
 1. **Layer 1 (Network Acces Layer):** The network access layer, also known as the data link layer, handles the physical infrastructure that lets computers communicate with one another over the internet. These communications can be trough cables, wireless networks, network interface cards and more. The network access layer also includes the technical infrastructure. Such as the code that converts digital data into transmittable signals. That makes network connection possible.
 You can see this layer as a combination of layer 1 and 2 from the OSI model.
 
-2. **Layer 2 (internet Layer)
+2. **Layer 2 (Internet Layer):** The internet layer, also known as the network layer, controls the flow and routing of traffic to ensure data is sent speedily and accurately. This layer is also responsible for reassembling the data packet at its destination. If there’s lots of internet traffic, the internet layer may take a little longer to send a file, but there will be a smaller chance of an error corrupting that file. This layer is basicly the same as the network layer in the OSI model.
 
+3. **Layer 3 (Transport Layer):** The transport layer provides a reliable data connection between two communicating devices. It’s like sending an insured package: The transport layer divides the data in packets, acknowledges the packets it has received from the sender, and ensures that the recipient acknowledges the packets it receives. This layer is basicly the same as the transport layer in the OSI model.
 
-
+4. **Layer 4 (Application layer):** The application layer is the group of applications that let the user access the network. For most of us that means email, social media, and cloud storage programs. This is what the end user sees and interacts with when sending and receiving data. This layer is a big difference with the OSI model, the Presentation and Session layer are not present in the TCP/IP model and are all done in this single layer and skip steps.
