@@ -16,6 +16,9 @@ Study about the OSI model and the TCP/IP model.
 ![SS of difference](../../00_includes/NTW-01/TCP.png)
 4. [OSI model](https://www.linux.org/threads/open-systems-interconnect-osi-model.9095/)
 5. [Intranet](https://www.techtarget.com/whatis/definition/intranet)
+6. [TCP/IP](https://www.avg.com/nl/signal/what-is-tcp-ip)
+7. 
+![TCP](../../00_includes/NTW-01/TCP.png)
 
 
 ### Overcome challenges
@@ -64,4 +67,12 @@ B’s computer receives the bitstream physically through a wifi or other physica
 
 - ### The TCP/IP model
 
-    
+    The TCP and IP are seperate computer network protocols together they are a suite of protocols consisting of 4 layers. HTTP, FTP, and SMTP are 3 command the most used protocols. In this model the IP sorts the mail and finds the IP adress where the data needs to go and TCP sends and receives it.
+
+1. **Layer 1 (Network Acces Layer):** The network access layer, also known as the data link layer, handles the physical infrastructure that lets computers communicate with one another over the internet. These communications can be trough cables, wireless networks, network interface cards and more. The network access layer also includes the technical infrastructure. Such as the code that converts digital data into transmittable signals. That makes network connection possible.
+You can see this layer as a combination of layer 1 and 2 from the OSI model.
+
+2. **Layer 2 (internet Layer)
+
+
+
