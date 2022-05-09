@@ -12,6 +12,7 @@ Study about the OSI model and the TCP/IP model.
 1. [OSI layers](https://linuxhint.com/network-osi-layers-explained/#:~:text=Open%20System%20Interconnection%20OSI%20model,performed%20on%20each%20abstract%20layer.)
 2. ![SS of layers](../../00_includes/NTW-01/7layers.png)
 3. [OSI model](https://www.linux.org/threads/open-systems-interconnect-osi-model.9095/)
+4. [Intranet](https://www.techtarget.com/whatis/definition/intranet)
 
 
 ### Overcome challenges
@@ -33,6 +34,10 @@ Deze opdracht is voor mij alleen maar lezen. Voor mezelf de opdracht gemaakt sch
 - Error control, on the receivers end this makes sure the data is send and received correctly, if not it will request a re transmission.
 - Flow control, on the senders end flow control makes sure the receiver is not flooded. For example when the sender has a quicker connection than the receiver the flow control will match the transmission speed to the speed of the receiver. This creates a optimal data transmission.
 
-Layer 4 is also where the adressing occurs, this in done in protocols TCP/IP is a example protocol more about this later.
+    Layer 4 is also where the adressing occurs, this in done in protocols TCP/IP is a example protocol more about this later.
 
-5. **Layer 3 (Network layer):** 
+5. **Layer 3 (Network layer):** When this layer receives segments from layer 4 it splits them into even smaller units called "packets", the destination is also in these packets. When this layer receiver packets it will reasemmble then into segments again. The network layer ALWAYS ensures data is transported in the most efficient way. Out of a billion options this layer will identify the most efficient one, this is called routing. The destinations for these packets can be "LAN" or "WAN".
+- LAN, Local Area Network. If the destination is same LAN the destination adress will be copied from layer 4.
+- WAN, Wide Area Network. If the destination is WAN the packets will be send to a gateway (for example a router), in this case the destination should always be the receivers gateway adress since it has to go to a different LAN. When the destinated "router" receives the packets it will transmit them to the LAN.
+
+6. **layer 2 (Data Link):** 
