@@ -15,10 +15,12 @@ Study about the OSI model and the TCP/IP model.
 4. [TCP/IP](https://www.avg.com/nl/signal/what-is-tcp-ip)
 
 5. 
-![SS of difference](../../00_includes/NTW-01/TCP.png)
+![TCPupdated](../../00_includes/NTW-01/TCP2.png)
 6. 
-![TCP](../../00_includes/NTW-01/examplemodel.png)
+![SS of difference](../../00_includes/NTW-01/TCP.png)
 7. 
+![TCP](../../00_includes/NTW-01/examplemodel.png)
+8. 
 ![SS of layers](../../00_includes/NTW-01/7layers.png)
 
 
@@ -66,15 +68,29 @@ The data link layer breaks the packets down even further into frames and deliver
 The physical layer converts the email data into a bitstream of 1s and 0s and transmits it through a cable or other physical medium.
 B’s computer receives the bitstream physically through a wifi or other physical medium, and the email data begins to flow back through the same series of layers in the opposite order on B’s device.
 
-- ### The TCP/IP model
+- ## The TCP/IP model
 
-    The TCP and IP are seperate computer network protocols together they are a suite of protocols consisting of 4 layers. HTTP, FTP, and SMTP are 3 command the most used protocols. In this model the IP sorts the mail and finds the IP adress where the data needs to go and TCP sends and receives it. A 
+    The TCP and IP are seperate computer network protocols together they are a suite of protocols consisting of 4 layers or 5 layers in the updated model. HTTP, FTP, and SMTP are 3 command the most used protocols. In this model the IP sorts the mail and finds the IP adress where the data needs to go and TCP sends and receives it. 
 
-1. **Layer 1 (Network Acces Layer):** The network access layer, also known as the data link layer, handles the physical infrastructure that lets computers communicate with one another over the internet. These communications can be trough cables, wireless networks, network interface cards and more. The network access layer also includes the technical infrastructure. Such as the code that converts digital data into transmittable signals.
-You can see this layer as a combination of layer 1 and 2 from the OSI model.
+1. **Layer 1 (Network Acces Layer):** This layer is split into the Data link and physical layer again in the updated version. 
 
-2. **Layer 2 (Internet Layer):** The internet layer, also known as the network layer, controls the flow and routing of traffic to ensure data is sent speedily and accurately. This layer is also responsible for reassembling the data packet at its destination. If there’s lots of internet traffic, the internet layer may take a little longer to send a file, but there will be a smaller chance of an error corrupting that file. This layer is basicly the same as the network layer in the OSI model.
+- The data link layer has 2 sublayers. 
+1. 1 sublayer is the LLC (Logical Link Control) this layer talks to the network layer in this layer are your cables and your NIC
+2. The other sub layer is the  MAC (Media Acces Control) this layer defines HOW devices acces the medium (cables or wifi). CSMA/CD (Carrier senes multiple acces with Collision detection)(wired) or CSMA/CA (Carrier senses multiple acces with collision avoidance)(WIFI). 
 
-3. **Layer 3 (Transport Layer):** The transport layer provides a reliable data connection between two communicating devices. It’s like sending an insured package: The transport layer divides the data in packets, acknowledges the packets it has received from the sender, and ensures that the receiver acknowledges the packets it receives. This layer is basicly the same as the transport layer in the OSI model.
+    The data link layer does error checking.
 
-4. **Layer 4 (Application layer):** The application layer is the group of applications that let the user access the network. For most of us that means email, social media, and cloud storage programs. This is what the end user sees and interacts with when sending and receiving data. This layer is a big difference with the OSI model, the Presentation and Session layer are not present in the TCP/IP model and are all done in this single layer and skip steps.
+- The pshysical layer does the same thing as layer 1 in the OSI model, it encodes the data into 1s into 0s.
+  
+2. **Layer 2 (Internet Layer):** Like the 5th layer in the OSI model this layer provides the IP adress of the sender, it picks the best route to the destination (routing). This layer maintains the Quality of service, this makes it more efficient bij prioritizing the packets who have more prio then others for example a email has less prio then a live conversation. Thanks to the transport layer IP adresses can be connectionless networked all over the internet because the connection is already established in the transport layer.
+
+3. **Layer 3 (Transport Layer):** This layer is the equivalant of the 4th layer of the OSI layer. This layer establishes the connections and allows communication between the applications from layer 4 on different ports. It facilitates reliable (TCP) and unreliable (UDP) end to end data transport. This layer also open and closes the connections this is also TCP
+
+4. **Layer 4 (Application layer):** This layer is a combination of the layers 7,6 and 5 of the OSI model. Layer 4 in the TCP/IP model has protocols and services that interact with the end user.
+
+    The key differences of the TCP/IP layer are:
+    
+    1. TCP/IP uses a horizontal approach, OSI does vertical approach
+    2. TCP only has 5 layers while OSI has 7.
+    3. The minimum head size for TCP (20bytes)is 4 times as big as the OSI minumum (5bytes)
+    4. The OSI model is mainly used for troubleshooting because its a logical model and defines network communication. TCP/IP help determing HOW a specific device should connect to the net and secures its transition.
