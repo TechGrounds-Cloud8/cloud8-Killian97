@@ -80,4 +80,6 @@ Wireshark is the most used packet "sniffer" in the world. Like any other packet 
 
 3. **Visualization:** Wireshark allows you to dive right into the very middle of a network packet. It also allows you to visualize entire conversations and network streams.
 
-
+In this screenshot you can see some of my data transmissions in wireshark. After some testing i found that all the lines with 8801 in it is zoom communication, zoomes uses port 8801.
+All the HEX coding in the bottom are the data packets filled with the data from zoom, they include the heaedrs etc. If was to unpack all that data on my own i should be able to get a screenshot of zoom from that moment of transmission.
+![WS](../../00_includes/NTW-03/8801.png)
