@@ -83,3 +83,5 @@ Wireshark is the most used packet "sniffer" in the world. Like any other packet 
 In this screenshot you can see some of my data transmissions in wireshark. After some testing i found that all the lines with 8801 in it is zoom communication, zoomes uses port 8801.
 All the HEX coding in the bottom are the data packets filled with the data from zoom, they include the heaedrs etc. If was to unpack all that data on my own i should be able to get a screenshot of zoom from that moment of transmission.
 ![WS](../../00_includes/NTW-03/8801.png)
+
+I also found out that i have a big spyware virus in my PC, i found this out because i noticed that something called CLOUDNET 69 was interfering with every single line of communication. and when i looked into some of the protocols i noticed that cloudnet 69 send all the information to a outside IP adress(leaking my information). I am not happy about this but i do think it is funny that i already have a instant use and result from this assignment.

@@ -9,7 +9,7 @@ Learn the basics about GITHUB and test this with your peers.
 
 ## Exercise
 ### Sources
-1. 
+1. Ben (een klasgenoot).
 
 
 ### Overcome challenges
