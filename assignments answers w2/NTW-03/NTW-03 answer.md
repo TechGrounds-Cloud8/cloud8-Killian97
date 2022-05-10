@@ -79,3 +79,5 @@ Wireshark is the most used packet "sniffer" in the world. Like any other packet 
 2. **Filtering:** Wireshark is capable of slicing and dicing all of this live data using filters. With this filter you can search way more precise to what you need.
 
 3. **Visualization:** Wireshark allows you to dive right into the very middle of a network packet. It also allows you to visualize entire conversations and network streams.
+
+
