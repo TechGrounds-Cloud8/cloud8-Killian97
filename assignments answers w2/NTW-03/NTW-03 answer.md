@@ -2,7 +2,7 @@
 Find protocols and connect them to the OSI model. Learn about wireshark.
 
 ## Key terminology
-- ***
+- check results.
 
 
 
