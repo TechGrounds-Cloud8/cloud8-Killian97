@@ -20,7 +20,7 @@ Find protocols and connect them to the OSI model. Learn about wireshark.
 9. [IPX](https://techterms.com/definition/ipx)
 10. [ARP](https://www.fortinet.com/resources/cyberglossary/what-is-arp#:~:text=Address%20Resolution%20Protocol%20(ARP)%20is,%2Darea%20network%20(LAN).)
 11. [ATM](https://www.lifewire.com/asynchronous-transfer-mode-817942)
-
+12. [W3C](https://www.w3.org/Consortium/join)
 
 
 ### Overcome challenges
@@ -59,9 +59,23 @@ What is wireshark.
 7. ***Layer 1(Pshycical Layer):***
     - **Bluetooth:** Bluetooth is ment for short range communication. You will problably recognize this in your headset for example, or when you connect to phones to eachother. This is a done Wireless.
     - **USB(Universal serial bus)**: The name bus suggests it a little bit but USB is the litterall physical protoc to transport information from device to device (port to port). In these days you have universal USB cables to eliminate the confusion between multiple devices.
-
+        
 
 ## Who detirmes what protocol i use and how do i introduce my own?
+   -  ***W3C(World Wide Web Consortium):*** Many standards these days are standardized by the W3C. Their aim is to take the web to its full potential, creating protocols and standards that support technologies with specifications, guidelines, applications, and support programs.
 
+   - If you want to introduce your own protocol to the W3C, you first have to apply for a member ship. this application takes a while and is very serious process.
+   there are 4 main benefits of being a member:
+   1. You can interact directly with the leading enterprises.
+   2. You are allowed to help deciding the strategies.
+   3. You are allowed to participate in groups, and you are allowed to help shape new technologies (including introducing new protocols) to enable customers.
+   4. You can show leadership by ensuring and trying to make the web stay healthy. 
 
-    sdgdsgsgzf
+## Wireshark.
+Wireshark is the most used packet "sniffer" in the world. Like any other packet sniffer, Wireshark does 3 things:
+
+1. **Packet Capture:** Wireshark listens to a network connection in real time and then grabs entire streams of traffic, even thousands of packets at the same time.
+
+2. **Filtering:** Wireshark is capable of slicing and dicing all of this live data using filters. With this filter you can search way more precise to what you need.
+
+3. **Visualization:** Wireshark allows you to dive right into the very middle of a network packet. It also allows you to visualize entire conversations and network streams.
