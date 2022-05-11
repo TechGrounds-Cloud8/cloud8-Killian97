@@ -52,7 +52,7 @@ Deze opdracht is voor mij alleen maar lezen. Voor mezelf de opdracht gemaakt sch
 - LAN, Local Area Network. If the destination is same LAN the destination adress will be copied from layer 4.
 - WAN, Wide Area Network. If the destination is WAN the packets will be send to a gateway (for example a router), in this case the destination should always be the receivers gateway adress since it has to go to a different LAN. When the destinated "router" receives the packets it will transmit them to the LAN.
 
-6. **layer 2 (Data Link):** The data link breaks the data packets from layer 3  into even smaller pieces called frames before sending them to their destination. The data link is responsible for the commuincation of physically connected nodes(nodes on the same intra-network). The date network also applies flow and error control on the communication inside in the intre-network.   
+6. **layer 2 (Data Link):** The data link breaks the data packets from layer 3  into even smaller pieces called frames before sending them to their destination. The data link is responsible for the commuincation of physically connected nodes(nodes on the same intra-network). The data network also applies flow and error control on the communication inside in the intre-network.   
 
 7. **Layer 1 (Physical layer):** In this layer the data frames are converted into bitstreams, These bitstreams consist of 1s and 0s. Layer 1 sends these bitstreams to a physical device trough physical resources for example: "cables (with electrical pulses)" or "hubs(with frequencies)". when the receiver received all the data in bitstream form, it will flow back to layer 7 and apear on his device for example a email.
 
