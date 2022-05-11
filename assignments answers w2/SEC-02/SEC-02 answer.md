@@ -6,8 +6,9 @@ Install a web server and set your firewall to only allow SSH traffic
 - ***Website:*** A collection of web pages.
 - ***Web server:*** This is a machine(computer) that hosts a website on the internet.
 - ***sudo ufw allow portID:*** With this command you can allow ports trough the firewall. Making it able to receive data trough that port.
--***sudo ufw deny portID:*** With this command you can deny traffic trough a specific port.
--***ufw(uncomplicated firewall):*** Is the basic firewall for Ubuntu, it is a easy to use firewall since you can edit it with your command line.
+- ***sudo ufw deny portID:*** With this command you can deny traffic trough a specific port.
+- ***ufw(uncomplicated firewall):*** Is the basic firewall for Ubuntu, it is a easy to use firewall since you can edit it with your command line.
+- ***Firewall:*** A Firewall is a network security that checks incoming and outgoing data with a set of rules. Data is moving in the form of packets. A firewall checks these packets based on those set rules. This way you can create a lets say shield around your network and protect it from unwanted data or even other users.
 
 
 
@@ -19,6 +20,7 @@ Install a web server and set your firewall to only allow SSH traffic
 4. [UFW](https://www.linode.com/docs/guides/configure-firewall-with-ufw/
 )
 5. [ufw](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+6. [firewall](https://www.forcepoint.com/cyber-edu/firewall)
 
 ### Overcome challenges
 lots and lots of stress because i coudnt reach the default apache page. and not understanding why not. I solved or my LC solved this by explaining some things about inbound and outbound requests.
