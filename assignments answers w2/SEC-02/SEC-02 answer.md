@@ -31,6 +31,7 @@ In the screenshot below you can see i added a rule to the ufw that allowes incom
 ![ufwap](../../00_includes/SEC-02/ufwap.png)
 
 2. In the screenshot below you can see i added rules to ufw that allows SSH traffic but blocks web traffic. the result of this is that i cannot acces my default apache page anymore.
+
 ![httpblock](../../00_includes/SEC-02/httpblock.png)
 
 
