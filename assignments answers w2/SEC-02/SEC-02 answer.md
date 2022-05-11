@@ -33,6 +33,7 @@ Stateful firewalls can also integrate additional services, such as encryption or
 5. [ufw](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
 6. [firewall](https://www.forcepoint.com/cyber-edu/firewall)
 7. [firewalls](https://phoenixnap.com/blog/types-of-firewalls)
+8. [state](https://www.geeksforgeeks.org/stateless-vs-stateful-packet-filtering-firewalls/)
 
 ### Overcome challenges
 lots and lots of stress because i coudnt reach the default apache page. and not understanding why not. I solved or my LC solved this by explaining some things about inbound and outbound requests.
