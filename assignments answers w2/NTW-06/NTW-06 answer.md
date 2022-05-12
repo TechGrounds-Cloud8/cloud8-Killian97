@@ -23,7 +23,9 @@ Learn about Subnets and create a network architecture with subnets.
 3. [CIDR](https://en.wikipedia.org/wiki/Broadcast_address)
 4. Ben de uitleg held uit mijn groepje.
 5. [NAT](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html)
-6. 
+6. [broad](https://en.wikipedia.org/wiki/Broadcast_address)
+7. The learning coach explained alot of usefull information.
+8. 
 
 
 ### Overcome challenges
