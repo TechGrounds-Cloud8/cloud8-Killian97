@@ -11,7 +11,7 @@ Learn about Subnets and create a network architecture with subnets.
 - ***Data Center Subnet:*** This subnet version allows alot of devices to be connected if configured todo so.
 - ***IP adres division:*** An IP address is divided into two fields: a Network Prefix (also called the Network ID) and a Host ID. What separates the Network Prefix and the Host ID depends on whether the address is a Class A, B or C address.
 - ***NAT gateway:*** A NAT gateway is simply said a 1 way tunnel. A device in a private subnet can acces a service on the internet trough the NAT gateway but that service cannot establish a connection with the device in the private subnet. When data comes back from the internet and arrives at the NAT gateway the NAT gateway will have remembered the route and routes the data back to the device that did the original request.
-- ***Subnet classes:*** I will explain this by just showing a picture and you will understand IF you understand "subnet mask". ![SS](../../00_includes/NTW-06/class.png)
+- ***Subnet classes:*** I will explain this by just showing a picture and you will understand IF you understand "subnet mask". ![SS](../../00_includes/NTW-06/class2.png)
 
 
 
@@ -32,4 +32,10 @@ Learn about Subnets and create a network architecture with subnets.
 Hearing from my classmates that this was one of the hardest assignments of the course so i went in a bit nervous.
 
 ### Results
-1. 
+Wat heb ik nodig voor mijn architecture?
+- Een internet gateway.
+- Een nat gateway
+- een private subnet dat alleen van binnen het LAN bereikbaar is. Dit subnet moet minimaal 15 hosts kunnen plaatsen.
+- een private subnet dat internet toegang heeft via een NAT gateway. Dit subnet moet minimaal 30 hosts kunnen plaatsen (de 30 hosts is exclusief de NAT gateway).
+- 1 public subnet met een internet gateway. Dit subnet moet minimaal 5 hosts kunnen plaatsen (de 5 hosts is exclusief de internet gateway).
+
