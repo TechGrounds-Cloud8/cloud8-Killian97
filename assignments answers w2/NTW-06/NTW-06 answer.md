@@ -39,4 +39,4 @@ Wat heb ik nodig voor mijn architecture?
 - een private subnet dat internet toegang heeft via een NAT gateway. Dit subnet moet minimaal 30 hosts kunnen plaatsen (de 30 hosts is exclusief de NAT gateway).
 - 1 public subnet met een internet gateway. Dit subnet moet minimaal 5 hosts kunnen plaatsen (de 5 hosts is exclusief de internet gateway).
 Hier onder kan je mijn gemaakte architecture zien.
-![ARCH](../../00_includes/NTW-06/netarchfinal.drawio.png)1
+![ARCH](../../00_includes/NTW-06/netarchfinal2.drawio.png)1
