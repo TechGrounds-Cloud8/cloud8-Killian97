@@ -20,12 +20,15 @@ Beyond security, the principle of least privilege also bolsters system stability
 
 
 
+
 ## Exercise
 ### Sources
 1. [MFA](https://www.trustbuilder.com/trustbuilder-io-suite/capabilities/multi-factor-authentication/?utm_term=multi-factor%20authentication&utm_campaign=UK+and+IE+-+Leads+-+IAM+-+Low+funnel&utm_source=adwords&utm_medium=ppc&hsa_acc=4190588647&hsa_cam=10028913016&hsa_grp=135543866842&hsa_ad=585224568926&hsa_src=g&hsa_tgt=kwd-2569437482&hsa_kw=multi-factor%20authentication&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwyYKUBhDJARIsAMj9lkFUEgUE7r6MwWnuWv8S6lWFqFZR48jK5UicbxgkMKaOMre6yoyjS4waAk9DEALw_wcB)
 2. [MFA2](https://www.pingidentity.com/en/resources/blog/posts/2020/what-is-multi-factor-authentication-mfa.html#:~:text=Multi%2Dfactor%20authentication%20(MFA)%20is%20used%20to%20ensure%20that,have%20or%20something%20they%20are.)
 3. [SSO](https://www.pingidentity.com/en/resources/blog/posts/2021/what-is-single-sign-on-sso.html)
 4. [POLP](https://www.f5.com/labs/articles/education/what-is-the-principle-of-least-privilege-and-why-is-it-important#:~:text=The%20principle%20of%20least%20privilege%20addresses%20access%20control%20and%20states,or%20task%20and%20nothing%20more.)
+5. [POLP2](https://digitalguardian.com/blog/what-principle-least-privilege-polp-best-practice-information-security-and-compliance#:~:text=The%20principle%20of%20least%20privilege%20works%20by%20allowing%20only%20enough,account%2C%20device%2C%20or%20application.)
+6. [DIFF](https://www.sailpoint.com/identity-library/difference-between-authentication-and-authorization/#:~:text=So%2C%20what%20is%20the%20difference,a%20user%20has%20access%20to.)
 
 ### Overcome challenges
 
@@ -33,3 +36,10 @@ Beyond security, the principle of least privilege also bolsters system stability
 ### Results
 1. In the screenshot below you can see the 3 factors and how they can be combined.
 ![MFA](../../00_includes/SEC-03/MFA.png)
+2. |***Authentication***|***Authorization***|
+|---|---|
+|Authentication verifies who the user is.|Authorization determines what resources a user can access.|
+|Authentication works through passwords, one-time pins, biometric information, and other information provided or entered by the user.|Authorization works through settings that are implemented and maintained by the organization.|
+|Authentication is the first step of a good identity and access management process.|Authorization always takes place after authentication.|
+|Authentication is visible to and partially changeable by the user.|Authorization isn’t visible to or changeable by the user.|
+|Example: By verifying their identity, employees can gain access to an HR application that includes their personal pay information, vacation time, and 401K data.|Example: Once their level of access is authorized, employees and HR managers can access different levels of data based on the permissions set by the organization.|
