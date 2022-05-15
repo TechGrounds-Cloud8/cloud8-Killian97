@@ -1,8 +1,8 @@
 # IAM (Identity and Acces Management)
 Study about
 - The difference between authentication and authorization.
- -The three factors of authentication and how MFA improves security.
- -What the principle of least privilege is and how it improves security.
+- The three factors of authentication and how MFA improves security.
+- What the principle of least privilege is and how it improves security.
 
 
 ## Key terminology
