@@ -37,6 +37,7 @@ Beyond security, the principle of least privilege also bolsters system stability
 1. In the screenshot below you can see the 3 factors and how they can be combined.
 ![MFA](../../00_includes/SEC-03/MFA.png)
 2. A explantion for The difference between authentication and authorization
+
 |***Authentication***|***Authorization***|
 |:---:|:---:|
 |Authentication verifies who the user is.|Authorization determines what resources a user can access.|
