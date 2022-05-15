@@ -36,8 +36,9 @@ Beyond security, the principle of least privilege also bolsters system stability
 ### Results
 1. In the screenshot below you can see the 3 factors and how they can be combined.
 ![MFA](../../00_includes/SEC-03/MFA.png)
-2. |***Authentication***|***Authorization***|
-|---|---|
+2. A explantion for The difference between authentication and authorization
+|***Authentication***|***Authorization***|
+|:---:|:---:|
 |Authentication verifies who the user is.|Authorization determines what resources a user can access.|
 |Authentication works through passwords, one-time pins, biometric information, and other information provided or entered by the user.|Authorization works through settings that are implemented and maintained by the organization.|
 |Authentication is the first step of a good identity and access management process.|Authorization always takes place after authentication.|
