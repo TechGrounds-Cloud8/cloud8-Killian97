@@ -31,7 +31,7 @@ Beyond security, the principle of least privilege also bolsters system stability
 6. [DIFF](https://www.sailpoint.com/identity-library/difference-between-authentication-and-authorization/#:~:text=So%2C%20what%20is%20the%20difference,a%20user%20has%20access%20to.)
 
 ### Overcome challenges
-
+None, i am very intrested in cyber security and besides that i had little knowledge i could do this assignment with fun.
 
 ### Results
 1. In the screenshot below you can see the 3 factors and how they can be combined.
