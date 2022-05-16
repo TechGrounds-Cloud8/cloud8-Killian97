@@ -2,9 +2,9 @@
 
 
 ## Key terminology
-- ***Asymmetric encryption:*** This way of encrypting uses more then just 1 key. When data needs to be encrypted it gets encrypted with a Public key and to decrypt it everyone needs their own private key that corresponds with the public key. A advantage for this encryption is that unlike the symmetric encryption the need for key sharing is gone. A disadvantage for this is that it takes more effort to set up and when someone loses their private key alot of new problems will show up, A lost key CANNOT be recovered
+- ***Asymmetric encryption:*** This way of encrypting uses more then just 1 key. Like in the results below, a sender who wants his message to be assymetriccal encrypted needs to generate a key pair. The sender uses the public key send by the receiver to encrypt the message and the receiver needs to decrypt the message by using his private key.
 - ***Key pair:*** A key pair is a combination of a public key that is used to encrypt data and a private key that is used to decrypt data.
-- ***RSA:*** An RSA key pair includes a private and a public key. The RSA private key is used to generate digital signatures, and the RSA public key is used to verify digital signatures. The RSA public key is also used for key encryption of DES or AES DATA keys and the RSA private key for key recovery.
+- ***RSA:*** Is a assymetric 
 
 
 ## Exercise
@@ -36,3 +36,5 @@ Below you will see the encrypted messages i received from Ben.
 ![SS](../../00_includes/SEC-05/benskeyforass4.png)
 3. Below you can see me decrypting Ben's message.
 ![SS](../../00_includes/SEC-05/benmsg.png)
+
+After symmetric en assymetric encripting in assignment 4 and 5 i noticed that it's barely possible to make symmetric ecryption 100% safe or it's simply impossible. When a Public key needed for symmetric is known everyone can just guess the message and slowly translate it until it makes sence. With Assymetric encryption this is simply impossible since you will always need the private key to decrypt a message. For this reason it's always smart to store your private key on a local device and not on a public device.
