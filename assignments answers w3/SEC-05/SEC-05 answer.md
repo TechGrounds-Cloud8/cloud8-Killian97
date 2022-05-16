@@ -11,17 +11,28 @@
 ### Sources
 1. [AsymvsSymm](https://blog.mailfence.com/symmetric-vs-asymmetric-encryption/#:~:text=Symmetric%20encryption%20uses%20a%20private,her%20private%20key%20to%20decrypt.)
 2. [encrypting](https://cryptii.com/)
+3. [ecnryptRSA](https://www.devglan.com/online-tools/rsa-encryption-decryption)
 
 
 
 ### Overcome challenges
+Me confusing myself alot by thinking to easy about.
 
 
 ### Results
-1. In the screenshots below you can see my Encrypted message to Ben for assignment 4.
-![SS](../../00_includes/SEC-05/ass4%20crypt.png)
-2. Below you can see the key i ecrypted for Ben to decrypt my message.
-![SS](../../00_includes/SEC-05/encryptass5.png)
-3. Below you can see the msg i encrypted for Ben for assignment 5
+Below you will see the results of my encryption messages to Ben.
+1. In the screenshots below you can see the key i encrypted for Ben to decrypt my encrypted message to him for assignment 4.
 ![SS](../../00_includes/SEC-05/keyass4.png)
+2. Below you can see me encrypting my message to Ben Containing the key to decrypt the message of assignment 4.
+![SS](../../00_includes/SEC-05/encryptass5.png)
+3. Below you can see me encrypting my message for Ben for Assignment 4.
+![SS](../../00_includes/SEC-05/ass4%20crypt.png)
 
+
+Below you will see the encrypted messages i received from Ben.
+1. Below you can see the encrypted message i got from Ben, I decrypt this message.
+![SS](../../00_includes/SEC-05/benskeymsg.png)
+2. Below you can see me decrypting the message i got above to read the key i need to decrypt his message for assignment 4.
+![SS](../../00_includes/SEC-05/benskeyforass4.png)
+3. Below you can see me decrypting Ben's message.
+![SS](../../00_includes/SEC-05/benmsg.png)
