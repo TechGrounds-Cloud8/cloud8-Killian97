@@ -4,7 +4,7 @@ Learn about Asymmetric encryption.
 ## Key terminology
 - ***Asymmetric encryption:*** This way of encrypting uses more then just 1 key. Like in the results below, a sender who wants his message to be assymetriccal encrypted needs to generate a key pair. The sender uses the public key send by the receiver to encrypt the message and the receiver needs to decrypt the message by using his private key.
 - ***Key pair:*** A key pair is a combination of a public key that is used to encrypt data and a private key that is used to decrypt data.
-- ***RSA:*** Is a assymetric 
+- ***RSA:*** Is a asymmetric cryptography algorithm.
 
 
 ## Exercise
