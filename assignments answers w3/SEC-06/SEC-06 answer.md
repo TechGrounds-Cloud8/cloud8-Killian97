@@ -1,5 +1,5 @@
 # Public Key Infrastructure
-
+Study PKI and try to apply your knowledge in finding it in your daily used processes.
 
 ## Key terminology
 - ***PKI(Public Key Infrastructure):*** Is the technology used to encrypt and authenticate data during transmissions. The encrypting makes sure that the data is unreadable and only can be decrypted by entities that are authorized. And the authentication makes sure that the data being transmissioned isn't tempered with and that the sender is who they say they are. This identity check is done with digital certificates.
