@@ -36,7 +36,7 @@ Product.
 Going way to deep and getting confused because of obtaining to much information.
 
 ### Results
-1. Ben and me are going to mix assigntment 4 and 5 a bit. We will create an asymmetric encrypted message to eachother containing the key for the symmetric encrypted message. This way we do 4 and 5 at the same time. I will show the results in Assigntment 5 template.
+1. Ben and me are going to mix assigntment 4 and 5 a bit. We will create an asymmetric encrypted message for eachother containing the key for the symmetric encrypted message. This way we do 4 and 5 at the same time. I will show the results in Assigntment 5 template.
 
 
 
