@@ -9,7 +9,15 @@
 - ***X.509:*** Is one of the ways to tells how PKI should function, this is not the only one but it is the most used one.
 An X.509 certificate binds an identity to a public key using a digital signature. A certificate contains an identity (a hostname, or an organization, or an individual) and a public key (RSA, DSA, ECDSA, ed25519, etc.), and is either signed by a certificate authority or is self-signed. When a certificate is signed by a trusted certificate authority, or validated by other means, someone holding that certificate can use the public key it contains to establish secure communications with another party, or validate documents digitally signed by the corresponding private key.
 X.509 also defines certificate revocation lists, which are a means to distribute information about certificates that have been deemed invalid by a signing authority, as well as a certification path validation algorithm, which allows for certificates to be signed by intermediate CA certificates, which are, in turn, signed by other certificates, eventually reaching a trust anchor.
+- ***Self Signed Certificate:*** A self signed certificate is a digital certificate that’s not signed by a publicly trusted CA. This can include SSL/TLS certificates, code signing certificates, and S/MIME certificates. The reason why they’re considered different from traditional CA signed certificates is that they’re created, issued, and signed by the company or developer who is responsible for the website or software being signed. This is also the reason why self signed certificates are considered unsafe for public-facing websites and applications.
+- ***Certification Path:*** Users of public key applications and systems must be confident that a subject's public key is genuine, for example, that the associated private key is owned by the subject. Public key certificates are used to establish this trust. 
+If the user does not have a trusted copy of the public key of the CA that signed the subject's public key certificate, then another public key certificate vouching for the signing CA is required. This logic can be applied recursively, until a chain of certificates (or a certification path) is discovered from a trust anchor or a most-trusted CA to the target subject (commonly referred to as the end-entity). The most-trusted CA is usually specified by a certificate that is issued to a CA that the user directly trusts. In general, a certification path is an ordered list of certificates, usually comprised of the end-entity's public key certificate and zero or more additional certificates. A certification path typically has one or more encodings, allowing it to be safely transmitted across networks and to different operating system architectures.
+A certification path must be validated before it can be relied on to establish trust in a subject's public key. Validation can consist of various checks on the certificates contained in the certification path, such as verifying the signatures and checking that each certificate has not been revoked. The PKIX standards define an algorithm for validating certification paths consisting of X.509 certificates.
+Often a user may not have a certification path from a most-trusted CA to the subject. Providing services to build or discover certification paths is an important feature of public-key-enabled systems. RFC 2587 defines an LDAP (Lightweight Directory Access Protocol) schema definition which facilitates the discovery of X.509 certification paths using the LDAP directory service protocol.
 
+  The next picture shows a certification path from a most-trusted CA's public key (CA 1) to the target subject (Alice). The certification path establishes trust in Alice's public key through an intermediate CA named CA2.
+Figure 1. Certification Path
+![CP](../../00_includes/SEC-06/certpath.png)
 
 ## Further Explantions
 Besides the 2 examples i will give, PKI can also be used for securing retail transactions, digitally signing applications, smart card authentication, and many more. 
@@ -47,10 +55,30 @@ The answer is CAIN:
 1. [PKI](https://www.pentasecurity.com/blog/how-pki-work/)
 2. [PKI2](https://www.keyfactor.com/resources/what-is-pki/#:~:text=Public%20key%20infrastructure%20(PKI)%20governs,end%2Dto%2Dend%20communications.)
 3. [functs](https://www.omnisecu.com/security/public-key-infrastructure/what-is-public-key-infrastructure-pki.php)
+4. [creating SSl](https://websiteforstudents.com/how-to-create-self-signed-certificates-on-ubuntu-linux/)
+5. [path](https://www.ibm.com/docs/en/sdk-java-technology/7?topic=certpath-certification-path-introduction)
 
 
 ### Overcome challenges
 Trouble focusing because there is alot to read.
 
 ### Results
-1. 
+## Create your own Self signed Certificate in your VM.
+1. In the screenshot below you can see me creating the Self signed certificate.
+![create](../../00_includes/SEC-06/creatingcert.png)
+2. In the screenshot below you can that the certificate has been created.
+![Proof](../../00_includes/SEC-06/proofcert.png)
+
+## Analyze some certification paths of known websites.
+In the screenshot below you can see that the certificate for reddit is valid.
+![Reddit](../../00_includes/SEC-06/reddit.png)
+In the next screenshot you can see the certification path used for reddits certificate.
+![redd](../../00_includes/SEC-06/cert%20reddit.png)
+As you can see just like the example in the certification path key term. The path here is going trough CA1 before being validated for reddit itself.
+
+In the screenshot below you can see some other details about the certificate
+![SS](../../00_includes/SEC-06/redinfo.png)
+
+## Find the list of trusted certificate roots on your system (bonus points if you also find it in your VM).
+Below you can see where i found the list for all the roots. If the picture is to smal to read, its in /etc and then in the ca-certificate.conf
+![SS](../../00_includes/SEC-06/rootlist.png)
