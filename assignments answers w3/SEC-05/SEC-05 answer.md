@@ -16,7 +16,7 @@ Learn about Asymmetric encryption.
 
 
 ### Overcome challenges
-Me confusing myself alot by thinking to easy about.
+Me confusing myself alot by thinking to easy about the theory.
 
 
 ### Results
