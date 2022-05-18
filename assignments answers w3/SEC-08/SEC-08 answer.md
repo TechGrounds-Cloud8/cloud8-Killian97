@@ -52,11 +52,6 @@ Below i will talk about 4 of the top types of DR.
   - ***DRAAS(Disaster Recovery as a Service:)***
 
 
-
-
-
-
-
 ## Exercise
 ### Sources
 1. [YT](https://www.youtube.com/watch?v=rvKQtRklwQ4)
