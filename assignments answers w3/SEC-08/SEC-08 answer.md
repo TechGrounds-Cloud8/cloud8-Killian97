@@ -49,7 +49,7 @@ Below i will talk about 4 of the top types of DR.
   - ***Data Center Disaster Recovery:*** In this approach, the disaster recovery plan is not just limited to the computing facility it’s housed in. The entire building plays a large role in data center DR. Features and tools within the building, such as physical security, support personnel, backup power, HVAC, utility providers, and fire suppression all have an effect on data center DR. In the event of any sort of outage, these elements within the building must be in working order. With these components working, your data is at a lower risk against intruders and cybercriminals. However, even if everything is functioning correctly, your data center can still be susceptible to a natural disaster.
   - ***Cloud-Based Disaster Recovery:*** When using a cloud-based approach, you’re able to cut costs by using a cloud provider’s data center as a recovery site, rather than spending more on your own data center’s facilities, personnel, and systems. Users also benefit from the competition between cloud providers, as they continue to attempt to best each other in the market. But before committing to this method, determine the challenges that providers may have with your business’ backup and recovery. The provider may be able to assist you in fixing those problems before the cloud becomes a part of your DR plan.
   - ***Virtualization Disaster Recovery:*** Virtualization negates the need to reconstruct a physical server in the event of a disaster. You are also able to achieve your targeted RTO more easily by placing a virtual server on reserve capacity or the cloud.
-  - ***DRAAS(Disaster Recovery as a Service:)***
+  - ***DRAAS(Disaster Recovery as a Service:)*** While Disaster Recovery as a Service (DRaaS) is often based in the cloud, it is not strictly cloud-based. Some DRaaS providers offer their solutions as a site-to-site service, in which they host and run a secondary hot site. Additionally, providers can rebuild and ship servers to an organization’s site as a server replacement service. On the other hand, cloud-based DRaaS enables users to failover applications immediately, orchestrate failback to rebuilt servers, and reconnect users through VPN or Remote Desktop Protocol.
 
 
 ## Exercise
@@ -68,4 +68,9 @@ Did not really understand everything that well, really had to re read alot of in
 This subject is one of the biggest time sinks ive ever seen and im very vulnerable for that. i had to force myself to stay focused a bit.
 
 ### Results
-1. 
+#### A Company makes daily backups of their database. The database is automatically recovered when a failure happens using the most recent available backup. The recovery happens on a different physical machine than the original database, and the entire process takes about 15 minutes. What is the RPO of the database?
+In this example the RPO is 24 hours. They make a daily back up, so the maximum data loss is 24 hours.
+
+#### An automatic failover to a backup web server has been configured for a website. Because the backup has to be powered on first and has to pull the newest version of the website from GitHub, the process takes about 8 minutes. What is the RTO of the website?
+In this example the RTO is 8 minutes, if the actual version of the web server would go down it would take the backup server 8 minutes to boot.
+
