@@ -20,12 +20,6 @@ If a company chooses to lease a piece of equipment instead of purchasing it as a
 
 
 
-
-
-
-
-
-
 ## Exercise
 ### Sources
 1. [TCO](https://www.manutan.com/blog/en/glossary/understanding-tco-total-cost-of-ownership-origins-definition-calculation-advantages-and-so-on)
@@ -47,3 +41,5 @@ This was a pure study assignment, check key terms for explanations.
 
 Below is a Photo of a list with all the permanantly free services.
 ![SS](../../00_includes/AWS-02/freetier.png)
+
+Below you can see what is included in the free tier S3 and the free tier EC2.
