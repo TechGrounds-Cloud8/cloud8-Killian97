@@ -57,6 +57,6 @@ Below you will see how big the difference can be in latency and in transfer spee
 Below you will see some AWS services and where they are avaible and when they got released, check machine learning for example.
 ![SS](../../00_includes/AWS-01/service-launch-dates.png)
 
-4. ***AZ's:*** Not all regions have the same number of Availability Zones. If you are building an application with strict availability requirements, you should probably stay away from those four regions that only have 2 Availability Zones. When one goes down you will only have 1 left. If one goes down in a region with 4 AZ's you would have 4 left.
+4. ***AZ's:*** Not all regions have the same number of Availability Zones. If you are building an application with strict availability requirements, you should probably stay away from those four regions that only have 2 Availability Zones. When one goes down you will only have 1 left. If one goes down in a region with 4 AZ's you would have 3 left.
 
 
