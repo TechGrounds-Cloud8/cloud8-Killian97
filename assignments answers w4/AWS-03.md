@@ -1,4 +1,4 @@
-# Global infrastructure
+# Advantages of the Cloud
 
 
 
