@@ -43,3 +43,5 @@ Below is a Photo of a list with all the permanantly free services.
 ![SS](../../00_includes/AWS-02/freetier.png)
 
 Below you can see what is included in the free tier S3 and the free tier EC2.
+![SS](../../00_includes/AWS-02/s3free.png)
+![SS](../../00_includes/AWS-02/ec2free.png)
