@@ -32,4 +32,3 @@ The six advantages are:
 5. ***Stop spending money on running and maintaining data centers:***
 No more worries about your hardware. Focus on your business and your clients.
 6. ***Go global in minutes:*** Companies can deplay their applications all over the world in a fast efficient way. With all the regions AWS offers you can reach all of your app's end users with ease.
-
