@@ -57,6 +57,3 @@ Below you can see i logged in with a SSH connection.
 
 Below you see me terminating my instance.
 ![SS](../../00_includes/AWS-06/terminate.png)
-
-
-
