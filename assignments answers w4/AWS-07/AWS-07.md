@@ -1,6 +1,5 @@
 # EBS
-
-
+Learn about volumes and how to create apply and get acces to them.
 
 ## Key terminology
 - ***LSBLK command:*** is used to display details about block devices and these block devices(Except ram disk) are basically those files that represent devices connected to the pc.
