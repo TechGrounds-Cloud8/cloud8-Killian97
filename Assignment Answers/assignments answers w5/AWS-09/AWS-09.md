@@ -1,4 +1,4 @@
-# Shared Responsibility Model
+# AWS Shared Responsibility Model
 Study The shared responsibility model of AWS.
 
 
