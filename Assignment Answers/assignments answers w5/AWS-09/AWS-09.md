@@ -11,6 +11,7 @@ All will be explained under results.
 ## Exercise
 ### Sources
 1. [Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
+2. my classmate aurel
  
 
 

@@ -13,6 +13,7 @@ Learn how to create and edit VPC's
 ### Sources
 1. Previous assignments about subnetting, masks and VPC's.
 2. [EIP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html)
+3. my classmate aurel
 
 
 ### Overcome challenges
