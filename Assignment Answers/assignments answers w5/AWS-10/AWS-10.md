@@ -20,31 +20,24 @@ For the start i was a bit scared of not understanding it, because last time i ha
 
 ### Results
 
-##Exercise 1
-1. Allocate an Elastic IP address to your account.
-2. Use the Launch VPC Wizard option to create a new VPC with the following requirements:
-    - Region: Frankfurt (eu-central-1)
-    - VPC with a public and a private subnet
-    - Name: Lab VPC
-    - CIDR: 10.0.0.0/16
-3. Requirements for the public subnet:
-    - Name: Public subnet 1
-    - CIDR: 10.0.0.0/24
-    - AZ: eu-central-1a
-4. Requirements for the private subnet:
-    - Name: Private subnet 1
-    - CIDR: 10.0.1.0/24
-    - AZ: eu-central-1a
-
 Below you can see me creating my VPC.
 ![SS](../../../00_includes/AWS-10/vpcreated2.png)
 
 Below you can see that the creation was completed.
 ![SS](../../../00_includes/AWS-10/vpcmade.png)
 
+
+
+
+
 Below you will see 2 screenshots where you can see i explicitly associated my public subnets to the public route table and my private subnets to the private route table.
 ![SS](../../../00_includes/AWS-10/privateroute1.png)
 ![SS](../../../00_includes/AWS-10/publicroute1.png)
 
 
+Below you can see that i created a new EC2 instance.
+![SS](../../../00_includes/AWS-10/ec2created4.png)
 
+
+Lastly you can see below that i succesfully connected to my server
+![SS](../../../00_includes/AWS-10/connectcomplete.png)
