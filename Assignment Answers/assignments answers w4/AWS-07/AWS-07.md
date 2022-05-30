@@ -49,19 +49,19 @@ Learn about volumes and how to create apply and get acces to them.
 6. Find your text file on the new EBS volume.
 
 Below you can see that i am inside my new instance and that i already created the new volume while setting up the instance.
-![SS](../../00_includes/AWS-07/ebscreate2.png)
+![SS](../../../00_includes/AWS-07/ebscreate2.png)
 
 Next you can see that i found my volume called DB in the terminal.
-![SS](../../00_includes/AWS-07/foundvolincli.png)
+![SS](../../../00_includes/AWS-07/foundvolincli.png)
 
 Below you can see i found a list of file systems i could pick from so i could mount my volume. (i picked ext4)
-![SS](../../00_includes/AWS-07/filesystems.png)
+![SS](../../../00_includes/AWS-07/filesystems.png)
 
 Below you can see i mounted my volume with the entrypoint dir als accespoint.
-![SS](../../00_includes/AWS-07/mountedonau.png)
+![SS](../../../00_includes/AWS-07/mountedonau.png)
 
 Below you can see i created a txt file in my volume called DB trough entrypoint.
-![SS](../../00_includes/AWS-07/mktxt.png)
+![SS](../../../00_includes/AWS-07/mktxt.png)
 
 Lastly down here you can see i have created a new volume called DF and that i mounted it with accespoint "entrypoint2" and in the bottom of the screenshot you can see my snapshot worked because my test3.txt is already inside entrypoint2 aka the new volume.
-![SS](../../00_includes/AWS-07/newvolumecreated.png)
+![SS](../../../00_includes/AWS-07/newvolumecreated.png)

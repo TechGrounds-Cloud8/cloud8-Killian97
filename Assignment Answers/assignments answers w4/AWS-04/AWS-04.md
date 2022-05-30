@@ -5,7 +5,7 @@ Prepare your knowledge for the cloud Practitioner exam
 ## Key terminology
 I will put most of the key terms for this asignment in the Results parts.
 - ***AWS EBS(Amazon Elastic Block Store):*** Is an easy to use, scalable, high-performance block storage service designed for Amazon EC2. Block storage breaks up data into blocks and then stores those blocks as separate pieces, each with a unique identifier.
-![SS](../../00_includes/AWS-04/ebs.png)
+![SS](../../../00_includes/AWS-04/ebs.png)
 - ***SDK(Software Devolopment Kit):*** Is a set of software-building tools for a specific platform, including the building blocks, debuggers and, often, a framework or group of code libraries such as a set of routines specific to an operating system (OS)
 
 
@@ -77,7 +77,7 @@ VPC can be controlled by 4 interfaces:
 ***AWS CloudFront:*** Is a web service to speed up the distribution for static and dynamic web content, a CDN(Content delivery Network). For example HTML and css. Cloudfront uses edge locations to make this happen, If the content is already in the edge location with the lowest latency, CloudFront delivers it immediately. And if not CloudFront retrieves it from an origin that you've defined. Cloudfront always makes ensures the fastest delivry by using these edge locations.
 
 ***AWS CloudWatch(always free):*** Like the name says a little bit, cloudwatch monitors your AWS web services, your resources and your apps running on AWS, it does all this in real time. The CloudWatch home page automatically displays metrics about every AWS service you use. You can additionally create custom dashboards to display metrics about your custom applications, and display custom collections of metrics that you choose. You can create alarms that watch metrics and send notifications or automatically make changes to the resources you are monitoring when a threshold is breached. Below you can see an example of a part of the Cloudwatch Dashboard.
-![SS](../../00_includes/AWS-04/CWexa.png)
+![SS](../../../00_includes/AWS-04/CWexa.png)
 
 ***AWS IAM(Identity and Access Management):*** This is a security service, IAM lets you control who has acces to your recourses and who doesnt. With IAM you can control who is authenticated (signed in) and authorized (has permissions) to use resources. IAM has alot of features but here are 3 of the ones that i really liked:
   1. ***Shared access to your AWS account:*** You can grant other people permission to administer and use resources in your AWS account without having to share your password or access key.

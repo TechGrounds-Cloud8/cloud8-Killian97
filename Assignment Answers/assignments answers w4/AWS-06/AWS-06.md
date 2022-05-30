@@ -50,10 +50,10 @@ Terminate your instance.
 
 
 Below you can see i created my EC2 instance and that the status check got a pass.
-![SS](../../00_includes/AWS-06/instancemade.png)
+![SS](../../../00_includes/AWS-06/instancemade.png)
 
 Below you can see i logged in with a SSH connection.
-![SS](../../00_includes/AWS-06/SSHlogin.png)
+![SS](../../../00_includes/AWS-06/SSHlogin.png)
 
 Below you see me terminating my instance.
-![SS](../../00_includes/AWS-06/terminate.png)
+![SS](../../../00_includes/AWS-06/terminate.png)
