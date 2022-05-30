@@ -29,9 +29,17 @@ Each rule consists of a priority, one or more actions, and one or more condition
 
 
 ### Overcome challenges
-
+lots and lots of clicking to see what happens and therefor making some mistakes, but it was fun.
 
 ### Results
+
+Below you can see i created a new instance.
+![SS](../../../00_includes/AWS-11/11.1created.png)
+
+Below you can see i created a AMI from my instance.
+![SS](../../../00_includes/AWS-11/AMI%20created.png)
+
+
 
 
 
