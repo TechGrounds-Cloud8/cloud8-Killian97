@@ -27,4 +27,4 @@ Heel erg gefrustreerd raken en boos op mezelf omdat "opdracht 1" me al niet lukt
 
 ### Results
 1. Hier ben ik ingelogd en heb ik laten zien dat de user killian is.
-![SS](../../00_includes/LNX-01/login%20bewijs.png)
+![SS](../../../00_includes/LNX-01/login%20bewijs.png)

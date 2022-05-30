@@ -46,16 +46,16 @@ Stepping away a bit from the example, but there are various reasons why you need
 1. ***Pricing:*** Every region has different pricing, pick the wrong one and your wallet might not appriciate it.
 Below you will see how big the difference can be.
 
-    ![SS](../../00_includes/AWS-01/awsprice.png)
+    ![SS](../../../00_includes/AWS-01/awsprice.png)
 
 2. ***Latency and transfer speed:*** Every region has different latencies and different transfer speeds.
 Below you will see how big the difference can be in latency and in transfer speed.
-![SS](../../00_includes/AWS-01/ping.png)
-![SS](../../00_includes/AWS-01/ping2.png)
+![SS](../../../00_includes/AWS-01/ping.png)
+![SS](../../../00_includes/AWS-01/ping2.png)
 
 3. ***Services:*** Not all services are available in all regions (some will take a VERY long time before they are).
 Below you will see some AWS services and where they are avaible and when they got released, check machine learning for example.
-![SS](../../00_includes/AWS-01/service-launch-dates.png)
+![SS](../../../00_includes/AWS-01/service-launch-dates.png)
 
 4. ***AZ's:*** Not all regions have the same number of Availability Zones. If you are building an application with strict availability requirements, you should probably stay away from those four regions that only have 2 Availability Zones. When one goes down you will only have 1 left. If one goes down in a region with 4 AZ's you would have 3 left.
 

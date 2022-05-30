@@ -30,7 +30,7 @@ Hashing is an algorithm that calculates a fixed-size bit string value from a fil
 
 A good hashing algorithm would exhibit a property called the avalanche effect, where the resulting hash output would change significantly or entirely even when a single bit or byte of data within a file is changed. A hash function that does not do this is considered to have poor randomization, which would be easy to break by hackers.
 The picture below show this effect.
-![SS](../../00_includes/SEC-07/snowbally.png)
+![SS](../../../00_includes/SEC-07/snowbally.png)
 In this example picture you can see that the only thing changed about the input is the first letter, it goes from a lower care to a upper case i. Because of this the entire hash changes.
 
 A hash is usually a hexadecimal string of several characters. Hashing is also a unidirectional process so you can never work backwards to get back the original data. You can actually do reverse it but hashing is considered one-way, encryption for example is two-way. The power you need to reverse a hash is so high that hashing is considered one-way
@@ -40,9 +40,9 @@ But Imagine that you have N different possibilities of an birthday happening. In
 
 ## Below are two MD5 password hashes. One is a weak password, the other is a string of 16 randomly generated characters. Try to look up both hashes in a Rainbow Table.
  1. 03F6D7D1D9AAE7160C05F71CE485AD31
- ![SS](../../00_includes/SEC-07/crack1.png)
+ ![SS](../../../00_includes/SEC-07/crack1.png)
  2. 03D086C9B98F90D628F2D1BD84CFA6CA 
- ![SS](../../00_includes/SEC-07/crack2.png)
+ ![SS](../../../00_includes/SEC-07/crack2.png)
 
 ## Create a new user in Linux with the password 12345. Look up the hash in a Rainbow Table.
 I have not done this since i know what will happen. When i create my new user and give it the password, the password will be stored with a salt, when i would try to read it i would get an error because it doesnt match.

@@ -17,14 +17,14 @@ Often a user may not have a certification path from a most-trusted CA to the sub
 
   The next picture shows a certification path from a most-trusted CA's public key (CA 1) to the target subject (Alice). The certification path establishes trust in Alice's public key through an intermediate CA named CA2.
 Figure 1. Certification Path
-![CP](../../00_includes/SEC-06/certpath.png)
+![CP](../../../00_includes/SEC-06/certpath.png)
 
 ## Further Explantions
 Besides the 2 examples i will give, PKI can also be used for securing retail transactions, digitally signing applications, smart card authentication, and many more. 
 
 ### ***How Does PKI Authenticate Digital Certificates?***
 PKI works by encrypting data (in this case, digital certificate) with a cryptographic key, while having a separate key for decrypting it. The point here is to have one key for encryption and another for decryption. One of them is a private key, held by the key owner, while the other is a public key, shared with the public. Depending on the usage, the private key can either be the encryption key or the decryption key. In case of my example with the bank it would work like this: The owner of the certificate first encrypts it with the private key, then hands over the public key to the bank. The bank would decrypt it with the public key and verify the owner’s identity, and authenticate the user to access their account. As you see this works with key pairs, because it's a pair the bank can only decrypt the data with the public key that is paired with the private key that encrypted the data. This way if the data had been illegally modified by unauthorized parties in the transmission process, the decryption key would fail to decrypt the data because it would not match.
-![PKI](../../00_includes/SEC-06/PKI-1.png)
+![PKI](../../../00_includes/SEC-06/PKI-1.png)
 
 ### ***How Does PKI Secure Private Messages?***
 This is a different way than in the banking example. 
@@ -37,7 +37,7 @@ Imagine another situation where Seraphina needs to send a confidential message t
 3. When Nova receives the message, he needs to make sure that the sender is truly Seraphina, and not someone who is pretending to be Seraphina.
 
 PKI can easily ensure all these three criteria are met. How does it work in this case? First, Seraphina needs to request Nova’s public key. Then Seraphina uses Nova’s public key to encrypt the message she wants to send. After Nova receives the message, he simply needs to decrypt it with his private key. Note that different from the case of authenticating digital certificates, in this case, the owner of the keys is the receiver, not the sender, and that the public key is used as the encryption key while the private key is used as the decryption key.
-![PKI](../../00_includes/SEC-06/PKI-2.png)
+![PKI](../../../00_includes/SEC-06/PKI-2.png)
 
 ### ***What are the biggest functions of PKI?***
 The answer is CAIN:
@@ -65,20 +65,20 @@ Trouble focusing because there is alot to read.
 ### Results
 ## Create your own Self signed Certificate in your VM.
 1. In the screenshot below you can see me creating the Self signed certificate.
-![create](../../00_includes/SEC-06/creatingcert.png)
+![create](../../../00_includes/SEC-06/creatingcert.png)
 2. In the screenshot below you can that the certificate has been created.
-![Proof](../../00_includes/SEC-06/proofcert.png)
+![Proof](../../../00_includes/SEC-06/proofcert.png)
 
 ## Analyze some certification paths of known websites.
 In the screenshot below you can see that the certificate for reddit is valid.
-![Reddit](../../00_includes/SEC-06/reddit.png)
+![Reddit](../../../00_includes/SEC-06/reddit.png)
 In the next screenshot you can see the certification path used for reddits certificate.
-![redd](../../00_includes/SEC-06/cert%20reddit.png)
+![redd](../../../00_includes/SEC-06/cert%20reddit.png)
 As you can see just like the example in the certification path key term. The path here is going trough CA1 before being validated for reddit itself.
 
 In the screenshot below you can see some other details about the certificate
-![SS](../../00_includes/SEC-06/redinfo.png)
+![SS](../../../00_includes/SEC-06/redinfo.png)
 
 ## Find the list of trusted certificate roots on your system (bonus points if you also find it in your VM).
 Below you can see where i found the list for all the roots. If the picture is to smal to read, its in /etc and then in the ca-certificate.conf
-![SS](../../00_includes/SEC-06/rootlist.png)
+![SS](../../../00_includes/SEC-06/rootlist.png)

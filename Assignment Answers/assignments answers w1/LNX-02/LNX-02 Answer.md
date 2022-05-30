@@ -30,14 +30,14 @@ Mischien niet helemaal een challenge maar ik wist op een geven moment hoe ik de 
 
 ### Results
 1. Hier laat ik zien in welke PWD ik zit.
-![SS](../../00_includes/LNX-02/currentdir.png)
+![SS](../../../00_includes/LNX-02/currentdir.png)
 
 2. Hier list ik de inhoud van een directory.
-![SS](../../00_includes/LNX-02/listing.png)
+![SS](../../../00_includes/LNX-02/listing.png)
 
 3. Hier maak ik een nieuwe directory aan en een nieuw text bestand(hier gebruik ik nano voor)
-![SS](../../00_includes/LNX-02/txtfile.png)
+![SS](../../../00_includes/LNX-02/txtfile.png)
 
 4. Hier gebruik ik absolute en relative pathing.
 
-    ![SS](../../00_includes/LNX-02/pathing.png)
+    ![SS](../../../00_includes/LNX-02/pathing.png)

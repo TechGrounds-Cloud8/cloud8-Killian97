@@ -33,17 +33,17 @@ teveel fun hebben in scripting en teveel side tracken
 ### Results
 
 1. Hier zie je dat mijn script op een regel te appenden naar een text bestand is gelukt.
-![SS](../../00_includes/LNX-07/scriptexe.png)
+![SS](../../../00_includes/LNX-07/scriptexe.png)
 
 2. Hier zie je mijn script om apache2 te instaleren, te starten, te enablen en de status te checken en printen.
-![SS](../../00_includes/LNX-07/script2.png)
+![SS](../../../00_includes/LNX-07/script2.png)
 
 3. Hier zie je dat mijn httpd scripts is gelukt.
-![SS](../../00_includes/LNX-07/scriptstatus.png)
+![SS](../../../00_includes/LNX-07/scriptstatus.png)
 
 4. Hier zie je mijn script om een random nummer te generen en het resultaat te appenden naar een text bestand maar met een voorwaarde.
-![SS](../../00_includes/LNX-07/rngscript.png)
+![SS](../../../00_includes/LNX-07/rngscript.png)
 
 5. Hier zie je dat mijn script van result 4 werkt.
-![SS](../../00_includes/LNX-07/rngresult.png)
+![SS](../../../00_includes/LNX-07/rngresult.png)
 

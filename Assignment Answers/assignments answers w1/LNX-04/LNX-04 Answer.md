@@ -26,7 +26,7 @@ dit kost mij gewoon extra tijd en ook wat energie maar het lukt wel.
 ### Results
 
 1. Hier laat ik zien dat mijn nieuwe user Nova in de Sudo group zit en in de Admin group.
-![SS](../../00_includes/LNX-04/newusr.png)
+![SS](../../../00_includes/LNX-04/newusr.png)
 
 2. Hier laat ik zien dat ik de files heb gevonden die de users passwords en groups opslaat, en het bestand waar de echte passwords staan opgeslagen en ge hashed.
-![SS](../../00_includes/LNX-04/pwproof.png)
+![SS](../../../00_includes/LNX-04/pwproof.png)

@@ -27,11 +27,11 @@ moest leren over telnet en wat het was. Elke keer als we telnet killde kwam er e
 ### Results
 
 1. Hier installeer ik een daemon en daarna check ik de status van die daemon.
-![SS](../../00_includes/LNX-06/instaltellnet.png)
+![SS](../../../00_includes/LNX-06/instaltellnet.png)
 
 2. Hier zie je het onderste stukje van results 1 en check ik de PID en zie ik de use of memory.
-![SS](../../00_includes/LNX-06/PID.png)
+![SS](../../../00_includes/LNX-06/PID.png)
 
 3. Hier kill ik alle processen van de inet daemon
-![SS](../../00_includes/LNX-06/killtelnet.png)
+![SS](../../../00_includes/LNX-06/killtelnet.png)
 

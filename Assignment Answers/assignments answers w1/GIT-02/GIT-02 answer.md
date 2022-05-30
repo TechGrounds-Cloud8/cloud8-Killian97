@@ -22,7 +22,7 @@ Behalve dat ik niet wist wat markdown was en de syntaxes niet wist, was het na 5
 
 1. Ik heb hier een bestand gemaakt en een paar syntaxes gebruikt om een beetje te stylen.
 # Pannenkoeken recept :joy:
-![Pannekoek](../../00_includes/GIT-02/Pannenkoek-met-aardbei.png)
+![Pannekoek](../../../00_includes/GIT-02/Pannenkoek-met-aardbei.png)
 
 ## benodigdheden
 1. beslag

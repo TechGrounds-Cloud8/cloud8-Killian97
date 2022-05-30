@@ -19,4 +19,4 @@ Erg comfy zijn met nano en na eerder gebruik van VIM een tijdje geleden wist ik 
 ### Results
 
 1. Deze screenshot zal voor zichzelf spreken
-![SS](../../00_includes/LNX-ex1/vim.png)
+![SS](../../../00_includes/LNX-ex1/vim.png)

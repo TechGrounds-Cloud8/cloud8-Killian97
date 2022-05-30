@@ -35,7 +35,7 @@ None, i am very intrested in cyber security and besides that i had little knowle
 
 ### Results
 1. In the screenshot below you can see the 3 factors and how they can be combined.
-![MFA](../../00_includes/SEC-03/MFA.png)
+![MFA](../../../00_includes/SEC-03/MFA.png)
 2. A explantion for The difference between authentication and authorization
 
 |***Authentication***|***Authorization***|

@@ -30,13 +30,13 @@ Hier had ik niet echt challenges mee, misschien alleen dat ik over pipes gelezen
 
 ### Results
 1. Hier print ik een woord en append die naar het einde van een file.
-![SS](../../00_includes/LNX-03/append.png)
+![SS](../../../00_includes/LNX-03/append.png)
 
 2. Hier laat ik zien dat mijn command uit Result 1 gewerkt heeft.
-![SS](../../00_includes/LNX-03/append%20proof.png)
+![SS](../../../00_includes/LNX-03/append%20proof.png)
 
 3. Hier print en filter ik een woord uit de text file van result 2.
-![SS](../../00_includes/LNX-03/filter.png)
+![SS](../../../00_includes/LNX-03/filter.png)
 
 4. Hier filter ik een woord uit een text file en append de uitkomst daarvan naar een nieuwe text file
-![SS](../../00_includes/LNX-03/grepnewtxt.png)
+![SS](../../../00_includes/LNX-03/grepnewtxt.png)

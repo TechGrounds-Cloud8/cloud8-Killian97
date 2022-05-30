@@ -49,11 +49,11 @@ Een nog existing challenge, ik kan mijn router niet in.
     8. **NIC:** NIC or network interface card is a network adapter that is used to connect the computer to the network. It is installed in the computer to establish a LAN.  It has a unique id that is written on the chip, and it has a connector to connect the cable to it. The cable acts as an interface between the computer and router or modem. NIC card is a layer 2 device which means that it works on both physical and data link layer of the network model.
 
     Hier onder kan je de lijst zien met apparaten die verbonden zijn aan de router. Dit kan je vinden op de home page bij het inloggen op je router. De informatie die er bij staat is de naam van de apparaten zoals mijn desktop en mijn HP printer. Zoals zichtbaar staat de naam er niet altijd bij. Het gegeven IP adress staat er wel altijd bij.
-    ![Homepage](../../00_includes/NTW-02/applist.png)
+    ![Homepage](../../../00_includes/NTW-02/applist.png)
 
     De screenshot hier onder is mijn DHCP IP config in mijn CMD.
     Ik heb een leased IP adress meaning it will expire daily and i will need to request new ip adresses over time, this is done automatically.
-    ![SS](../../00_includes/NTW-02/DHCPconfig.png)
+    ![SS](../../../00_includes/NTW-02/DHCPconfig.png)
 
     Hier onder laat ik de config zien van mijn DCHP server op mijn router. Je kan hier zien dat de IP adressen die gegeven zullen worden aan alle apparaten zullen rangen van 192.168.2.1 tot en met 200.
-    ![SS](../../00_includes/NTW-02/routerdchp.png)
+    ![SS](../../../00_includes/NTW-02/routerdchp.png)

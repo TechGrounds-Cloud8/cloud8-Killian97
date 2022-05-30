@@ -18,7 +18,8 @@ Learn how to count in Binary and hex and how to convert it to eachother and to d
 
 ### Results
 
-1.
-![bin](../../00_includes/NTW-04/decbin.png)
+1. 
+![bin](../../../00_includes/NTW-04/decbin.png)
+
 2. 
-![hex](../../00_includes/NTW-04/dechex.png)
+![hex](../../../00_includes/NTW-04/dechex.png)

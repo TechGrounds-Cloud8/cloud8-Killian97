@@ -23,10 +23,10 @@ I noticed that i do not understand wireshark completely yet.
 
 ### Results
 1. In this screenshot you can see the results of my scan, what i can see is that as expected it listed all the VM's connected to the network. And i can see everyones IP adress connected to their VM. I can also see that TG used Xenserver to run the Linux server. XEN is a Hypervisor.
-![NMAP](../../00_includes/SEC-01/nmapscan.png)
+![NMAP](../../../00_includes/SEC-01/nmapscan.png)
 
 2. In this screenshot you can see a TCP protocol when i opened a browser page. you can see here where the data came from (port 52503) and where it has togo (port 443).
-![transproto](../../00_includes/SEC-01/transproto.png)
+![transproto](../../../00_includes/SEC-01/transproto.png)
 
 3. In this screenshot you can see that TLS is being applied to my request to open the webbrowser. in the bottom line you can see a litteral confirmation that the HTTP is going over the TLS.
-![secproto](../../00_includes/SEC-01/secproto.png)
+![secproto](../../../00_includes/SEC-01/secproto.png)

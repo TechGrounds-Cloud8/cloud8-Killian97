@@ -25,10 +25,10 @@ None besides needing to google everything.
 ### Results
 
 A security group and a ACL are similar but definetly different, Below i will show you a summary of the basic differences.
-![SS](../../00_includes/AWS-08/diffs.png)
+![SS](../../../00_includes/AWS-08/diffs.png)
 
 The diagram below will show you the layers of security provided by security groups and network ACL's. In this example you can see how traffic from an internet gateway is routed to the appropriate subnet using the routes in the routing table. The rules of the network ACL that is associated with the subnet control which traffic is allowed to the subnet. The rules of the security group that is associated with an instance control which traffic is allowed to the instance.
 
-![SS](../../00_includes/AWS-08/VPCex.png)
+![SS](../../../00_includes/AWS-08/VPCex.png)
 
 As a conclusion personnaly i would say: ALWAYS use both NACL's and Security groups. But its not needed, you can see NACL's as a extra layer of security, and who doesnt want extra security?

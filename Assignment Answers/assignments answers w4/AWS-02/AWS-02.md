@@ -40,8 +40,8 @@ Knowing AWS is commercial company and needing to list all the advantages while a
 This was a pure study assignment, check key terms for explanations.
 
 Below is a Photo of a list with all the permanantly free services.
-![SS](../../00_includes/AWS-02/freetier.png)
+![SS](../../../00_includes/AWS-02/freetier.png)
 
 Below you can see what is included in the free tier S3 and the free tier EC2.
-![SS](../../00_includes/AWS-02/s3free.png)
-![SS](../../00_includes/AWS-02/ec2free.png)
+![SS](../../../00_includes/AWS-02/s3free.png)
+![SS](../../../00_includes/AWS-02/ec2free.png)

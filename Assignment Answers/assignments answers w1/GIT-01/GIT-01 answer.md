@@ -28,10 +28,10 @@ Ik werd wel enorm ge side tracked omdat ik allemaal interesante knopjes zag en k
 
 ### Results
 1. Hier onder is tezien dat ik mijn peers heb toegevoegd als collaborators.
-![SS](../../00_includes/GIT-01/permission%20proof.png)
+![SS](../../../00_includes/GIT-01/permission%20proof.png)
 
 2. In deze screenshot heb ik een file aan gepast op mijn local machine en heb ik die change ge pushed naar GITHUB.
-![SS](../../00_includes/GIT-01/push%20code%20proof.png)
+![SS](../../../00_includes/GIT-01/push%20code%20proof.png)
 
 3. Hier heb ik een repo van Tom ge pulled en een verandering in zijn repo ge commit en een pull request gedaan naar Tom zijn github.
-![SS](../../00_includes/GIT-01/clone%20proof.png)
+![SS](../../../00_includes/GIT-01/clone%20proof.png)

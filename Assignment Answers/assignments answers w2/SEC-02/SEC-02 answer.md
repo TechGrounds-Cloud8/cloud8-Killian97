@@ -41,13 +41,13 @@ lots and lots of stress because i coudnt reach the default apache page. and not 
 ### Results
 1. I already had apache installed so i tried to connect to the apache standard page, this didnt work and i got a error that the page wasnt reachable. When i tried to ping port 80 i noticed that port 80 was closed. After some heavy thinking and some tips from my learning coach i realised that with our entire class there was no way we could all use port 80. I found out that i had to use my unique port 55809. 
 In this screenshot below you will see i reached the default page from my installed webserver. and for a fun thing i changed the title of the page in the HTML file.
-![apachedef](../../00_includes/SEC-02/apdefpage.png)
+![apachedef](../../../00_includes/SEC-02/apdefpage.png)
 In the screenshot below you can see i added a rule to the ufw that allowes incoming traffic from apache (my installed webserver).
-![ufwap](../../00_includes/SEC-02/ufwap.png)
+![ufwap](../../../00_includes/SEC-02/ufwap.png)
 
 2. In the screenshot below you can see i added rules to ufw that allows SSH traffic but blocks web traffic. the result of this is that i cannot acces my default apache page anymore.
 
-![httpblock](../../00_includes/SEC-02/httpblock.png)
+![httpblock](../../../00_includes/SEC-02/httpblock.png)
 
 
 
