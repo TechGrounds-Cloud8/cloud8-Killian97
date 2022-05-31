@@ -53,6 +53,8 @@ Below you can see the 2 new instances are online and that they are part of the c
 ![SS](../../../00_includes/AWS-11/group1.png)
 ![SS](../../../00_includes/AWS-11/group2.png)
 
+Below you can see the 2 new instances that got created by the ELB
+![SS](../../../00_includes/AWS-11/newinstelb.png)
 
 
 
