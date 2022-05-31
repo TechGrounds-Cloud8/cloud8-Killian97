@@ -30,7 +30,7 @@ Each rule consists of a priority, one or more actions, and one or more condition
 
 
 ### Overcome challenges
-lots and lots of clicking to see what happens and therefor making some mistakes, but it was fun.
+lots and lots of clicking to see what happens and therefor making some mistakes, but it was fun. also needed ALOT of patience for the stres test.
 
 ### Results
 
