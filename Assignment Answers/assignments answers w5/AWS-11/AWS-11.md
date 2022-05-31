@@ -15,6 +15,7 @@ There are four types of ELB's:
 - ***Listener Rules:*** Are The rules that you define for your listener to determine how the load balancer routes requests to the targets in one or more target groups.
 Each rule consists of a priority, one or more actions, and one or more conditions.
 - ***5 and 3-tuple:*** A Gateway Load Balancer does not maintain application state, but it maintains flow stickiness to a specific appliance using 5-tuple (for TCP/UDP flows) or 3-tuple (for non-TCP/UDP flows)
+- ***GENEVE protocol:*** [Geneve](https://datatracker.ietf.org/doc/html/rfc8926)
 
 
 
@@ -41,6 +42,17 @@ Below you can see i created a AMI from my instance.
 
 Below you can see my created Application.
 ![SS](../../../00_includes/AWS-11/ELBcreated.png)
+
+Below you can see i crated a template from my EC2 instance instead of a launch configuration because ive read that launch configs were outdated and could select templates or configs, i chose template.
+![SS](../../../00_includes/AWS-11/temp.png)
+
+Below you can see i succesfully created a auto scaling group with the template.
+![SS](../../../00_includes/AWS-11/auto.png)
+
+Below you can see the 2 new instances are online and that they are part of the correct target group.
+![SS](../../../00_includes/AWS-11/group1.png)
+![SS](../../../00_includes/AWS-11/group2.png)
+
 
 
 
