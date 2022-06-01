@@ -30,14 +30,14 @@ I will answer these 4 quesions for every subject:
 3. EB is connected to alot of other AWS services because it needs them. When you launch a new application, EB will launch an environment and gather/provide the resources it needs, for example you tell EB you want to launch a web application, EB will then provide an EC2 instance for you. This was EB automatically combines and used alot of different AWS resources, as a customer you dont need to worry about this because it happens automatically.
 4. There are quiet some alternatives for EB, most not in AWS itself but some are. I will list the top 8 alternatives and explain 1 of the alternatives in AWS itself. 
 
-    1. Google app engine.
-    2. Docker.
-    3. Azure App Serive.
-    4. Kubernetes.
-    5. Heroku.
-    6. Apollo.
-    7. AWS CodeDeploy.
-    8. AWS CloudFormation. (i will compare this one with EB)
+   1. Google app engine.
+   2. Docker.
+   3. Azure App Serive.
+   4. Kubernetes.
+   5. Heroku.
+   6. Apollo.
+   7. AWS CodeDeploy.
+   8. AWS CloudFormation. (i will compare this one with EB)
 
 **Elastic Beanstalk VS CloudFormation:**
 Both services essentially have the same goal, deploying your applications. But they approach this very differently. EB is PaaS(platform as a service) and CF is IaC(infrastructure as code). The most important difference is that EB handles deployment and provisioning, so it makes it easier and more comfortable for you While CloudFormation needs alot of imput, So giving you alot of control. 
