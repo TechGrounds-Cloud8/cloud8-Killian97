@@ -65,18 +65,33 @@ CF will be good for? Teams who have the knowlegde about the cloud or when they r
     - Sucuri
     - Akamai
 
-**Cloudfront VS CloudFlare:**
+**Cloudfront VS CloudFlare CDN:**
 The key differences in these services is that cloudfront is purely focused on speeding up content delivery while cloudflare also offers DDos protection and a WAF. Another big and important difference is that Cloudflare works like a DNS for your website while cloudfront works directly with your network so it can deliver content instantly.
 
 ### ***Route 53.***
 
-1. Route 53 is a highly scalable DNS web service, it has 3 main functions that you can use in any combination you want. These 3 are Domain registration, DNS routing and health checking. When you decide to use all three functions you do need to apply them in a certain order.
+1. Route 53 is a highly scalable DNS web service, it has 3 main functions that you can use in any combination you want. These 3 are Domain registration, DNS routing and health checking. When you decide to use all three functions you do need to apply them in a certain order. You can use Route 53 to route to non-AWS infrastructures aswell.
     
     1. Register Domain name.
     2. Route internet traffic to the resources for your domain.
     3. Check the health of your resources.
+2. Before AWS route 53 existed people would just have to use older DNS services, less available, less scalable and with less functions.
+3. Route 53 can almost be combined with all other AWS services. You can use route 53 to log requests that are sent to the Route 53 API, monitor the status of your resources and assign tags to your resources. But you can also use route 53 to route internet traffic to your AWS resources.
+One example for monitoring is Route 53 + Cloudwatch. You can use cloudwatch to monitor and check your route 53 health checks, Route 53 submits automated requests over the internet to your application, server, or other resource to verify that it's reachable, available, and functional. A routing example is Route 53 + ELB. If you host a website on multiple Amazon EC2 instances, you can distribute traffic to your website across the instances by using an ELB load balancer. The ELB service automatically scales the load balancer as traffic to your website changes over time. hereby you can use Route 53 to route traffic for your domain to your load balancer.
+4. AWS has alot of competitors for their DNS service, below i will list a few and explain the differences from one of them. 
 
+    - Cloudflare DNS (I will explain the differences to route 53)
+    - Google cloud DNS
+    - Azure DNS
+    - GoDaddy Premium DNS
+    - DNS Made Easy
+    - ClouDNS
+    - Ultra DNS
+    - NS1
+    - DNSimple
+    - EasyDNS
 
+**Route 53 VS CloudFlare DNS:** I think the biggest but also most important difference is that in times of failures and errors both services handle it very differently, or better said, 1 does not handle it at all. For example, your server goes down, Cloudflare DNS will keep redirecting users to it anyway. But route 53 wont, route 53 will redirect them to a different working server until the issue has been solved. Also Cloudflare is highly focused on speed and from what i have read, i can believe that they are also VERY good at that. and they also have privacy high in their priority list, for example they dont log your IP adress. Most of the neutral recommendations i have read actually recommend Cloudflare over Route 53, BUT route 53 is much more customizable and route 53 can perfectly fit and combine with other AWS services.
 
 
 ## Practical part.
