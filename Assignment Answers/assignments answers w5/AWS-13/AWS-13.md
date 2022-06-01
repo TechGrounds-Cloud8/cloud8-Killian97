@@ -70,7 +70,13 @@ The key differences in these services is that cloudfront is purely focused on sp
 
 ### ***Route 53.***
 
-Route 53 is a highly scalable DNS web service, it has 3 main functions that you can use in any combination you want. These 3 are Domain registration, DNS routing and health checking.
+1. Route 53 is a highly scalable DNS web service, it has 3 main functions that you can use in any combination you want. These 3 are Domain registration, DNS routing and health checking. When you decide to use all three functions you do need to apply them in a certain order.
+    
+   1. Register Domain name.
+   2. Route internet traffic to the resources for your domain.
+   3. Check the health of your resources.
+
+
 
 
 ## Practical part.
