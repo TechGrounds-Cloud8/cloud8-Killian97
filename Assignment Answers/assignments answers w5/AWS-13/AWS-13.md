@@ -24,9 +24,7 @@ I will answer these 4 quesions for every subject:
 ### ***Elastic Beanstalk(EB).***
 
 1. Elastic beanstalk makes you able to launch, deploy and manage your applications in the AWS cloud without the needs to learn how the infrasctructure works and HOW the managing works. But it does not limit you to certain management decisions, you still have full control. For example you can deploy your newly made app and EB will handle the details of capacity provisioning, load balancing, scaling, and application health monitoring. This way you can focus a 100% on managing your app and your customers. EB makes managing your applications less complex. 
-2. There was no service like EB before. Before hand if you wanted to deploy your app you needed to learn how to manage it. How to build the infrastructure and how to manage and gather enough resources. Many times this would end up in under or over provisioning or not having enough focus on the app itself because manegement needs time, and most important it would cost alot of money. If you want to read about the history of EB itself i recommend you to go here: 
-
-[EB history](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history.html)
+2. There was no service like EB before. Before hand if you wanted to deploy your app you needed to learn how to manage it. How to build the infrastructure and how to manage and gather enough resources. Many times this would end up in under or over provisioning or not having enough focus on the app itself because manegement needs time, and most important it would cost alot of money. If you want to read about the history of EB itself i recommend you to go here: [EB history](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history.html)
 
 
 3. EB is connected to alot of other AWS services because it needs them. When you launch a new application, EB will launch an environment and gather/provide the resources it needs, for example you tell EB you want to launch a web application, EB will then provide an EC2 instance for you. This was EB automatically combines and used alot of different AWS resources, as a customer you dont need to worry about this because it happens automatically.
@@ -44,6 +42,7 @@ I will answer these 4 quesions for every subject:
 **Elastic Beanstalk VS CloudFormation:**
 Both services essentially have the same goal, deploying your applications. But they approach this very differently. EB is PaaS(platform as a service) and CF is IaC(infrastructure as code). The most important difference is that EB handles deployment and provisioning, so it makes it easier and more comfortable for you While CloudFormation needs alot of imput, So giving you alot of control. 
 ![EBvsCF](../../../00_includes/AWS-13/ebvscf.png)
+
 So what is EB good for?
 Beanstalk can be great for teams who dont have time and resources to invest in the cloud itself. EB is simply said the easier way
 CF will be good for? Teams who have the knowlegde about the cloud or when they really need full control. CF is simply said the harder way.
