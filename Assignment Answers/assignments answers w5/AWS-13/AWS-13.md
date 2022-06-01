@@ -1,7 +1,7 @@
 # Files app services, CDN, DNS & Database
 Study and try to apply: EB, Cloudfront, Route53, EFS and RDS/aurora.
 
-I will change my way of creating my answers from now on. Instead of having a key term part and a result part i will create a Theory block where i talk and explain theory parts and then i will also havea practical part. In the theory part i will answer the same questions for every subject and have a general piece of information. So basicly im changing the names but i want to restructure my answering a bit because the exercizes are also changing.
+I will change my way of creating my answers from now on. Instead of having a key term part and a result part i will create a Theory block where i talk and explain theory parts and then i will also have a practical part. In the theory part i will answer the same questions for every subject and have a general piece of information. So basicly im changing the names but i want to restructure my answering a bit because the exercizes are also changing.
 
 ### Sources
 1. Aurel my classmate.
