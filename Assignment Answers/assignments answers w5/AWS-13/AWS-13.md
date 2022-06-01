@@ -7,7 +7,7 @@ I will change my way of creating my answers from now on. Instead of having a key
 1. Aurel my classmate.
 2. [EB](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html)
 3. [ALTS](https://stackshare.io/aws-elastic-beanstalk/alternatives)
-4. [VS](https://www.justaftermidnight247.com/insights/cloudformation-vs-elastic-beanstalk-aws-paas-and-iac-services/#:~:text=Beanstalk%20is%20PaaS%20(platform%20as,has%20a%20lot%20to%20offer.)
+4. [VS](https://www.justaftermidnight247.com/insights/cloudformation-vs-elastic-beanstalk-aws-paas-and-iac-services/#:~:text=Beanstalk%20is%20PaaS%20(platform%20as,has%20a%20lot%20to%20offer.))
 5. [CloudfrontandS3](https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-s3-amazon-cloudfront-a-match-made-in-the-cloud/)
 6. [ALTS2](https://www.g2.com/products/amazon-cloudfront/competitors/alternatives)
 7. 
