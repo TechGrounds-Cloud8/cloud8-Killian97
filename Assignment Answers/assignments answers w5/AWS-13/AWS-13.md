@@ -8,6 +8,8 @@ I will change my way of creating my answers from now on. Instead of having a key
 2. [EB](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html)
 3. [ALTS](https://stackshare.io/aws-elastic-beanstalk/alternatives)
 4. [VS](https://www.justaftermidnight247.com/insights/cloudformation-vs-elastic-beanstalk-aws-paas-and-iac-services/#:~:text=Beanstalk%20is%20PaaS%20(platform%20as,has%20a%20lot%20to%20offer.)
+5. [CloudfrontandS3](https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-s3-amazon-cloudfront-a-match-made-in-the-cloud/)
+6. 
 
 ### Overcome challenges
 This was the first assignment in a new way of "learning" and doing the assignments so i was a bit nervous on how do it. But after talking with aurel we mostly agreed on how to tackle the new form of assigments.
@@ -26,8 +28,7 @@ I will answer these 4 quesions for every subject:
 1. Elastic beanstalk makes you able to launch, deploy and manage your applications in the AWS cloud without the needs to learn how the infrasctructure works and HOW the managing works. But it does not limit you to certain management decisions, you still have full control. For example you can deploy your newly made app and EB will handle the details of capacity provisioning, load balancing, scaling, and application health monitoring. This way you can focus a 100% on managing your app and your customers. EB makes managing your applications less complex. 
 2. There was no service like EB before. Before hand if you wanted to deploy your app you needed to learn how to manage it. How to build the infrastructure and how to manage and gather enough resources. Many times this would end up in under or over provisioning or not having enough focus on the app itself because manegement needs time, and most important it would cost alot of money. If you want to read about the history of EB itself i recommend you to go here: [EB history](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history.html)
 
-
-3. EB is connected to alot of other AWS services because it needs them. When you launch a new application, EB will launch an environment and gather/provide the resources it needs, for example you tell EB you want to launch a web application, EB will then provide an EC2 instance for you. This was EB automatically combines and used alot of different AWS resources, as a customer you dont need to worry about this because it happens automatically.
+3. EB is connected to alot of other AWS services because it needs/uses them. When you launch a new application, EB will launch an environment and gather/provide the resources it needs, for example you tell EB you want to launch a web application, EB will then provide an EC2 instance for you. This way EB automatically combines and uses alot of different AWS resources, as a customer you dont need to worry about this because it happens automatically.
 4. There are quiet some alternatives for EB, most not in AWS itself but some are. I will list the top 8 alternatives and explain 1 of the alternatives in AWS itself. 
 
    1. Google app engine.
@@ -49,7 +50,10 @@ CF will be good for? Teams who have the knowlegde about the cloud or when they r
   
 ### ***Cloudfront.***
 
-1. 
+1. Cloudfront is a service that peeds up distribution of your static and dynamic web content, For example html and css files. Cloudfront does this by using edge locations. When a user requests your HTML page and you serve it with cloudfront, that request will be routed to the nearest edge location, this way the user will have te shortest delivery time and the best performance. By using edge locations Cloudfront can be used globally and requests can be delivered globally in seconds. Cloudfront is a CDN(Content Delivery Network.)
+2. Before Cloudfront, Content needed to be stored locally. For example If you wanted your content that is stored in a S3 bucket to be delivered with the lowest latency as possible, it would mean that you needed to create a physical data center close to the user and store your content there aswell. Cloudfront is used to speed this all up. So before cloudfront you just needed to wait a little longer when surfing the WEB.
+3. Yes you can combine Cloudfront with other services. Cloudfront uses the backbone of the AWS network itself. One of the best combinations by AWS ever is Cloudfront + S3 buckets. This is because when you store your static web content in a S3 bucket you no longer need to worry about scaling, S3 does this for you. S3 is serverles, So no more worries about patching and updating. S3 gives you the option to use OAI(Origin Access Identity), so you can secure your content by creating acces restrictions. So when you combine S3 with the Cloudfront delivery you can have cheap, efficient, automatic and secure content delivery to your web users. AWS calls this: A match made in heaven.
+4. 
 
 
 
