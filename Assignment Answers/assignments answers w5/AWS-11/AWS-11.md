@@ -43,7 +43,7 @@ Below you can see i created a new instance.
 Below you can see i created a AMI from my instance.
 ![SS](../../../00_includes/AWS-11/AMI%20created.png)
 
-Below you can see my created Application.
+Below you can see my created Application load balancer.
 ![SS](../../../00_includes/AWS-11/ELBcreated.png)
 
 Below you can see i crated a template from my EC2 instance instead of a launch configuration because ive read that launch configs were outdated and could select templates or configs, i chose template.
