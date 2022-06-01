@@ -10,6 +10,7 @@ I will change my way of creating my answers from now on. Instead of having a key
 4. [VS](https://www.justaftermidnight247.com/insights/cloudformation-vs-elastic-beanstalk-aws-paas-and-iac-services/#:~:text=Beanstalk%20is%20PaaS%20(platform%20as,has%20a%20lot%20to%20offer.)
 5. [CloudfrontandS3](https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-s3-amazon-cloudfront-a-match-made-in-the-cloud/)
 6. [ALTS2](https://www.g2.com/products/amazon-cloudfront/competitors/alternatives)
+7. 
 
 ### Overcome challenges
 This was the first assignment in a new way of "learning" and doing the assignments so i was a bit nervous on how do it. But after talking with aurel we mostly agreed on how to tackle the new form of assigments.
@@ -55,7 +56,7 @@ CF will be good for? Teams who have the knowlegde about the cloud or when they r
 3. Yes you can combine Cloudfront with other services. Cloudfront uses the backbone of the AWS network itself. One of the best combinations by AWS ever is Cloudfront + S3 buckets. This is because when you store your static web content in a S3 bucket you no longer need to worry about scaling, S3 does this for you. S3 is serverles, So no more worries about patching and updating. S3 gives you the option to use OAI(Origin Access Identity), so you can secure your content by creating acces restrictions. So when you combine S3 with the Cloudfront delivery you can have cheap, efficient, automatic and secure content delivery to your web users. AWS calls this: A match made in heaven.
 4. AWS cloudfront has quiet some competitors, I will list some below and explain the differences from 1 of them.
 
-    - Cloudflare CDN
+    - Cloudflare CDN (I will compare this one to Cloudfront)
     - Fastly
     - Azure CDN
     - Varnish Software
@@ -64,9 +65,12 @@ CF will be good for? Teams who have the knowlegde about the cloud or when they r
     - Sucuri
     - Akamai
 
+**Cloudfront VS CloudFlare:**
+The key differences in these services is that cloudfront is purely focused on speeding up content delivery while cloudflare also offers DDos protection and a WAF. Another big and important difference is that Cloudflare works like a DNS for your website while cloudfront works directly with your network so it can deliver content instantly.
 
+### ***Route 53.***
 
-
+Route 53 is a highly scalable DNS web service, it has 3 main functions that you can use in any combination you want. These 3 are Domain registration, DNS routing and health checking.
 
 
 ## Practical part.
