@@ -46,7 +46,7 @@ Below you can see i created a AMI from my instance.
 Below you can see my created Application load balancer.
 ![SS](../../../00_includes/AWS-11/ELBcreated.png)
 
-Below you can see i crated a template from my EC2 instance instead of a launch configuration because ive read that launch configs were outdated and could select templates or configs, i chose template.
+Below you can see i created a template from my EC2 instance instead of a launch configuration because ive read that launch configs were outdated and could select templates or configs, i chose template.
 ![SS](../../../00_includes/AWS-11/temp.png)
 
 Below you can see i succesfully created a auto scaling group with the template.
