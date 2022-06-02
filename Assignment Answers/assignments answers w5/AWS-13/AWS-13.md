@@ -140,6 +140,15 @@ Amazon Aurora (Aurora) is a fully managed relational database engine that's comp
 Below you can see i am creating a EFS.
 ![SS](../../../00_includes/AWS-13/EFScreate.png)
 
+Below you can see i add my EFS to my EC2 instance while creating my EC2 instance.
+![SS](../../../00_includes/AWS-13/ec2efs.png)
+
+Below you can see the automatically filled in user data to create a mountpoint and mount me new EFS.
+![SS](../../../00_includes/AWS-13/ec2usrdata.png)
+
+Below i connect to my new ec2 instance called AWS13.1 with a SSH connection and a key pair.
+![SS](../../../00_includes/AWS-13/aws13.1%20connect.png)
+
 
 
 ### Results
