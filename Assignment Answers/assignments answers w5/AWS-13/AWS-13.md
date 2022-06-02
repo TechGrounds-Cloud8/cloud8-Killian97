@@ -149,11 +149,9 @@ Below you can see the automatically filled in user data to create a mountpoint a
 Below i connect to my new ec2 instance called AWS13.1 with a SSH connection and a key pair.
 ![SS](../../../00_includes/AWS-13/aws13.1%20connect.png)
 
+Below you can see i have fount my automatically created mountpoint and that i have checked if the mounting was succesfully with the DF command, next i accesed my EFS and created a text file.
+![SS](../../../00_includes/AWS-13/newmount.png)
 
-
-
-
-
-
-### Results
+Below you can see ive connected to my newly created EC2 instance, where i attacked the same EFS and mounted it automatically. Because all of this worked succesfully you can see my text file created on EC2(a) is accesable and visible at EC2(b).
+![SS](../../../00_includes/AWS-13/efsworks.png)
 
