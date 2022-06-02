@@ -10,7 +10,9 @@ I will change my way of creating my answers from now on. Instead of having a key
 4. [VS](https://www.justaftermidnight247.com/insights/cloudformation-vs-elastic-beanstalk-aws-paas-and-iac-services/#:~:text=Beanstalk%20is%20PaaS%20(platform%20as,has%20a%20lot%20to%20offer.))
 5. [CloudfrontandS3](https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-s3-amazon-cloudfront-a-match-made-in-the-cloud/)
 6. [ALTS2](https://www.g2.com/products/amazon-cloudfront/competitors/alternatives)
-7. 
+7. [EFS](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html)
+8. [EFSint](https://aws.amazon.com/blogs/storage/easy-to-use-amazon-efs-integrations-with-aws-compute-services/)
+9. [EFSvsS3](https://www.justaftermidnight247.com/insights/ebs-efs-and-s3-when-to-use-awss-three-storage-solutions/)
 
 ### Overcome challenges
 This was the first assignment in a new way of "learning" and doing the assignments so i was a bit nervous on how do it. But after talking with aurel we mostly agreed on how to tackle the new form of assigments.
@@ -93,6 +95,27 @@ One example for monitoring is Route 53 + Cloudwatch. You can use cloudwatch to m
 
 **Route 53 VS CloudFlare DNS:** I think the biggest but also most important difference is that in times of failures and errors both services handle it very differently, or better said, 1 does not handle it at all. For example, your server goes down, Cloudflare DNS will keep redirecting users to it anyway. But route 53 wont, route 53 will redirect them to a different working server until the issue has been solved. Also Cloudflare is highly focused on speed and from what i have read, i can believe that they are also VERY good at that. and they also have privacy high in their priority list, for example they dont log your IP adress. Most of the neutral recommendations i have read actually recommend Cloudflare over Route 53, BUT route 53 is much more customizable and route 53 can perfectly fit and combine with other AWS services.
 
+### ***Amazon Elastic File System(EFS).***
+
+1. AWS EFS provides an easy to work with, serverless elastic file system for other AWS Services like EC2 and Lambda. EFS is created to scale on demand to petabytes(1000TB) without disrupting applications, like alot of other AWS services EFS takes away the needs from you for provisioning and capacity managing. EFS is easy to use because EFS has a simple web services interface that allows you to create and configure file systems quickly and easily. EFS also takes infrastructure management out of your hands by managing the entire file storage infrastructure for you. Another great feauture about EFS is that multiple instances can acces EFS file systems at the same time. Multiple EC2 and Lambda instances could acces the same EFS and therefor having a common data source for workloads. The 3 big USP's from EFS are: High scalability, High durability and High Availability. EFS also has multiple storage classes with: EFS Standard, EFS Standard–Infrequent Access (Standard-IA), EFS One Zone, and EFS One Zone–Infrequent Access (EFS One Zone-IA).
+
+![SS](../../../00_includes/AWS-13/stor%20class.png)
+
+2. Before EFS there no such thing similar to it. Everyone needed todo it manually. Manually make sure you had enough capacity and create more or less. Manually provide the resources and manually do all the management. Sounds like quiet alot of work to me now i can see how easy AWS makes everything.
+3. Yes you can combine EFS with other services, EFS basicly is created to work with other services. AWS is making it easier and easier to integrate their services with eachother. In a recent update AWS made it possible that you can launch a new EC2 instance and in your EC2 console you can create and attach it to your EC2 instance.
+4. There are alot of alternatives for EFS, also inside AWS itself, i will list 8 below and talk about 1 of them.
+    - Dropbox
+    - Cloudapp
+    - Google Cloud Filestorage
+    - LucidLink Filespaces
+    - Filerobot
+    - Vchasno
+    - AWS S3 (i will explain the differences for this one)
+    - AWS EBS
+
+**AWS EFS VS AWS S3:** Both Services have similar foundations but very different use cases, so usually you can decide wich one you want or need by establishing your needs and understanding in wich situations either S3 or EFS works best. So when should you use EFS? EFS is a good option when you need a shared file storage with auto high-performing scaling. Content management systems benefit from this higly because of the autoscaling, and also app development benefits highly because EFS is ideal for code and media file storage. So why use S3? S3 has an archiving system so when you need to store long term data like reports and records S3 will store this for you at a way lower cost then EFS. S3 can also handle data on which complex queries may be run. So S3 is useful for data related to customer purchases, behaviour or profiles, because that data can be easily queried and fed into analytics tools. S3 is also great for back ups and restoration as it can be combined with AWS glacier.
+
+### ***.***
 
 ## Practical part.
 
