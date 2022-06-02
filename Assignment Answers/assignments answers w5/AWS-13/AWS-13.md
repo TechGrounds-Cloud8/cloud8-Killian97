@@ -13,9 +13,13 @@ I will change my way of creating my answers from now on. Instead of having a key
 7. [EFS](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html)
 8. [EFSint](https://aws.amazon.com/blogs/storage/easy-to-use-amazon-efs-integrations-with-aws-compute-services/)
 9. [EFSvsS3](https://www.justaftermidnight247.com/insights/ebs-efs-and-s3-when-to-use-awss-three-storage-solutions/)
+10. [RDS]https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
+11. [Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)
+12. [EFStut](https://docs.aws.amazon.com/efs/latest/ug/gs-step-two-create-efs-resources.html)
 
 ### Overcome challenges
 This was the first assignment in a new way of "learning" and doing the assignments so i was a bit nervous on how do it. But after talking with aurel we mostly agreed on how to tackle the new form of assigments.
+Also lots and lots of things to read, learn and remember. And hard to decide what i should really learn and what i should let go of for now.
 
 ## Theoretical part.
 
@@ -115,9 +119,26 @@ One example for monitoring is Route 53 + Cloudwatch. You can use cloudwatch to m
 
 **AWS EFS VS AWS S3:** Both Services have similar foundations but very different use cases, so usually you can decide wich one you want or need by establishing your needs and understanding in wich situations either S3 or EFS works best. So when should you use EFS? EFS is a good option when you need a shared file storage with auto high-performing scaling. Content management systems benefit from this higly because of the autoscaling, and also app development benefits highly because EFS is ideal for code and media file storage. So why use S3? S3 has an archiving system so when you need to store long term data like reports and records S3 will store this for you at a way lower cost then EFS. S3 can also handle data on which complex queries may be run. So S3 is useful for data related to customer purchases, behaviour or profiles, because that data can be easily queried and fed into analytics tools. S3 is also great for back ups and restoration as it can be combined with AWS glacier.
 
-### ***.***
+### ***AWS RDS(Relational Database Service):***
+
+1. Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud. It provides cost-efficient, resizable capacity for an industry-standard relational database and manages common database administration tasks.
+
+2. Like most other services in my assignment there was nothing before AWS RDS, before RDS you simply needed to host, manage, create and scale your own database. You would problably use MySQL and i think alot of people still use MySQL
+
+3. Yes you can combine RDS with other instances as most AWS services can be used with eachother. But i dont think you really combine RDS with other services. When you need a DB and you work with AWS you "will" use RDS but you would still problably use EC2 at the same time, or S3 or other services. This is because i think most application dont just need a database but also other things, for example a webshop, probably you will use EFS for the shop itself but a EFS DB to store customer account details. But there are other AWS services that could be considered to be combined and one of those services is AWS Aurora, i will explain a bit about aurora later. I said could be considered because Aurora is an option for RDS as a DB engine, just like MY]ySQL and PostgreSQL. Since it is already inside RDS i dont think it is combining.
+
+4. In AWS it self there is already a big question when you migrate your apps from on-premise to AWS. Should i use EC2 or RDS to host my database. I can explain why but i can also just share 1 table with you about the DB management and you will instantly understand why you should almost always pick RDS over EC2, (this does not mean you should not use EC2).
+
+![SS](../../../00_includes/AWS-13/ec2vsrds.png)
+
+### What is AWS Aurora?
+
+Amazon Aurora (Aurora) is a fully managed relational database engine that's compatible with MySQL and PostgreSQL. Aurora includes a high-performance storage subsystem. Its MySQL- and PostgreSQL-compatible database engines are customized to take advantage of that fast distributed storage. The underlying storage grows automatically as needed. An Aurora cluster volume can grow to a maximum size of 128 tebibytes. Aurora also automates and standardizes database clustering and replication, which are typically among the most challenging aspects of database configuration and administration. Aurora takes advantage of the AWS RDS features for management and administration. Aurora uses the Amazon RDS AWS Management Console interface, AWS CLI commands, and API operations to handle routine database tasks such as provisioning, patching, backup, recovery, failure detection, and repair.
 
 ## Practical part.
+
+Below you can see i am creating a EFS.
+![SS](../../../00_includes/AWS-13/EFScreate.png)
 
 
 
