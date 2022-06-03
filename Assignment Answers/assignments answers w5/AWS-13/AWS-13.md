@@ -135,8 +135,9 @@ One example for monitoring is Route 53 + Cloudwatch. You can use cloudwatch to m
 
 Amazon Aurora (Aurora) is a fully managed relational database engine that's compatible with MySQL and PostgreSQL. Aurora includes a high-performance storage subsystem. Its MySQL- and PostgreSQL-compatible database engines are customized to take advantage of that fast distributed storage. The underlying storage grows automatically as needed. An Aurora cluster volume can grow to a maximum size of 128 tebibytes. Aurora also automates and standardizes database clustering and replication, which are typically among the most challenging aspects of database configuration and administration. Aurora takes advantage of the AWS RDS features for management and administration. Aurora uses the Amazon RDS AWS Management Console interface, AWS CLI commands, and API operations to handle routine database tasks such as provisioning, patching, backup, recovery, failure detection, and repair.
 
-## Practical part.
+## Practical Results.
 
+## ***EFS***
 Below you can see i am creating a EFS.
 ![SS](../../../00_includes/AWS-13/EFScreate.png)
 
@@ -155,3 +156,21 @@ Below you can see i have fount my automatically created mountpoint and that i ha
 Below you can see ive connected to my newly created EC2 instance, where i attacked the same EFS and mounted it automatically. Because all of this worked succesfully you can see my text file created on EC2(a) is accesable and visible at EC2(b).
 ![SS](../../../00_includes/AWS-13/efsworks.png)
 
+## ***RDS and Aurora***
+
+What i tried todo was creating a RDS DB with aurora MySQL engine and afterwards somehow trying to connect to it. I found out i could use MySQl Workbench for it.
+
+Below you can see i created my RDS DB succesfully. In the screenshot you can also see the endpoints to connect to.
+![SS](../../../00_includes/AWS-13/awsaurcreated.png)
+
+Below you can see me trying to establish a connection by using the write instance endpoint. For this i select TCP and port 3306 as i specified those details why creating my RDS DB
+![SS](../../../00_includes/AWS-13/logintry.png)
+
+Below you can see my secure login settings worked as it asks for a password before i get acces.
+![SS](../../../00_includes/AWS-13/password.png)
+
+Below you can see im connected to by DB instance succesfully from my laptop, outside the VPC where the instance is in. This means my DB is public. The Host name you see starting with 84. is my public IP adress.
+![SS](../../../00_includes/AWS-13/suc6connect.png)
+
+Below you can see another IP adress connected to by RDS DB, this is my classmate Ben on his PC. This means my DB is succesfully accesible for public.
+![SS](../../../00_includes/AWS-13/benconnect.png)
