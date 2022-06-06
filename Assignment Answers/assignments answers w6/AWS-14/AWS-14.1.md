@@ -3,7 +3,7 @@ Study ECS
 
 
 ### Sources
-1. Aurel my classmate
+1. Aurel and Ben my classmates
 2. [Container](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_instances.html)
 3. [ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
 4. [Task defs](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
