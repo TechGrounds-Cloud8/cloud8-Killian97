@@ -9,7 +9,7 @@ Study ECS
 4. [Task defs](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
 
 ### Overcome challenges
-Lots of stress in the start because of little time for 10 subjects this week.
+Lots of stress in the start because of little time for 10 subjects this week. Getting confused about AKS EKS ECS alot, the shortages are starting to become 1 for me.
 
 ## Key terms
 
