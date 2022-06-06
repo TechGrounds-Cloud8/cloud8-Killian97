@@ -3,21 +3,14 @@ Study AWS Cloud Trail
 
 
 ### Sources
-1. Aurel my classmate
+1. [Cloudtrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
 
 ### Overcome challenges
-
+None really, just alot of reading again.
 
 
 
 ## Theoretical part.
-
-I will answer these 4 quesions for every subjecect:
-  
-  1. What is "subject" for?
-  2. What does "subject" replace compared to how it was done before?
-  3. Can i and how to combine "subject" with other services?
-  4. What is the difference between "subject" and other similar services. 
 
 
 
