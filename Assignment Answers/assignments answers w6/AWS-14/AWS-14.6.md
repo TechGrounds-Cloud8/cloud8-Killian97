@@ -49,15 +49,29 @@ AWS IAM and AWS Security Token Service (AWS STS) are features of your AWS accoun
 ## Exercise
 ### Sources
 1. [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
-2. 
+2. Aurel and Ben my classmates for practical brainstorm ideas.
 
 
 ### Overcome challenges
-
+Not much, IAM is security and my intrest is high in security so i knew a bit about IAM already.
 
 
 ### Practical Results
 
+As a practical assignment i am going to try to create 2 different groups with both 1 newly created IAM user. 1 group will have FULL acces to AWS so like a ADMIN, and the 2nd group will have 0 permissions.
+
+Below you can see i am creating the group ADMIN, and that i give it 1 policy, that policy is full acces to everything.
+![SS](../../../00_includes/AWS-14.6/new%20group.png)
+
+Below you can see i am creating 2 new users both with accessable with a password.
+![SS](../../../00_includes/AWS-14.6/newusers.png)
+
+Below you can see i added the 2 new users to the 2 created groups.
+![SS](../../../00_includes/AWS-14.6/groupadd.png)
+
+Lastly you can see that my ADMIN user has full acces to everything and that my Not-Admin user has 0 acces anything.
+![SS](../../../00_includes/AWS-14.6/adminuser.png)
+![SS](../../../00_includes/AWS-14.6/notadminuser.png)
 
 
 
