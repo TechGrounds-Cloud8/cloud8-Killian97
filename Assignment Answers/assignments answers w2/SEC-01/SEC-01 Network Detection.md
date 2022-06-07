@@ -1,4 +1,4 @@
-# Network Detenction
+# Network Detection
 Learn how to use the basics of NMAP and use wireshark to find your browser communication
 
 ## Key terminology
