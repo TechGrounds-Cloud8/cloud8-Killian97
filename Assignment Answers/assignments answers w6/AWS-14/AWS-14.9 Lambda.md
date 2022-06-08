@@ -30,6 +30,15 @@ As a practical test i am simple going to try to make Lambda run a 'hello world' 
 Below you can see me in the process of making a very default function.
 ![SS](../../../00_includes/AWS-14.9/helworld.png)
 
+Below you can see the script inside my function, my script tries to get a response van a value specified in a event.
+![SS](../../../00_includes/AWS-14.9/jsfucntion.png)
+
+Below you can see the event.
+![SS](../../../00_includes/AWS-14.9/test%20event.png)
+
+Below you can see the test results.
+![SS](../../../00_includes/AWS-14.9/testresults.png)
+
 
 
 
