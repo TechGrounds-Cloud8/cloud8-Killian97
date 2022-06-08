@@ -30,7 +30,7 @@ Below you can see i created a new Cloudwatch Dashboard.
 Below here you can see that i can add a Widget and when i do that i can select what type of widget i want. I am kinda amazed by how many options there are.
 ![SS](../../../00_includes/AWS-14.7/widget.png)
 
-Below you can see me that i created a new EC2 instance and that i started a load test on it. Then i checked my newly created EC2 Cloudwatch widget and you can see the CPU spiking hard.
+Below you can see that i created a new EC2 instance and that i started a load test on it. Then i checked my newly created EC2 Cloudwatch widget and you can see the CPU spiking hard.
 ![SS](../../../00_includes/AWS-14.7/monitorec2.png)
 
 
