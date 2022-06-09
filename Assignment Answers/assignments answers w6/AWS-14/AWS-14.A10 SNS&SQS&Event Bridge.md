@@ -105,3 +105,18 @@ Lastly you can see that it worked succesfully and that i recieved the message wi
 
 
 ## Event bridge results.
+
+I am going to try to use a event bridge to trigger a event rule that will send a message with SNS to a SQS queue when i upload a foto to a S3 bucket. I have already made a S3 bucket, a SNS topic and a SQS queue so i will not show the creation of those.
+
+Below you can see me creating a EB rule.
+![SS](/00_includes/AWS-14.10/rule1.png)
+![SS](/00_includes/AWS-14.10/rule2.png)
+![SS](/00_includes/AWS-14.10/rule%203.png)
+![SS](/00_includes/AWS-14.10/rule4.png)
+![SS](/00_includes/AWS-14.10/rule5.png)
+
+Below you can see me uploading a picture to my S3 bucket.
+![SS](/00_includes/AWS-14.10/uploadfotos3.png)
+
+And lastly you can see that i succesfully recieved a msg on my SQS trough SNS because a event rule triggered.
+![SS](/00_includes/AWS-14.10/s3msgrecieved.png)
