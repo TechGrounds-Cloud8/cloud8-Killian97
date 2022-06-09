@@ -104,8 +104,4 @@ Lastly you can see that it worked succesfully and that i recieved the message wi
 ![SS](/00_includes/AWS-14.10/snsmsgrdy.png)
 
 
-
-
-
-
-
+## Event bridge results.
