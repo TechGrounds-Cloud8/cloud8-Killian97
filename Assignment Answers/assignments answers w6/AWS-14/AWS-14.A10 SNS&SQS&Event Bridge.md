@@ -28,6 +28,8 @@ Below you can see Pub/Sub, SMS and Mobile push and how it works, for me these pi
     - Amazon EC2 Auto Scaling generates events when it launches or terminates instances.
     - AWS CloudTrail publishes events when you make API calls.
 
+![SS](../../../00_includes/AWS-14.10/evbridge.png)
+
 
 
 
@@ -54,7 +56,7 @@ I was very very confused about how deep to go on these 3 subjects, and got insec
 Below you can see me creating my Topic for my SNS.
 ![SS](../../../00_includes/AWS-14.10/topic.png)
 
-Below you can see me subcribing to the topic i created above and that the endpoint will be me(a user) trough email/
+Below you can see me subcribing to the topic i created above and that the endpoint will be me(a user) trough email.
 ![SS](../../../00_includes/AWS-14.10/create%20sub.png)
 
 Below you can see the endpoint was correct and that i confirmed my subscription.
@@ -64,6 +66,20 @@ Below you can see the endpoint was correct and that i confirmed my subscription.
 Below you can see i published a message in the topic and that i received the message because i am subbed to the topic.
 ![SS](../../../00_includes/AWS-14.10/publishmsg.png)
 ![SS](../../../00_includes/AWS-14.10/msg%20recieved.png)
+
+
+## SQS Result.
+
+I will try to send a test message with SQS and also recieve it with SQS.
+
+Below you can see me creating a default SQS queue.
+![SS](/00_includes/AWS-14.10/makeq.png)
+![SS](/00_includes/AWS-14.10/makeq2.png)
+
+Below you can see me sending a message to my SQS.
+![SS](/00_includes/AWS-14.10/sqsmsg.png)
+
+
 
 
 
