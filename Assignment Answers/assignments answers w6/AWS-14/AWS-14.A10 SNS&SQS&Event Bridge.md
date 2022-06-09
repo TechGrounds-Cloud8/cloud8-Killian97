@@ -79,6 +79,29 @@ Below you can see me creating a default SQS queue.
 Below you can see me sending a message to my SQS.
 ![SS](/00_includes/AWS-14.10/sqsmsg.png)
 
+Below you can see that i have send 2 messages and that they are ready to be received.
+![SS](/00_includes/AWS-14.10/msgready.png)
+
+Below you can see i have succesfully received my message.
+![SS](/00_includes/AWS-14.10/msgreceived.png)
+
+## ***Next i will try to connect a SNS topic with a SQS queue as a end point. So i will send a msg with SNS and SQS will recieve it.***
+
+Below you can see me creating a fifo sns topic.
+![SS](/00_includes/AWS-14.10/SNSSQS.png)
+
+Then you can see me creating the Fifo SQS queue.
+![SS](/00_includes/AWS-14.10/newsqsforsns.png)
+
+Next you can mee see subscribing to my SNS topic with my SQS queue.
+![SS](/00_includes/AWS-14.10/subtosns.png)
+
+Here you can see me sending a message with SNS.
+![SS](/00_includes/AWS-14.10/snsmsg2.png)
+![SS](/00_includes/AWS-14.10/snsmsg3.png)
+
+Lastly you can see that it worked succesfully and that i recieved the message with my SQS queue.
+![SS](/00_includes/AWS-14.10/snsmsgrdy.png)
 
 
 
