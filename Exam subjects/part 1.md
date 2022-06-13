@@ -72,8 +72,8 @@
 
 - ***Outposts:*** is a fully managed service that extends AWS infrastructure, services, APIs, and tools to customer premises. By providing local access to AWS managed infrastructure, AWS Outposts enables customers to build and run applications on premises using the same programming interfaces as in AWS Regions, while using local compute and storage resources for lower latency and local data processing needs. AKA aws brings it to the customer.
 
-- ***Workspaces:*** An Amazon WorkSpace is a cloud-based virtual desktop that can act as a replacement for a traditional desktop.
+- ***Amazon Workspace:*** is a cloud-based virtual desktop that can act as a replacement for a traditional desktop.
 
-- ***Direct connect:***
+- ***Direct connect:*** links your internal network to an AWS Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router. With this connection, you can create virtual interfaces directly to public AWS services (for example, to Amazon S3) or to Amazon VPC, bypassing internet service providers in your network path.
 
 - ***All pillars of “well architected framework”:***
