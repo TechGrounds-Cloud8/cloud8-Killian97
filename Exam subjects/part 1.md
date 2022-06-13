@@ -60,19 +60,19 @@
 - ***Responsibility model:*** 
 ![SS](/00_includes/Prep%20exam%20examples/respondmodel.png)
 
-- ***Code commit:***
+- ***Code commit:*** alternative for GITHUB
 
-- ***Code deploy:***
+- ***Code deploy:***  is a deployment service that automates application deployments to Amazon EC2 instances, on-premises instances, serverless Lambda functions, or Amazon ECS services.
 
-- ***Cloudtrail:***
+- ***Cloudtrail:*** is an AWS service that helps you enable governance, compliance, and operational and risk auditing of your AWS account. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. 
 
-- ***AWS cost management tools:***
+- ***AWS cost management console:*** The AWS Cost Management console is integrated closely with the Billing console. Using both together, you can manage your costs in a holistic manner. You can use Billing console resources to manage your ongoing payments, and AWS Cost Management console resources to optimize your future costs.
 
-- ***Access keys:***
+- ***Access keys:***  are long-term credentials for an IAM user or the AWS account root user. You can use access keys to sign programmatic requests to the AWS CLI or AWS API (directly or using the AWS SDK).
 
-- ***Outposts:*** 
+- ***Outposts:*** is a fully managed service that extends AWS infrastructure, services, APIs, and tools to customer premises. By providing local access to AWS managed infrastructure, AWS Outposts enables customers to build and run applications on premises using the same programming interfaces as in AWS Regions, while using local compute and storage resources for lower latency and local data processing needs. AKA aws brings it to the customer.
 
-- ***Workspaces:***
+- ***Workspaces:*** An Amazon WorkSpace is a cloud-based virtual desktop that can act as a replacement for a traditional desktop.
 
 - ***Direct connect:***
 
