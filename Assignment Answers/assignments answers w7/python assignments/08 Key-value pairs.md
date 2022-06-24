@@ -1,5 +1,5 @@
-# Variables
-Use variables
+# Key-value pairs
+Study
 i already have programming experience so i will keep these starting assignments short.
 
 ## Key terminology
