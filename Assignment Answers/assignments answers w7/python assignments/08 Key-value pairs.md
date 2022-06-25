@@ -26,5 +26,9 @@ Ik probeer alles zonder hulp te doen, puur op knowlegde. en dat maakt het wat mo
 ![SS](/00_includes/python%20pics%205%2C6%2C7%2C8/key2.png)
 
 ***Exercise 2.5:*** Write the information to a csv file (comma-separated values). The data should not be overwritten when you run the script multiple times.
-![SS]
+![SS](/00_includes/python%20pics%205%2C6%2C7%2C8/key3.png)
+![SS](/00_includes/python%20pics%205%2C6%2C7%2C8/key4.png)
+
+Below you can see CSV files can be read in Excel.
+![SS](/00_includes/python%20pics%205%2C6%2C7%2C8/key5.png)
 
