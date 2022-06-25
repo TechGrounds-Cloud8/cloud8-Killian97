@@ -9,8 +9,10 @@ i already have programming experience so i will keep these starting assignments 
 
 ## Exercise
 ### Sources
-1. W3schools
+1. Youtube 
 2. dingen proberen uit older knowledge
+3. ***Ben*** :heart: my classmate
+4. [Fstring](https://realpython.com/python-f-strings/)
 
 ### Overcome challenges
 Ik probeer alles zonder hulp te doen, puur op knowlegde. en dat maakt het wat moeilijker maar leuker
