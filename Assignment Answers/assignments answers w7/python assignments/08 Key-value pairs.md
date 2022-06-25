@@ -11,11 +11,13 @@ i already have programming experience so i will keep these starting assignments 
 ### Sources
 1. Youtube 
 2. dingen proberen uit older knowledge
-3. ***Ben*** :heart: my classmate
+3. ***Ben*** :100: my classmate
 4. [Fstring](https://realpython.com/python-f-strings/)
 
 ### Overcome challenges
 Ik probeer alles zonder hulp te doen, puur op knowlegde. en dat maakt het wat moeilijker maar leuker
 
 ### Results
-1. 
+
+***Exercise 1:*** Create a dictionary and Loop over the dictionary and print every key-value pair in the terminal.
+![SS](/00_includes/python%20pics%205%2C6%2C7%2C8/key1.png)
