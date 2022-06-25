@@ -9,9 +9,8 @@ i already have programming experience so i will keep these starting assignments 
 
 ## Exercise
 ### Sources
-1. Youtube 
+1. W3schools
 2. dingen proberen uit older knowledge
-3. Aurel my classmate
 
 ### Overcome challenges
 Ik probeer alles zonder hulp te doen, puur op knowlegde. en dat maakt het wat moeilijker maar leuker

@@ -18,4 +18,4 @@ Ik probeer alles zonder hulp te doen, puur op knowlegde. en dat maakt het wat mo
 
 ### Results
 1. Here you can see that my hello world script works.
-![SS](/00_includes/python1/pyhelloworld.png)
+![SS](/00_includes/python%20pics%201%2C2%2C3%2C4/pyhelloworld.png)

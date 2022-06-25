@@ -18,11 +18,12 @@ Ik probeer alles zonder hulp te doen, puur op knowlegde. en dat maakt het wat mo
 ### Results
 
 ***Exercise 1:*** The scripts comments will explain the exersize.
-![SS](/00_includes/python%20pics/datatype1.png) 
+![SS](/00_includes/python%20pics%201%2C2%2C3%2C4/datatype1.png)
+![SS](/00_includes/python%20pics%201%2C2%2C3%2C4/datatype2.png)
 
 ***Exercise 2:*** Use input to edit variable values.
-![SS](/00_includes/python%20pics/variables2%263.png)
+![SS](/00_includes/python%20pics%201%2C2%2C3%2C4/variables2%263.png)
 
 ***Exercise 2.5:*** Find out what data type the output of input() is. See if it is different for different kinds of input (numbers, words, etc.).
-![SS](/00_includes/python%20pics/datatype3.png)
+![SS](/00_includes/python%20pics%201%2C2%2C3%2C4/datatype3.png)
 
