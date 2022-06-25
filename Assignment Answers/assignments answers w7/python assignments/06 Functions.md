@@ -25,5 +25,6 @@ Rewrite your function so that it takes a string as an argument.
 ![SS](/00_includes/python%20pics%205%2C6%2C7%2C8/function2.png)
 
 ***Exercise 2:*** Copy the example code below into your script. and Write the custom function avg() so that it returns the average of the given parameters.
-![SS]
+![SS](/00_includes/python%20pics%205%2C6%2C7%2C8/function3.png)
+
 
