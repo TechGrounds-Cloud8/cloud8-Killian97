@@ -26,4 +26,3 @@ Ik probeer alles zonder hulp te doen, puur op knowlegde. en dat maakt het wat mo
 
 Ben showed me another way todo exercise 2.
 ![SS](/00_includes/python%20pics%205%2C6%2C7%2C8/condition4.png)
-
