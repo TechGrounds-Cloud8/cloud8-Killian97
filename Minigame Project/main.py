@@ -13,7 +13,7 @@ from game import Game
 pygame.init()
 
 # Create window and define Size
-screen = pygame.display.set_mode((600,400))
+screen = pygame.display.set_mode((config.SCREEN_WIDTH, config.SCREEN_HEIGHT))
 
 # Give title to window
 pygame.display.set_caption("Pokemon")
@@ -21,7 +21,7 @@ pygame.display.set_caption("Pokemon")
 # set var for framerate
 clock = pygame.time.Clock()
 
-# game var is equal to the Class "Game" on screen
+# game var is equal to the Class "Game" on screens
 game = Game(screen)
 
 # sets up the game and the screen
