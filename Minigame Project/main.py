@@ -9,6 +9,8 @@ from game_state import GameState
 # import class Game from game.py
 from game import Game
 
+from menu import Menu
+
 # Initialize pygame
 pygame.init()
 
@@ -25,13 +27,21 @@ clock = pygame.time.Clock()
 game = Game(screen)
 
 # sets up the game and the screen
-game.set_up()
+# game.set_up()
+
+menu = Menu(screen, game)
+menu.set_up()
 
 # allows the game to be running and also quitting
-while game.game_state == GameState.RUNNING:
+while game.game_state != GameState.ENDED:
     # set framerate
     clock.tick(50)
-    # update the screen
-    game.update()
+    
+    if game.game_state == GameState.NONE:
+        menu.update()
+    
+    if game.game_state == GameState.RUNNING:    
+        game.update()
+    
     # Update the full display Surface to the screen
-    pygame.display.flip()  
+    pygame.display.flip()
