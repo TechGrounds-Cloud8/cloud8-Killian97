@@ -21,7 +21,7 @@ pygame.display.set_caption("Pokemon")
 # set var for framerate
 clock = pygame.time.Clock()
 
-# game var is equal to the Class "Game" on screens
+# game var is equal to the Class "Game" on screen
 game = Game(screen)
 
 # sets up the game and the screen
