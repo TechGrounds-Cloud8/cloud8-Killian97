@@ -6,7 +6,7 @@ import math
 import utilities
 
 from player import Player
-from game_state import GameState
+from game_state import GameState, CurrentGameState
 from monsterfactory import MonsterFactory
 from game_view.map import Map
 
@@ -15,6 +15,7 @@ class Game:
         self.screen = screen
         self.objects = []
         self.game_state = GameState.NONE
+        self.current_game_state = CurrentGameState.MAP
         self.player_has_moved = False
         self.monster_factory = MonsterFactory()
         self.map = Map(screen)
@@ -29,15 +30,18 @@ class Game:
         self.map.load("01")
     
     def update(self):
-        self.player_has_moved = False
-        self.screen.fill(config.BLACK)
-        # print("update")
-        self.handle_events()
+        if self.current_game_state == CurrentGameState.MAP:
+            self.player_has_moved = False
+            self.screen.fill(config.BLACK)
+            # print("update")
+            self.handle_events()
 
-        self.map.render(self.screen, self.player, self.objects)
-        
-        if self.player_has_moved:
-            self.determine_game_events()
+            self.map.render(self.screen, self.player, self.objects)
+            
+            if self.player_has_moved:
+                self.determine_game_events()
+        elif self.current_game_state == CurrentGameState.BATTLE:
+            self.battle.update()
         
     def determine_game_events(self):
         map_tile = self.map.map_array[self.player.position[1]][self.player.position[0]]
