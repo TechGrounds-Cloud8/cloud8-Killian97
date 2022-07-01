@@ -14,10 +14,10 @@ class Game:
         self.screen = screen
         self.objects = []
         self.game_state = GameState.NONE
-        self.map = []
         self.camera = [0, 0]
         self.player_has_moved = False
         self.monster_factory = MonsterFactory()
+        self.map = Map(screen)
 
     def set_up(self):
         player = Player(1, 1)
@@ -26,7 +26,7 @@ class Game:
         print("Havefun!!!")
         self.game_state = GameState.RUNNING
 
-        self.load_map("01")
+        self.map.load_map("01")
     
     def update(self):
         self.player_has_moved = False
@@ -34,7 +34,7 @@ class Game:
         # print("update")
         self.handle_events()
 
-        self.render_map(self.screen)
+        self.map.render_map(self.screen)
 
         for object in self.objects:
             object.render(self.screen, self.camera)
@@ -43,7 +43,7 @@ class Game:
             self.determine_game_events()
         
     def determine_game_events(self):
-        map_tile = self.map[self.player.position[1]][self.player.position[0]]
+        map_tile = self.map_array[self.player.position[1]][self.player.position[0]]
         print(map_tile)
 
         if map_tile == config.MAP_TILE_ROADNORTH:
@@ -105,62 +105,25 @@ class Game:
                     self.move_unit(self.player, [0, 1])
                 elif event.key == pygame.K_d: # right
                     self.move_unit(self.player, [1, 0])
-    
-    # open and read the map file (01.txt)
-    def load_map(self, file_name):
-        with open('C:/Users/Lenovo/Documents/GitHub/cloud8-Killian97/Minigame Project/maps/' + file_name + ".txt") as map_file:
-            for line in map_file:
-                tiles = []
-                for i in range(0, len(line) - 1, 2):
-                    tiles.append(line[i])
-                self.map.append(tiles)
-            
-            # print(self.map)
-    
-    def render_map(self, screen):
-        self.determine_camera()
-
-        y_pos = 0
-        for line in self.map:
-            x_pos = 0
-            for tile in line:
-                image = map_tile_image[tile]
-                rect = pygame.Rect(x_pos * config.SCALE, y_pos * config.SCALE - (self.camera[1] * config.SCALE), config.SCALE, config.SCALE)
-                screen.blit(image, rect)
-                x_pos = x_pos + 1
-
-            y_pos = y_pos + 1
 
 
     def move_unit(self, unit, position_change):
         new_position = [unit.position[0] + position_change[0], unit.position[1] + position_change[1]]
 
         # check for edges of the map
-        if new_position[0] < 0 or new_position[0] > (len(self.map[0]) - 1):
+        if new_position[0] < 0 or new_position[0] > (len(self.map_array[0]) - 1):
             return
 
-        if new_position[1] < 0 or new_position[1] > (len(self.map) - 1):
+        if new_position[1] < 0 or new_position[1] > (len(self.map_array) - 1):
             return
 
         # check for tiles on the map where you cant walk
-        if self.map[new_position[1]][new_position[0]] == config.MAP_TILE_WATER:
+        if self.map_array[new_position[1]][new_position[0]] == config.MAP_TILE_WATER:
             return
 
         self.player_has_moved = True
 
-        unit.update_position(new_position)
-    
-
-    def determine_camera(self):
-        max_y_position = len(self.map) - config.SCREEN_HEIGHT / config.SCALE
-        y_position = self.player.position[1] - math.ceil(round(config.SCREEN_HEIGHT/ config.SCALE / 2))
-
-        if y_position <= max_y_position and y_position >= 0:
-            self.camera[1] = y_position
-        elif y_position < 0:
-            self.camera[1] = 0
-        else:
-            self.camera[1] = max_y_position
+        unit.update_position(new_position)  
 
 
 map_tile_image = {
