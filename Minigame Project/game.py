@@ -9,6 +9,7 @@ from player import Player
 from game_state import GameState, CurrentGameState
 from monsterfactory import MonsterFactory
 from game_view.map import Map
+from game_view.battle import Battle
 
 class Game:
     def __init__(self, screen):
@@ -19,6 +20,7 @@ class Game:
         self.player_has_moved = False
         self.monster_factory = MonsterFactory()
         self.map = Map(screen)
+        self.battle = None
 
     def set_up(self):
         player = Player(1, 1)
@@ -42,6 +44,10 @@ class Game:
                 self.determine_game_events()
         elif self.current_game_state == CurrentGameState.BATTLE:
             self.battle.update()
+            self.battle.render()
+
+            if self.battle.monster.health <= 0:
+                self.current_game_state = CurrentGameState.MAP
         
     def determine_game_events(self):
         map_tile = self.map.map_array[self.player.position[1]][self.player.position[0]]
@@ -86,6 +92,9 @@ class Game:
             print("Monster Type: " + found_monster.type)
             print("Monster Health: " + str(found_monster.health))
             print("Monster Attack: " + str(found_monster.attack))
+
+            self.battle = Battle(self.screen, found_monster, self.player)
+            self.current_game_state = CurrentGameState.BATTLE
 
             
      
