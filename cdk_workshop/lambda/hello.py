@@ -7,5 +7,5 @@ def handler(event, context):
         'headers': {
             'Content-Type': 'text/plain'
         },
-        'body': 'GoodNight, CDK! You have hit {}\n'.format(event['path'])
+        'body': 'GoodNight Nova&Killian, CDK! You have hit {}\n'.format(event['path'])
     }
