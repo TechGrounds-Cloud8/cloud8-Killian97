@@ -1,5 +1,6 @@
 ### all demands for project v1.0
 
+google bastion hosts
 
 ## Network/VPC
 - the following IP ranges need to be used: 10.10.10.0/24 & 10.20.20.0/24

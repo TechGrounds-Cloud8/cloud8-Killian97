@@ -37,5 +37,5 @@ class CdkWorkshopStack(Stack):
             self, 'ViewHitCounter',
             title='Hello Hits',
             table=hello_with_counter.table,
-            sort_by="-hits" 
+            # sort_by="-hits" 
         )
