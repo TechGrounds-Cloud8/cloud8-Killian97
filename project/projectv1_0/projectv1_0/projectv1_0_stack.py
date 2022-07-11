@@ -32,6 +32,29 @@ class Projectv10Stack(Stack):
             ]
         )
 
+        # Create and configure webserver Security Group
+        webvpc_sg = ec2.SecurityGroup(
+            self, "webvpc_sg",
+            vpc=vpc_webserver,
+            allow_all_outbound=True,
+        )
+
+        ## add inbound rules for the webvpc SG
+
+        # add rule for allow all inbound HTTP traffic
+        webvpc_sg.add_ingress_rule(
+            peer=ec2.Peer.any_ipv4(),
+            connection=ec2.Port.tcp(80),
+            description="Allow all HTTP traffic from anywhere",
+        )
+
+        # add rule for allow all inbound HTTPS traffic
+        webvpc_sg.add_ingress_rule(
+            peer=ec2.Peer.any_ipv4(),
+            connection=ec2.Port.tcp(443),
+            description="Allow all HTTPS traffic from anywhere",
+        )
+
         # Create and configure webserver ec2 instance
         web_instance = ec2.Instance(
             self, "Web-Instance",
@@ -43,29 +66,7 @@ class Projectv10Stack(Stack):
             machine_image=ec2.AmazonLinuxImage(
                 generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
             ),
-        )
-
-        # Create and configure webserver Security Group
-        webvpc_sg = ec2.SecurityGroup(
-            self, "webvpc_sg",
-            vpc=vpc_webserver,
-            allow_all_outbound=TRUE,
-        )
-
-        ## add inbound rules for the webserver vpc SG
-
-        # add rule for allow all inbound HTTP traffic
-        webvpc_sg.add_ingress_rule(
-            ec2.Peer.any_ipv4(),
-            ec2.Port.tcp(80),
-            "Allow all HTTP traffic from anywhere",
-        )
-
-        # add rule for allow all inbound HTTPS traffic
-        webvpc_sg.add_ingress_rule(
-            ec2.Peer.any_ipv4(),
-            ec2.Port.tcp(443),
-            "Allow all HTTPS traffic from anywhere",
+            security_group=webvpc_sg,
         )
 
         #######################################
@@ -84,7 +85,7 @@ class Projectv10Stack(Stack):
                     cidr_mask=26, 
                     subnet_type=ec2.SubnetType.PUBLIC)
             ]
-        )        
+        )   
 
 
         ###########################################
