@@ -1,4 +1,5 @@
 from multiprocessing.sharedctypes import Value
+from pickle import TRUE
 from aws_cdk import (
     CfnOutput,
     Stack,
@@ -6,8 +7,7 @@ from aws_cdk import (
 )
 from constructs import Construct
 
-with open("./post_launch_scripts/web_userdata.sh") as f:
-    web_userdata = f.read()
+
 
 class Projectv10Stack(Stack):
 
@@ -18,7 +18,7 @@ class Projectv10Stack(Stack):
         ###Everything for the Webserver VPC###
         #######################################
 
-        # Create VPC with 2 subnets both being public.
+        # Create and configure webserver VPC with 2 subnets both being public.
         vpc_webserver = ec2.Vpc(
             self, "app-prd-vpc",
             cidr="10.10.10.0/24",
@@ -43,23 +43,36 @@ class Projectv10Stack(Stack):
             machine_image=ec2.AmazonLinuxImage(
                 generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
             ),
-            user_data=ec2.UserData.custom(web_userdata)
         )
 
-        web_instance.connections.allow_from_any_ipv4(
-            ec2.Port.tcp(80)
+        # Create and configure webserver Security Group
+        webvpc_sg = ec2.SecurityGroup(
+            self, "webvpc_sg",
+            vpc=vpc_webserver,
+            allow_all_outbound=TRUE,
         )
 
-        CfnOutput(self, "Output",
-            value=web_instance.instance_public_ip
+        ## add inbound rules for the webserver vpc SG
+
+        # add rule for allow all inbound HTTP traffic
+        webvpc_sg.add_ingress_rule(
+            ec2.Peer.any_ipv4(),
+            ec2.Port.tcp(80),
+            "Allow all HTTP traffic from anywhere",
         )
 
-
+        # add rule for allow all inbound HTTPS traffic
+        webvpc_sg.add_ingress_rule(
+            ec2.Peer.any_ipv4(),
+            ec2.Port.tcp(443),
+            "Allow all HTTPS traffic from anywhere",
+        )
 
         #######################################
         ###Everything for the adminserver VPC##
         #######################################
 
+        # Create and configure adminserver VPC with 2 subnets both being public.
         vpc_manageserver = ec2.Vpc(
             self, "manage-prd-vpc",
             cidr="10.20.20.0/24",
@@ -72,3 +85,15 @@ class Projectv10Stack(Stack):
                     subnet_type=ec2.SubnetType.PUBLIC)
             ]
         )        
+
+
+        ###########################################
+        ###Peering connection between the 2 VPC's##
+        ###########################################
+
+        # create peering connection between the webserver VPC and the management server vpc
+        vpc_peer_connection = ec2.CfnVPCPeeringConnection(
+            self, "VPC_peer_connection",
+            peer_vpc_id=vpc_manageserver.vpc_id,
+            vpc_id=vpc_webserver.vpc_id,
+        )
