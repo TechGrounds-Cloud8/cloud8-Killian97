@@ -46,10 +46,45 @@ After searching quite a while i found out i could use a ALI aswell, i was to fix
 # Log [11-07-2022]
 
 ## Day report
-
+Today i succesfully created and configured the security groups needed for both VPC's BUT i only did the HTTP and HTTPS rules, i still have fix the SSH rules for the admin server
 
 ## Challenges
-None.
+How to fill in the parameters.
 
 ## Solutions
-None.
+Read more carefully.
+
+# Log [12-07-2022]
+
+## Day report
+
+## Challenges
+
+
+## Solutions
+
+# Log [13-07-2022]
+
+## Day report
+
+## Challenges
+
+
+## Solutions
+
+# Log [14-07-2022]
+
+## Day report
+
+## Challenges
+
+## Solutions
+
+# Log [15-07-2022]
+
+## Day report
+
+## Challenges
+
+
+## Solutions
