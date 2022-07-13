@@ -54,23 +54,27 @@ How to fill in the parameters.
 ## Solutions
 Read more carefully.
 
-# Log [12-07-2022]
+# Log [12-07-2022] 
 
 ## Day report
+today i started with configuring user data and the NACL's.
 
 ## Challenges
-
+i succesfully created the NACL's but i could no longer reach my webserver, i did not get to the userdata part
 
 ## Solutions
+none, continue tommorow
 
 # Log [13-07-2022]
 
 ## Day report
+i succesfully created a S3 bucket to store user data in, read it and execute it. 
 
 ## Challenges
-
+same as yesterday. and my S3 bucket is public, this cant stay like this but i will fix this in the end.
 
 ## Solutions
+EPHEMERAL PORTS!!!
 
 # Log [14-07-2022]
 

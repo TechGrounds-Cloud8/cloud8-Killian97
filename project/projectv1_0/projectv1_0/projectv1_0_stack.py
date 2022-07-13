@@ -1,9 +1,11 @@
-from multiprocessing.sharedctypes import Value
-from pickle import TRUE
 from aws_cdk import (
     CfnOutput,
+    RemovalPolicy,
     Stack,
     aws_ec2 as ec2,
+    aws_s3 as s3,
+    aws_s3_deployment as s3deploy,
+    aws_s3_assets as Asset,
 )
 from constructs import Construct
 
@@ -69,6 +71,7 @@ class Projectv10Stack(Stack):
             security_group=webvpc_sg,
         )
 
+
         # create and configure NACL for webserver VPC
         webvpc_nacl = ec2.NetworkAcl(
             self, "web NACL",
@@ -94,7 +97,7 @@ class Projectv10Stack(Stack):
             rule_number=100,
             traffic=ec2.AclTraffic.tcp_port(80),
             direction=ec2.TrafficDirection.EGRESS,
-            rule_action=ec2.Action.DENY,
+            rule_action=ec2.Action.ALLOW,
         )
 
         webvpc_nacl.add_entry(
@@ -112,10 +115,26 @@ class Projectv10Stack(Stack):
             rule_number=110,
             traffic=ec2.AclTraffic.tcp_port(443),
             direction=ec2.TrafficDirection.EGRESS,
-            rule_action=ec2.Action.DENY,
+            rule_action=ec2.Action.ALLOW,
         )
 
+        webvpc_nacl.add_entry(
+            id="Allow Ephemeral inbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=120,
+            traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
 
+        webvpc_nacl.add_entry(
+            id="Allow Ephemeral outbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=120,
+            traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
         
         #######################################
         ###Everything for the adminserver VPC##
@@ -140,13 +159,13 @@ class Projectv10Stack(Stack):
 
 
         # create and configure NACL for management server VPC
-        managevpc_nacl = ec2.NetworkAcl(
+        '''managevpc_nacl = ec2.NetworkAcl(
             self, "Admin NACL",
             vpc=vpc_manageserver,
             subnet_selection=ec2.SubnetSelection(
                 subnet_type=ec2.SubnetType.PUBLIC        
             )
-        )
+        )'''
 
 
 
@@ -160,3 +179,31 @@ class Projectv10Stack(Stack):
             peer_vpc_id=vpc_manageserver.vpc_id,
             vpc_id=vpc_webserver.vpc_id,
         )
+
+        #################
+        ###S3 buckets####
+        #################
+
+        # create and configure S3 bucket for post depploy scriip
+        postdeployments3 = s3.Bucket(
+            self, "post depployment bucket",
+            encryption=s3.BucketEncryption.S3_MANAGED,
+            enforce_ssl=True,
+            removal_policy=RemovalPolicy.DESTROY,
+            auto_delete_objects=True,
+            public_read_access=True,
+        )
+
+        # upload files from post launch scripts folder into post deployment S3 bucket 
+        userdata_upload = s3deploy.BucketDeployment(
+            self, "postdeploy upload",
+            destination_bucket=postdeployments3,
+            sources=[s3deploy.Source.asset("./post_launch_scripts")],
+        )
+
+        web_userdata = web_instance.user_data.add_s3_download_command(
+            bucket=postdeployments3,
+            bucket_key="web_userdata.sh"
+        )
+
+        web_instance.user_data.add_execute_file_command(file_path=web_userdata)
