@@ -70,7 +70,7 @@ class Projectv10Stack(Stack):
         # Create and configure webserver ec2 instance
         web_instance = ec2.Instance(
             self, "Web-Instance",
-            instance_type=ec2.InstanceType("t2.micro"),
+            instance_type=ec2.InstanceType("t3.nano"), # check t3.nano and if its cheaper for non free tier
             vpc=vpc_webserver,
             vpc_subnets=ec2.SubnetSelection(
                 subnet_type=ec2.SubnetType.PUBLIC
@@ -195,7 +195,7 @@ class Projectv10Stack(Stack):
         # Create and configure manage ec2 instance
         manage_instance = ec2.Instance(
             self, "Manage-Instance",
-            instance_type=ec2.InstanceType("t2.micro"),
+            instance_type=ec2.InstanceType("t3.nano"), # check t3.nano and if its cheaper for non free tier
             vpc=vpc_manageserver,
             vpc_subnets=ec2.SubnetSelection(
                 subnet_type=ec2.SubnetType.PUBLIC
@@ -254,8 +254,6 @@ class Projectv10Stack(Stack):
             rule_action=ec2.Action.ALLOW,
         )
 
-      
-
 
 
         ###########################################
@@ -268,6 +266,10 @@ class Projectv10Stack(Stack):
             peer_vpc_id=vpc_manageserver.vpc_id,
             vpc_id=vpc_webserver.vpc_id,
         )
+
+        #######################################################################################
+        ##problably need to edit routing tables to make internal SSH able in the VPC peering##
+        #######################################################################################
 
         #################
         ###S3 buckets####

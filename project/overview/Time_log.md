@@ -79,10 +79,13 @@ EPHEMERAL PORTS!!!
 # Log [14-07-2022]
 
 ## Day report
+today was a very bad day, i did nothing.
 
 ## Challenges
+my home situation was very toxic and took all my focus.
 
 ## Solutions
+i slept during the afternoon and got a good mood again.
 
 # Log [15-07-2022]
 
