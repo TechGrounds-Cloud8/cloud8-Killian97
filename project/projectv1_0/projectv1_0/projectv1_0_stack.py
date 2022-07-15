@@ -187,7 +187,7 @@ class Projectv10Stack(Stack):
 
         # add rule for allow all inbound HTTP traffic
         managevpc_sg.add_ingress_rule(
-            peer=ec2.Peer.any_ipv4(),
+            peer=ec2.Peer.ipv4(my_ip),
             connection=ec2.Port.tcp(22),
             description="Allow all SSH traffic from anywhere",
         )
@@ -220,7 +220,7 @@ class Projectv10Stack(Stack):
 
         managevpc_nacl.add_entry(
             id="Allow SSH inbound from pc with keypair",
-            cidr=ec2.AclCidr.any_ipv4(),
+            cidr=ec2.AclCidr.ipv4(my_ip),
             rule_number=200,
             traffic=ec2.AclTraffic.tcp_port(22),
             direction=ec2.TrafficDirection.INGRESS,
@@ -281,6 +281,8 @@ class Projectv10Stack(Stack):
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True,
             public_read_access=True,
+            # website_index_document="index.html",
+            # website_error_document="error.html",
         )
 
         # upload files from post launch scripts folder into post deployment S3 bucket 
@@ -296,3 +298,8 @@ class Projectv10Stack(Stack):
         )
 
         web_instance.user_data.add_execute_file_command(file_path=web_userdata)
+
+        # web_instance.user_data.add_s3_download_command(
+        #     bucket=postdeployments3,
+        #     bucket_key="index.html",
+        # )
