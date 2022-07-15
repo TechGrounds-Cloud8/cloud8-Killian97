@@ -10,6 +10,8 @@ from aws_cdk import (
 from constructs import Construct
 
 
+my_ip="84.85.157.1/32"
+
 
 class Projectv10Stack(Stack):
 
@@ -57,6 +59,14 @@ class Projectv10Stack(Stack):
             description="Allow all HTTPS traffic from anywhere",
         )
 
+        # add rule to allow inbound SSH, STILL NEED TO EDIT THAT ONLY THE ADMIN SERVER CAN CONNECT WITH SSH
+        webvpc_sg.add_egress_rule(
+            peer=ec2.Peer.any_ipv4(),
+            connection=ec2.Port.tcp(22),
+            description="allow SSH inbound"
+        )
+
+
         # Create and configure webserver ec2 instance
         web_instance = ec2.Instance(
             self, "Web-Instance",
@@ -69,6 +79,7 @@ class Projectv10Stack(Stack):
                 generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
             ),
             security_group=webvpc_sg,
+            key_name="webmin_key_pair",
         )
 
 
@@ -135,6 +146,17 @@ class Projectv10Stack(Stack):
             direction=ec2.TrafficDirection.EGRESS,
             rule_action=ec2.Action.ALLOW,
         )
+
+        webvpc_nacl.add_entry(
+            id="Allow SSH inbound from adminserver",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=130,
+            traffic=ec2.AclTraffic.tcp_port(22),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        
         
         #######################################
         ###Everything for the adminserver VPC##
@@ -151,21 +173,88 @@ class Projectv10Stack(Stack):
                     name="Public", 
                     cidr_mask=26, 
                     subnet_type=ec2.SubnetType.PUBLIC)
-            ]
+            ],
+        )
+
+        # Create and configure manageserver Security Group
+        managevpc_sg = ec2.SecurityGroup(
+            self, "managevpc_sg",
+            vpc=vpc_manageserver,
+            allow_all_outbound=True,
+        )
+
+        ## add inbound rules for the Managevpc SG
+
+        # add rule for allow all inbound HTTP traffic
+        managevpc_sg.add_ingress_rule(
+            peer=ec2.Peer.any_ipv4(),
+            connection=ec2.Port.tcp(22),
+            description="Allow all SSH traffic from anywhere",
+        )
+
+        # Create and configure manage ec2 instance
+        manage_instance = ec2.Instance(
+            self, "Manage-Instance",
+            instance_type=ec2.InstanceType("t2.micro"),
+            vpc=vpc_manageserver,
+            vpc_subnets=ec2.SubnetSelection(
+                subnet_type=ec2.SubnetType.PUBLIC
+            ),
+            machine_image=ec2.AmazonLinuxImage(
+                generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
+            ),
+            security_group=managevpc_sg,
+            key_name="webmin_key_pair",
         )
 
 
 
-
-
         # create and configure NACL for management server VPC
-        '''managevpc_nacl = ec2.NetworkAcl(
+        managevpc_nacl = ec2.NetworkAcl(
             self, "Admin NACL",
             vpc=vpc_manageserver,
             subnet_selection=ec2.SubnetSelection(
                 subnet_type=ec2.SubnetType.PUBLIC        
             )
-        )'''
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow SSH inbound from pc with keypair",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=200,
+            traffic=ec2.AclTraffic.tcp_port(22),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow SSH outbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=200,
+            traffic=ec2.AclTraffic.tcp_port(22),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow Ephemeral inbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=210,
+            traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow Ephemeral outbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=210,
+            traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+      
 
 
 
