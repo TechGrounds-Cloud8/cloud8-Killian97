@@ -6,6 +6,7 @@ from aws_cdk import (
     aws_s3 as s3,
     aws_s3_deployment as s3deploy,
     aws_s3_assets as Asset,
+    aws_iam as iam
 )
 from constructs import Construct
 
@@ -30,10 +31,10 @@ class Projectv10Stack(Stack):
             nat_gateways=0,
             subnet_configuration=[
                 ec2.SubnetConfiguration(
-                    name="Public", 
+                    name="web_VPC", 
                     cidr_mask=26, 
                     subnet_type=ec2.SubnetType.PUBLIC)
-            ]
+            ],
         )
 
         # Create and configure webserver Security Group
@@ -59,8 +60,8 @@ class Projectv10Stack(Stack):
             description="Allow all HTTPS traffic from anywhere",
         )
 
-        # add rule to allow inbound SSH, STILL NEED TO EDIT THAT ONLY THE ADMIN SERVER CAN CONNECT WITH SSH
-        webvpc_sg.add_egress_rule(
+        # add rule to allow inbound SSH,
+        webvpc_sg.add_ingress_rule(
             peer=ec2.Peer.any_ipv4(),
             connection=ec2.Port.tcp(22),
             description="allow SSH inbound"
@@ -80,6 +81,11 @@ class Projectv10Stack(Stack):
             ),
             security_group=webvpc_sg,
             key_name="webmin_key_pair",
+            role=iam.Role(
+                self, "Role for S3",
+                assumed_by=iam.ServicePrincipal("ec2.amazonaws.com"),
+                description="Webserver role"
+            ),
         )
 
 
@@ -170,7 +176,7 @@ class Projectv10Stack(Stack):
             nat_gateways=0,
             subnet_configuration=[
                 ec2.SubnetConfiguration(
-                    name="Public", 
+                    name="Manage_VPC", 
                     cidr_mask=26, 
                     subnet_type=ec2.SubnetType.PUBLIC)
             ],
@@ -189,7 +195,7 @@ class Projectv10Stack(Stack):
         managevpc_sg.add_ingress_rule(
             peer=ec2.Peer.ipv4(my_ip),
             connection=ec2.Port.tcp(22),
-            description="Allow all SSH traffic from anywhere",
+            description="Allow all SSH traffic from my IP",
         )
 
         # Create and configure manage ec2 instance
@@ -267,6 +273,25 @@ class Projectv10Stack(Stack):
             vpc_id=vpc_webserver.vpc_id,
         )
 
+        for subnet in vpc_webserver.public_subnets:
+            ec2.CfnRoute(
+                self,
+                id=f"${subnet.node.id} Peer",
+                route_table_id=subnet.route_table.route_table_id,
+                destination_cidr_block="10.20.20.0/24",
+                vpc_peering_connection_id=vpc_peer_connection.ref,
+            )
+        
+        for subnet in vpc_manageserver.public_subnets:
+            ec2.CfnRoute(
+                self, 
+                id=f"${subnet.node.id} Peer",
+                route_table_id=subnet.route_table.route_table_id,
+                destination_cidr_block="10.10.10.0/24",
+                vpc_peering_connection_id=vpc_peer_connection.ref,
+            )
+
+
         #######################################################################################
         ##problably need to edit routing tables to make internal SSH able in the VPC peering##
         #######################################################################################
@@ -282,7 +307,6 @@ class Projectv10Stack(Stack):
             enforce_ssl=True,
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True,
-            public_read_access=True,
             # website_index_document="index.html",
             # website_error_document="error.html",
         )
@@ -300,6 +324,7 @@ class Projectv10Stack(Stack):
         )
 
         web_instance.user_data.add_execute_file_command(file_path=web_userdata)
+        postdeployments3.grant_read(web_instance)
 
         # web_instance.user_data.add_s3_download_command(
         #     bucket=postdeployments3,

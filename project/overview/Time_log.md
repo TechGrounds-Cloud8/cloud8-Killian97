@@ -90,6 +90,59 @@ i slept during the afternoon and got a good mood again.
 # Log [15-07-2022]
 
 ## Day report
+i started trying to fix the VPC peering because i could not ssh from the admin to the webserver.
+
+## Challenges
+i knew it had something todo with routing and route tables but i was having a hard time finding what i needed
+
+## Solutions
+Cfn routing with tokens.
+
+# Log [18-07-2022]
+
+## Day report
+today in this heat i wanted to atleast fix the vpc peering, this was done succesfully together with aurel. and i will start with the backup feature. also fixed the S3 bucket no longer being public.
+
+## Challenges
+the heat, but we managed
+
+## Solutions
+we had to untoken the token.
+
+# Log [19-07-2022]
+
+## Day report
+
+
+## Challenges
+
+
+## Solutions
+
+# Log [20-07-2022]
+
+## Day report
+
+
+## Challenges
+
+
+## Solutions
+
+# Log [21-07-2022]
+
+## Day report
+
+
+## Challenges
+
+
+## Solutions
+
+# Log [22-07-2022]
+
+## Day report
+
 
 ## Challenges
 
