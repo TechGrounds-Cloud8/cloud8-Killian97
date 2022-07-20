@@ -104,7 +104,7 @@ Cfn routing with tokens.
 today in this heat i wanted to atleast fix the vpc peering, this was done succesfully together with aurel. and i will start with the backup feature. also fixed the S3 bucket no longer being public.
 
 ## Challenges
-the heat, but we managed
+the heat, but we managed.
 
 ## Solutions
 we had to untoken the token.
@@ -112,12 +112,13 @@ we had to untoken the token.
 # Log [19-07-2022]
 
 ## Day report
-
+today i am going to try to create my backup plan.
 
 ## Challenges
-
+HEAT. and not really being able to test if it works without wasting money.
 
 ## Solutions
+stop half way the day and continue in the cooler evening
 
 # Log [20-07-2022]
 

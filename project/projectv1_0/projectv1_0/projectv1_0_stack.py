@@ -1,3 +1,4 @@
+from sched import scheduler
 from aws_cdk import (
     CfnOutput,
     RemovalPolicy,
@@ -6,7 +7,11 @@ from aws_cdk import (
     aws_s3 as s3,
     aws_s3_deployment as s3deploy,
     aws_s3_assets as Asset,
-    aws_iam as iam
+    aws_iam as iam,
+    aws_backup as backup,
+    Duration,
+    aws_events as events,
+
 )
 from constructs import Construct
 
@@ -330,3 +335,39 @@ class Projectv10Stack(Stack):
         #     bucket=postdeployments3,
         #     bucket_key="index.html",
         # )
+
+
+
+        #########################
+        ##############Back up####
+        #########################
+
+        # create the back up vault
+        back_up_vault = backup.BackupVault(
+            self, "backup_vault",
+            backup_vault_name="backup_vault",
+            removal_policy=RemovalPolicy.DESTROY,
+        )
+
+        # create a back up plan
+        back_up_plan = backup.BackupPlan(
+            self, "backup_plan",
+            backup_vault=back_up_vault,  
+        )
+
+        # add rules to the back up plan
+        back_up_plan.add_rule(backup.BackupPlanRule(
+            delete_after=Duration.days(7),
+            enable_continuous_backup=True,
+            schedule_expression=events.Schedule.cron(
+                hour="5",
+                minute="1",
+            ))
+        )
+
+        # define what needs to be backed up
+        back_up_plan.add_selection(
+            "webserver_instance",
+            resources=[backup.BackupResource.from_ec2_instance(web_instance)],
+            allow_restores=True,
+        )
