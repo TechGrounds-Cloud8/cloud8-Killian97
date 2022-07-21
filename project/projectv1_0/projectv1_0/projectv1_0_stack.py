@@ -76,7 +76,7 @@ class Projectv10Stack(Stack):
         # Create and configure webserver ec2 instance
         web_instance = ec2.Instance(
             self, "Web-Instance",
-            instance_type=ec2.InstanceType("t3.nano"), # check t3.nano and if its cheaper for non free tier
+            instance_type=ec2.InstanceType("t3.nano"),
             vpc=vpc_webserver,
             vpc_subnets=ec2.SubnetSelection(
                 subnet_type=ec2.SubnetType.PUBLIC
@@ -91,6 +91,16 @@ class Projectv10Stack(Stack):
                 assumed_by=iam.ServicePrincipal("ec2.amazonaws.com"),
                 description="Webserver role"
             ),
+            block_devices=[
+                ec2.BlockDevice(
+                    device_name="/dev/xvda",
+                    volume=ec2.BlockDeviceVolume.ebs(
+                        volume_size=8,
+                        encrypted=True,
+                        delete_on_termination=True,    
+                    )
+                )
+            ]
         )
 
 
@@ -159,7 +169,7 @@ class Projectv10Stack(Stack):
         )
 
         webvpc_nacl.add_entry(
-            id="Allow SSH inbound from adminserver",
+            id="Allow SSH inbound from anywhere",
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=130,
             traffic=ec2.AclTraffic.tcp_port(22),
@@ -206,7 +216,7 @@ class Projectv10Stack(Stack):
         # Create and configure manage ec2 instance
         manage_instance = ec2.Instance(
             self, "Manage-Instance",
-            instance_type=ec2.InstanceType("t3.nano"), # check t3.nano and if its cheaper for non free tier
+            instance_type=ec2.InstanceType("t3.nano"),
             vpc=vpc_manageserver,
             vpc_subnets=ec2.SubnetSelection(
                 subnet_type=ec2.SubnetType.PUBLIC
@@ -216,6 +226,16 @@ class Projectv10Stack(Stack):
             ),
             security_group=managevpc_sg,
             key_name="webmin_key_pair",
+            block_devices=[
+                ec2.BlockDevice(
+                    device_name="/dev/xvda",
+                    volume=ec2.BlockDeviceVolume.ebs(
+                        volume_size=8,
+                        encrypted=True,
+                        delete_on_termination=True,    
+                    )
+                )
+            ]
         )
 
 
@@ -312,8 +332,6 @@ class Projectv10Stack(Stack):
             enforce_ssl=True,
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True,
-            # website_index_document="index.html",
-            # website_error_document="error.html",
         )
 
         # upload files from post launch scripts folder into post deployment S3 bucket 
@@ -329,13 +347,8 @@ class Projectv10Stack(Stack):
         )
 
         web_instance.user_data.add_execute_file_command(file_path=web_userdata)
+        
         postdeployments3.grant_read(web_instance)
-
-        # web_instance.user_data.add_s3_download_command(
-        #     bucket=postdeployments3,
-        #     bucket_key="index.html",
-        # )
-
 
 
         #########################
