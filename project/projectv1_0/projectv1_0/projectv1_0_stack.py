@@ -346,6 +346,8 @@ class Projectv10Stack(Stack):
             bucket_key="web_userdata.sh"
         )
 
+        web_instance.user_data.add_execute_file_command(file_path=web_userdata)
+
         web_instance.user_data.add_s3_download_command(
             bucket=postdeployments3,
             bucket_key="demo_website.zip",
@@ -355,10 +357,8 @@ class Projectv10Stack(Stack):
         # add command for the CLI so the html folder of apache can be overwritten
         web_instance.user_data.add_commands("chmod 755 -R /var/www/html/")
         # add command for the CLI to unzip the website.zip in the s3 bucket into the html folder we just allowed to be overwritten
-        web_instance.user_data.add_commands("sudo unzip /tmp/demo_website.zip -d /var/www/html/")
+        web_instance.user_data.add_commands("unzip /tmp/demo_website.zip -d /var/www/html/")
         
-
-        web_instance.user_data.add_execute_file_command(file_path=web_userdata)
 
         postdeployments3.grant_read(web_instance)
 
