@@ -213,6 +213,12 @@ class Projectv10Stack(Stack):
             description="Allow all SSH traffic from my IP",
         )
 
+        managevpc_sg.add_ingress_rule(
+            peer=ec2.Peer.any_ipv4(),
+            connection=ec2.Port.tcp(3389),
+            description="Allow all RDP traffic from my anywhere",
+        )
+
         # Create and configure manage ec2 instance
         manage_instance = ec2.Instance(
             self, "Manage-Instance",
@@ -221,9 +227,7 @@ class Projectv10Stack(Stack):
             vpc_subnets=ec2.SubnetSelection(
                 subnet_type=ec2.SubnetType.PUBLIC
             ),
-            machine_image=ec2.AmazonLinuxImage(
-                generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
-            ),
+            machine_image=ec2.WindowsImage(ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE),
             security_group=managevpc_sg,
             key_name="webmin_key_pair",
             block_devices=[
@@ -281,6 +285,24 @@ class Projectv10Stack(Stack):
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=210,
             traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow RDP inbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=220,
+            traffic=ec2.AclTraffic.tcp_port(3389),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow RDP outbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=220,
+            traffic=ec2.AclTraffic.tcp_port(3389),
             direction=ec2.TrafficDirection.EGRESS,
             rule_action=ec2.Action.ALLOW,
         )
