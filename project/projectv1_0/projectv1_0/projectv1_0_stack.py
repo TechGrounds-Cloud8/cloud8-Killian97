@@ -446,15 +446,6 @@ class Projectv10Stack(Stack):
             self, "backup_vault",
             backup_vault_name="backup_vault",
             removal_policy=RemovalPolicy.DESTROY,
-            access_policy=iam.PolicyDocument(
-                statements=[iam.PolicyStatement(    
-                    effect=iam.Effect.ALLOW,
-                    principals=[iam.AnyPrincipal()],
-                    actions=["backup:DeleteRecoveryPoint"],
-                    resources=["*"],
-                )
-                ]    
-            )
         )
         
         # create a back up plan
