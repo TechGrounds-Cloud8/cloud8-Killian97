@@ -65,12 +65,8 @@ class Projectv10Stack(Stack):
             description="Allow all HTTPS traffic from anywhere",
         )
 
-        # add rule to allow inbound SSH,
-        webvpc_sg.add_ingress_rule(
-            peer=ec2.Peer.any_ipv4(),
-            connection=ec2.Port.tcp(22),
-            description="allow SSH inbound"
-        )
+        # add rule to allow inbound SSH from only admin server,
+        webvpc_sg.connections.allow_from(ec2.Peer.ipv4("10.20.20.0/24"), ec2.Port.tcp(22))
 
 
         # Create and configure webserver ec2 instance
@@ -214,9 +210,21 @@ class Projectv10Stack(Stack):
         )
 
         managevpc_sg.add_ingress_rule(
-            peer=ec2.Peer.any_ipv4(),
+            peer=ec2.Peer.ipv4(my_ip),
             connection=ec2.Port.tcp(3389),
             description="Allow all RDP traffic from my anywhere",
+        )
+
+        managevpc_sg.add_ingress_rule(
+            peer=ec2.Peer.any_ipv4(),
+            connection=ec2.Port.tcp(80),
+            description="Allow all HTTP traffic from my anywhere",
+        )
+
+        managevpc_sg.add_ingress_rule(
+            peer=ec2.Peer.any_ipv4(),
+            connection=ec2.Port.tcp(443),
+            description="Allow all HTTPS traffic from my anywhere",
         )
 
         # Create and configure manage ec2 instance
@@ -242,6 +250,14 @@ class Projectv10Stack(Stack):
             ]
         )
 
+        # install open SSH on admin server
+        manage_instance.user_data.for_windows()
+        manage_instance.add_user_data(
+            "Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0",
+            "Start-Service sshd",
+            "Set-Service -Name sshd -StartupType 'Automatic'",
+            "New-NetFirewallRule -Name sshd -DisplayName 'Allow SSH' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22",
+        )
 
 
         # create and configure NACL for management server VPC
@@ -291,7 +307,7 @@ class Projectv10Stack(Stack):
 
         managevpc_nacl.add_entry(
             id="Allow RDP inbound",
-            cidr=ec2.AclCidr.any_ipv4(),
+            cidr=ec2.AclCidr.ipv4(my_ip),
             rule_number=220,
             traffic=ec2.AclTraffic.tcp_port(3389),
             direction=ec2.TrafficDirection.INGRESS,
@@ -303,6 +319,42 @@ class Projectv10Stack(Stack):
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=220,
             traffic=ec2.AclTraffic.tcp_port(3389),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow HTTP inbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=230,
+            traffic=ec2.AclTraffic.tcp_port(80),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow HTTP outbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=230,
+            traffic=ec2.AclTraffic.tcp_port(80),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow HTTPS inbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=240,
+            traffic=ec2.AclTraffic.tcp_port(443),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        managevpc_nacl.add_entry(
+            id="Allow HTTPS outbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=240,
+            traffic=ec2.AclTraffic.tcp_port(443),
             direction=ec2.TrafficDirection.EGRESS,
             rule_action=ec2.Action.ALLOW,
         )
@@ -394,8 +446,17 @@ class Projectv10Stack(Stack):
             self, "backup_vault",
             backup_vault_name="backup_vault",
             removal_policy=RemovalPolicy.DESTROY,
+            access_policy=iam.PolicyDocument(
+                statements=[iam.PolicyStatement(    
+                    effect=iam.Effect.ALLOW,
+                    principals=[iam.AnyPrincipal()],
+                    actions=["backup:DeleteRecoveryPoint"],
+                    resources=["*"],
+                )
+                ]    
+            )
         )
-
+        
         # create a back up plan
         back_up_plan = backup.BackupPlan(
             self, "backup_plan",
@@ -409,8 +470,8 @@ class Projectv10Stack(Stack):
             delete_after=Duration.days(7),
             enable_continuous_backup=True,
             schedule_expression=events.Schedule.cron(
-                hour="5",
-                minute="1",
+                hour="11",
+                minute="30",
             ))
         )
 
