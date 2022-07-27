@@ -179,7 +179,7 @@ After multiple tries during the day we asked our teachers and they said its poss
 # Log [27-07-2022]
 
 ## Day report
-Today i will finish up and finalize the documentation for V1.0
+Today i will finish up and finalize the documentation for V1.0. i did this succesfully.
 
 ## Challenges
 None
