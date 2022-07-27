@@ -123,14 +123,71 @@ stop half way the day and continue in the cooler evening
 # Log [20-07-2022]
 
 ## Day report
-
+Today i planned on finishing the AWS backup. i did succesfully except not being able to delete the stack after the RP was made. i will try to fix this later on.
 
 ## Challenges
+The warmt was still there and i slept very badly
 
+## Solutions
+stop half way the day and continue in the cooler evening
+
+# Log [21-07-2022]
+
+## Day report
+Today i wanted to figure out how to encrypt the 2 servers itself. i did this succesfully
+
+## Challenges
+No idea what exactly to backup and where.
+
+## Solutions
+We had to attack RDS volumes to our server and encrypt those. So the server would be on those volumes and be encrypted.
+
+# Log [22-07-2022]
+
+## Day report
+Today together with Aurel we fixed that our webserver shows our new index.html website instead of the default apache page that comes with installing apache.
+
+## Challenges
+Not being able to overwrite the apache page.
 
 ## Solutions
 
-# Log [21-07-2022]
+
+# Log [25-07-2022]
+
+## Day report
+Tried changing the webserver from a Linux server to a windows server and connecting to it trough RPD & SSH, did this succesfully.
+Secondly i tried to SSH from my Admin server to my webserver like before but now from windows to Linnux, Did this succesfully.
+
+## Challenges
+Struggling with connecting to my windows server because it was so slow. and having no idea how todo the connect since it was not know by me how to
+
+## Solutions
+Use proxy jump to connect from my PC to the admin server and jump to the webserver with all SSH. and just use RDP for single connection from my PC to admin.
+
+# Log [26-07-2022]
+
+## Day report
+I tried to fix the Recovry point error when deleting the vault when the RP was already created. 
+
+## Challenges
+I could not delete the stack when the RP was created. because the Vault cant be deleted with a resource inside. except manually.
+
+## Solutions
+After multiple tries during the day we asked our teachers and they said its possible but that its not smart todo it cause of safety reasons so i am going to let this be. A company later on that will use my code wont delete their stack so its not necesary and they could always do it manually in 10 seconds.
+
+# Log [27-07-2022]
+
+## Day report
+Today i will finish up and finalize the documentation for V1.0
+
+## Challenges
+None
+
+## Solutions
+None
+
+# Log [28-07-2022]
 
 ## Day report
 
@@ -140,7 +197,7 @@ stop half way the day and continue in the cooler evening
 
 ## Solutions
 
-# Log [22-07-2022]
+# Log [29-07-2022]
 
 ## Day report
 
