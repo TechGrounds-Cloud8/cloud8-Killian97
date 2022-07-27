@@ -32,4 +32,12 @@ This project is created with AWS CDK, if you have no experience with CDK, dont w
 # Connect via SSH
 
 1. Open a bash terminal in the DIR where your key pair is stored.
-2. Start the ssh agent with the command: '''
+2. Start the ssh agent with the command:
+```
+ssh-agent bash
+```
+3. add your keypair to the SSH agent
+```
+ssh-add webmin_key_pair.pem
+```
+4. 
