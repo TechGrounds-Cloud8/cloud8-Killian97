@@ -12,11 +12,14 @@ This project is created with AWS CDK, if you have no experience with CDK, dont w
 - [An IDE (VScode recommended)](https://code.visualstudio.com/)
 - AWS cdk installed, follow the steps below:
     1. Open a terminal session and run the following command: 
-    '''
+    ```
     npm install -g aws-cdk
-    '''
-    
-    2. Check if the installation was succesfull with the command: cdk --version
+    ```
+
+    2. Check if the installation was succesfull with the command: 
+    ```
+    cdk --version
+    ```
 - [Setup your CDK (if you dont know how follow the NEW PROJECT part of this workshop)](https://cdkworkshop.com/30-python/20-create-project.html)
 
 
