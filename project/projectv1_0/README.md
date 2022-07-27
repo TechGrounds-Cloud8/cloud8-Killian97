@@ -10,7 +10,7 @@ This project is created with AWS CDK, if you have no experience with CDK, don't 
 - [An AWS account and user](https://aws.amazon.com/)
 - [NodeJS installed](https://nodejs.org/en/)
 - [An IDE (VScode recommended)](https://code.visualstudio.com/)
-- AWS cdk installed, follow the steps below:
+- AWS CDK installed, follow the steps below:
     1. Open a terminal session and run the following command: 
     ```
     npm install -g aws-cdk
