@@ -458,8 +458,8 @@ class Projectv10Stack(Stack):
             delete_after=Duration.days(7),
             enable_continuous_backup=True,
             schedule_expression=events.Schedule.cron(
-                hour="11",
-                minute="30",
+                hour="17",
+                minute="1",
             ))
         )
 
