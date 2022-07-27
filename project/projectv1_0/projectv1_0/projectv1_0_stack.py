@@ -391,9 +391,6 @@ class Projectv10Stack(Stack):
             )
 
 
-        #######################################################################################
-        ##problably need to edit routing tables to make internal SSH able in the VPC peering##
-        #######################################################################################
 
         #################
         ###S3 buckets####

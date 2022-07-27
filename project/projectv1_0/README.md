@@ -20,7 +20,7 @@ This project is created with AWS CDK, if you have no experience with CDK, don't 
     ```
     cdk --version
     ```
-- [Setup your CDK (if you dont know how, follow the NEW PROJECT part of this workshop)](https://cdkworkshop.com/30-python/20-create-project.html)
+- [Setup your CDK (if you dont know how, follow the Python NEW PROJECT part of this workshop)](https://cdkworkshop.com/30-python/20-create-project.html)
 
 
 # Editing the Files for your use
@@ -38,11 +38,11 @@ This project is created with AWS CDK, if you have no experience with CDK, don't 
 3. Be patient it can take a few min to launch.
 
 
-# Connect to webserver with SSH trough the Admin server.
+# Connect to webserver with SSH through the Admin server.
 1. Go the AWS console and go to ec2 instances, find your admin/manage server and select it, click connect.
 2. Choose RDP client and follow the step below.
     decrypt password by adding the webmin_key_pair.pem (remember/store this password and the username)
-3. Open a bash terminal in the same dir as where webmin_key_pair.pem is stored
+3. Open a bash terminal in the same DIR as where webmin_key_pair.pem is stored
 4. Activate the SSH agent with command:
 ```
 ssh-agent bash
@@ -55,6 +55,9 @@ ssh-add webmin_key_pair.pem
 ```
 ssh -A -J <admin server Username(should be Administrator)>@<admin.server.public.ip> ec2-user@<web.server.private.ip>
 ```
+
+# Edit
+To edit the webpage on the webserver go to the post_launch_scripts folder and overwrite the demo_website.zip file with a demo_website.zip file that contains a index.html and other files that you want your website to have. It will automatically be unzipped and deployed.
 
 # Close everything down when done
 If all the steps above have worked this CDK project is working succesfully for you.
