@@ -1,6 +1,6 @@
 # README TG project V1.0
 
-In this readme you will get to know what todo to get this project running for yourself.
+In this README you will get to know what to do to get this project running for yourself.
 This project is created with AWS CDK, if you have no experience with CDK, dont worry in the requirments steps you will learn the basics.
 
 
