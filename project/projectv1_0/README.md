@@ -5,7 +5,7 @@ This project is created with AWS CDK, if you have no experience with CDK, dont w
 
 
 # Requirments for the project
-- [A github account (recommended)](https://github.com/)
+- [A github account](https://github.com/)
 - [Python installed (during installation add python to your PATH)](https://www.python.org/downloads/)
 - [An AWS account and user](https://aws.amazon.com/)
 - [NodeJS installed](https://nodejs.org/en/)
@@ -14,3 +14,8 @@ This project is created with AWS CDK, if you have no experience with CDK, dont w
     1. Open a terminal session and run the following command: npm install -g aws-cdk
     2. Check if the installation was succesfull with the command: cdk --version
 - [Setup your CDK (if you dont know how follow the NEW PROJECT part of this workshop)](https://cdkworkshop.com/30-python/20-create-project.html)
+
+
+# Editting the Files for your use
+1. In the AWS console create a keypair and name it webmin_key_pair like in the picture below.
+[Keypair creation]()
