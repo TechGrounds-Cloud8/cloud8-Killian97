@@ -1,0 +1,10 @@
+- ***vpc*** to launch the instances in.
+- ***EC2*** as the service to launch the instances with.
+- ***S3*** for storage of the post deployment scripts (and maybe also the backups?).
+- ***SG*** as security for the instances.
+- ***AWS backup*** to make the daily backups.
+- ***NACLS*** extra security.
+- ***LB*** load balancing.
+- ***Health checks*** for the Health checks
+- ***TLS1.2*** Security minimum.
+- ***ASG*** Autoscaling groups for the Load balancer.
