@@ -11,4 +11,3 @@
 ## Connection
 - If a user HTTP connects to the load balancer the connection has to be automatically upgraded to HTTPS.
 - All connections should be protected with TLS 1.2 minimaly.
-
