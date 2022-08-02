@@ -13,22 +13,22 @@ class nacl_construct(Construct):
     def __init__(self, scope: Construct, construct_id: str, vpc_webserver, vpc_adminserver, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        ###############################
-        ###Create NACL for webserver###
-        ###############################
+        ##############################################
+        ###Create NACL for webserver private subnet###
+        ##############################################
 
         # create and configure NACL for webserver VPC
-        webvpc_nacl = ec2.NetworkAcl(
-            self, "web NACL",
+        webvpc_priv_nacl = ec2.NetworkAcl(
+            self, "priv web NACL",
             vpc=vpc_webserver,
             subnet_selection=ec2.SubnetSelection(
-                subnet_type=ec2.SubnetType.PUBLIC        
+                subnet_type=ec2.SubnetType.PRIVATE_ISOLATED    
             )
         )       
 
         # add inbound and outbound rules for the webserver NACL
 
-        webvpc_nacl.add_entry(
+        webvpc_priv_nacl.add_entry(
             id="Allow all inbound HTTP",
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=100,
@@ -37,7 +37,7 @@ class nacl_construct(Construct):
             rule_action=ec2.Action.ALLOW,
         )
 
-        webvpc_nacl.add_entry(
+        webvpc_priv_nacl.add_entry(
             id="Allow all outbound HTTP",
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=100,
@@ -46,7 +46,7 @@ class nacl_construct(Construct):
             rule_action=ec2.Action.ALLOW,
         )
 
-        webvpc_nacl.add_entry(
+        webvpc_priv_nacl.add_entry(
             id="Allow all inbound HTTPS",
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=110,
@@ -55,7 +55,7 @@ class nacl_construct(Construct):
             rule_action=ec2.Action.ALLOW,
         )
 
-        webvpc_nacl.add_entry(
+        webvpc_priv_nacl.add_entry(
             id="Allow all outbound HTTPS",
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=110,
@@ -64,7 +64,7 @@ class nacl_construct(Construct):
             rule_action=ec2.Action.ALLOW,
         )
 
-        webvpc_nacl.add_entry(
+        webvpc_priv_nacl.add_entry(
             id="Allow Ephemeral inbound",
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=120,
@@ -73,7 +73,7 @@ class nacl_construct(Construct):
             rule_action=ec2.Action.ALLOW,
         )
 
-        webvpc_nacl.add_entry(
+        webvpc_priv_nacl.add_entry(
             id="Allow Ephemeral outbound",
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=120,
@@ -82,7 +82,86 @@ class nacl_construct(Construct):
             rule_action=ec2.Action.ALLOW,
         )
 
-        webvpc_nacl.add_entry(
+        webvpc_priv_nacl.add_entry(
+            id="Allow SSH inbound from anywhere",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=130,
+            traffic=ec2.AclTraffic.tcp_port(22),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+
+        ##############################################
+        ###Create NACL for webserver public subnet###
+        ##############################################
+
+        # create and configure NACL for webserver VPC
+        webvpc_pub_nacl = ec2.NetworkAcl(
+            self, "pub web NACL",
+            vpc=vpc_webserver,
+            subnet_selection=ec2.SubnetSelection(
+                subnet_type=ec2.SubnetType.PUBLIC
+            )
+        )       
+
+        # add inbound and outbound rules for the webserver NACL
+
+        webvpc_pub_nacl.add_entry(
+            id="Allow all inbound HTTP",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=100,
+            traffic=ec2.AclTraffic.tcp_port(80),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        webvpc_pub_nacl.add_entry(
+            id="Allow all outbound HTTP",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=100,
+            traffic=ec2.AclTraffic.tcp_port(80),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        webvpc_pub_nacl.add_entry(
+            id="Allow all inbound HTTPS",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=110,
+            traffic=ec2.AclTraffic.tcp_port(443),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        webvpc_pub_nacl.add_entry(
+            id="Allow all outbound HTTPS",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=110,
+            traffic=ec2.AclTraffic.tcp_port(443),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        webvpc_pub_nacl.add_entry(
+            id="Allow Ephemeral inbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=120,
+            traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
+            direction=ec2.TrafficDirection.INGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        webvpc_pub_nacl.add_entry(
+            id="Allow Ephemeral outbound",
+            cidr=ec2.AclCidr.any_ipv4(),
+            rule_number=120,
+            traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+
+        webvpc_pub_nacl.add_entry(
             id="Allow SSH inbound from anywhere",
             cidr=ec2.AclCidr.any_ipv4(),
             rule_number=130,
@@ -196,5 +275,3 @@ class nacl_construct(Construct):
             direction=ec2.TrafficDirection.EGRESS,
             rule_action=ec2.Action.ALLOW,
         )
-
-
