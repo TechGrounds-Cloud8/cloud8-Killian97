@@ -1,4 +1,5 @@
 from aws_cdk import (
+    CfnOutput,
     Stack,
     aws_ec2 as ec2,
     aws_iam as iam,
@@ -228,25 +229,25 @@ class ProjectV11Stack(Stack):
         ###########################
 
         # download the userdata for the auto scaling group instance
-        asg_userdata = self.as_group.as_group.user_data.add_s3_download_command(
+        asg_userdata = self.as_group.user_data.add_s3_download_command(
             bucket=self.postdeployments3.postdeployments3,
             bucket_key="web_userdata.sh"
         )
 
         # execute the userdata file
-        self.as_group.as_group.user_data.add_execute_file_command(file_path=asg_userdata)
+        self.as_group.user_data.add_execute_file_command(file_path=asg_userdata)
 
         # download the webpage folder for the asg instance
-        self.as_group.as_group.user_data.add_s3_download_command(
+        self.as_group.user_data.add_s3_download_command(
             bucket=self.postdeployments3.postdeployments3,
             bucket_key="demo_website.zip",
             local_file="/tmp/demo_website.zip",
         )
 
         # add command for the CLI so the html folder of apache can be overwritten
-        self.as_group.as_group.user_data.add_commands("chmod 755 -R /var/www/html/")
+        self.as_group.user_data.add_commands("chmod 755 -R /var/www/html/")
         # add command for the CLI to unzip the website.zip in the s3 bucket into the html folder we just allowed to be overwritten
-        self.as_group.as_group.user_data.add_commands("unzip /tmp/demo_website.zip -d /var/www/html/")
+        self.as_group.user_data.add_commands("unzip /tmp/demo_website.zip -d /var/www/html/")
 
         # give the web instance acces to read the s3 bucket
         self.postdeployments3.postdeployments3.grant_read(self.as_group.as_group)
@@ -266,3 +267,5 @@ class ProjectV11Stack(Stack):
             resources=[backup.BackupResource.from_ec2_instance(web_instance)],
             allow_restores=True,
         )
+
+        CfnOutput(self, "DNS for lb", value=self.alb.alb.load_balancer_dns_name)

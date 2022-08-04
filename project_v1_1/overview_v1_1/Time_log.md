@@ -29,17 +29,18 @@ today i started on V1.1. my goal was to get a working autoscaling group and chan
 what i needed and didnt need for the ASG, and still not sure if the web server itself should be private or public
 
 ## Solutions
-
+i personnaly deemed it better to make it private because of best safety. and for the asg i asked help fom my classmate Aurel
 
 # Log [02-08-2022]
 
 ## Day report
-
+today i am going to try to create the entire load balancer.
 
 ## Challenges
-
+the certificates are hard to implement and i do not know where to trigger a health check.
 
 ## Solutions
+
 
 # Log [03-08-2022]
 

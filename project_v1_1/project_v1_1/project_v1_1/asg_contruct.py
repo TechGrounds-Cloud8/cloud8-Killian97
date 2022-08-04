@@ -11,6 +11,9 @@ class asg_construct(Construct):
     def __init__(self, scope: Construct, construct_id: str, vpc_webserver, security_group, role, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
+        
+        self.user_data = ec2.UserData.for_linux()
+
         # create and configure launch Template
         self.launch_temp = ec2.LaunchTemplate(
             self, "Launch template",
@@ -21,7 +24,7 @@ class asg_construct(Construct):
                 generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
             ),
             role=role,
-            user_data=ec2.UserData.for_linux(),
+            user_data=self.user_data,
             security_group=security_group,
         )
 
@@ -30,7 +33,7 @@ class asg_construct(Construct):
             self, "Auto_Scaling_Group",
             vpc=vpc_webserver,
             vpc_subnets=ec2.SubnetSelection(
-                subnet_type=ec2.SubnetType.PRIVATE_ISOLATED
+                subnet_type=ec2.SubnetType.PUBLIC
             ),
             launch_template=self.launch_temp,
             min_capacity=1,
@@ -43,7 +46,7 @@ class asg_construct(Construct):
             target_utilization_percent=80,
         )
 
-        self.as_group.scale_on_request_count(
-            "request count auto scaling",
-            target_requests_per_minute=250,
-        )
+        # self.as_group.scale_on_request_count(
+        #     "request count auto scaling",
+        #     target_requests_per_minute=250,
+        # )

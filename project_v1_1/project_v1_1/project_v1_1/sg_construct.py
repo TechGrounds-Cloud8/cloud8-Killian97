@@ -8,6 +8,8 @@ from constructs import Construct
 my_ip="84.85.157.1/32"
 
 
+# redundant port 80 allow all on webserver
+
 class webvpc_sg_construct(Construct):
 
     def __init__(self, scope: Construct, construct_id: str, vpc, **kwargs) -> None:

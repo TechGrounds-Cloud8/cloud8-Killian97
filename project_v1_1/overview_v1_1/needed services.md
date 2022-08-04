@@ -8,3 +8,5 @@
 - ***Health checks*** for the Health checks
 - ***TLS1.2*** Security minimum.
 - ***ASG*** Autoscaling groups for the Load balancer.
+- ***Cert*** Certificates for the HTTPS connection
+- ***ACM*** Aws certificate manager for the certificates.
