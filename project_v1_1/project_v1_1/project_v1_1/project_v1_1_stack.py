@@ -1,5 +1,4 @@
-"""
-from ast import Assign
+
 from aws_cdk import (
     CfnOutput,
     Stack,
@@ -272,5 +271,5 @@ class ProjectV11Stack(Stack):
         )
 
         CfnOutput(self, "DNS for lb", value=self.alb.alb.load_balancer_dns_name)
-"""
+
 
