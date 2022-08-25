@@ -46,8 +46,3 @@ class asg_construct(Construct):
             "cpu auto scaling",
             target_utilization_percent=80,
         )
-
-        # self.as_group.scale_on_request_count(
-        #     "request count auto scaling",
-        #     target_requests_per_minute=250,
-        # )

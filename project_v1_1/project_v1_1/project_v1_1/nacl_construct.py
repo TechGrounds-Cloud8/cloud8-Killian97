@@ -66,7 +66,7 @@ class nacl_construct(Construct):
 
         webvpc_priv_nacl.add_entry(
             id="Allow Ephemeral inbound",
-            cidr=ec2.AclCidr.any_ipv4(),
+            cidr=ec2.AclCidr.any_ipv4(), # add that only inside vpc cidr block can connect
             rule_number=120,
             traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
             direction=ec2.TrafficDirection.INGRESS,
