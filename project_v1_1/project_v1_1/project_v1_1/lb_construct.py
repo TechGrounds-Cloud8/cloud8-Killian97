@@ -1,8 +1,7 @@
 from aws_cdk import (
     Duration,
     aws_elasticloadbalancingv2 as elbv2,
-    aws_certificatemanager as acm,
-    aws_acmpca as acmpa
+    aws_certificatemanager as acm
 )
 
 from constructs import Construct

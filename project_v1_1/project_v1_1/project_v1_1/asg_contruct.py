@@ -25,7 +25,7 @@ class asg_construct(Construct):
             ),
             role=role,
             user_data=self.user_data,
-            security_group=security_group,        
+            security_group=security_group,    
         )
 
         # create and configure the auto scaling group
