@@ -117,6 +117,7 @@ class ProjectV11Stack(Stack):
             asg=self.as_group.as_group,
         )
 
+
         self.as_group.as_group.scale_on_request_count(
             "request count auto scaling",
             target_requests_per_minute=250,
@@ -276,5 +277,3 @@ class ProjectV11Stack(Stack):
         )
 
         CfnOutput(self, "DNS for lb", value=self.alb.alb.load_balancer_dns_name)
-
-
