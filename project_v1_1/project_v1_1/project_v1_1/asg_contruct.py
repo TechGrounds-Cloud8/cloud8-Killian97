@@ -25,7 +25,7 @@ class asg_construct(Construct):
             ),
             role=role,
             user_data=self.user_data,
-            security_group=security_group,
+            security_group=security_group,        
         )
 
         # create and configure the auto scaling group
@@ -33,11 +33,12 @@ class asg_construct(Construct):
             self, "Auto_Scaling_Group",
             vpc=vpc_webserver,
             vpc_subnets=ec2.SubnetSelection(
-                subnet_type=ec2.SubnetType.PUBLIC
+                subnet_type=ec2.SubnetType.PUBLIC,
             ),
             launch_template=self.launch_temp,
             min_capacity=1,
             max_capacity=3,
+            # associate_public_ip_address=False,
         )
 
         # scaling policy

@@ -23,7 +23,7 @@ class lb_construct(Construct):
         self.alb.add_redirect()
 
         # call for the cert arn
-        arn = "arn:aws:acm:eu-central-1:663303000432:certificate/759c358f-d344-46fb-853d-62ee6bf74e71"
+        arn = "arn:aws:acm:eu-central-1:663303000432:certificate/7a324a63-01ba-438c-b7a6-95b6b4e4aecb"
 
         # call the certificate itself
         certificate = acm.Certificate.from_certificate_arn(self, "Certificate", arn)

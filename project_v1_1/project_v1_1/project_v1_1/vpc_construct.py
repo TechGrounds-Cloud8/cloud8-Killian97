@@ -31,9 +31,16 @@ class vpc_webserver_construct(Construct):
                 ec2.SubnetConfiguration(
                     name="Public_Web_VPC",
                     cidr_mask=24,
-                    subnet_type=ec2.SubnetType.PUBLIC),
+                    subnet_type=ec2.SubnetType.PUBLIC,
+                    ),
             ],
+            # gateway_endpoints={
+            #     's3_bucket': ec2.GatewayVpcEndpointOptions(
+            #         service=ec2.GatewayVpcEndpointAwsService.S3
+            #     )
+            # },
         )
+
 
 
 class vpc_adminserver_construct(Construct):

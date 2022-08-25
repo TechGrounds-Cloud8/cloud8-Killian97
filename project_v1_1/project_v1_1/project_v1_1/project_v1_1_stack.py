@@ -1,3 +1,5 @@
+"""
+from ast import Assign
 from aws_cdk import (
     CfnOutput,
     Stack,
@@ -78,11 +80,11 @@ class ProjectV11Stack(Stack):
         ###Adding NACL's to both VPC's###
         #################################
 
-        # self.nacl = nacl_construct(
-        #     self, "nacl",
-        #     vpc_webserver=self.vpc_webserver,
-        #     vpc_adminserver=self.vpc_adminserver,
-        # )
+        self.nacl = nacl_construct(
+            self, "nacl",
+            vpc_webserver=self.vpc_webserver,
+            vpc_adminserver=self.vpc_adminserver,
+        )
 
 
         ####################################################
@@ -107,6 +109,7 @@ class ProjectV11Stack(Stack):
                 assumed_by=iam.ServicePrincipal("ec2.amazonaws.com"),
                 description="Webserver role"
             ),
+            
         )
 
         self.alb = lb_construct(
@@ -144,7 +147,7 @@ class ProjectV11Stack(Stack):
                 )
             ]
         )
-    
+
         
         ######################################################
         ###Creating adminserver instance and calling the SG###
@@ -269,3 +272,5 @@ class ProjectV11Stack(Stack):
         )
 
         CfnOutput(self, "DNS for lb", value=self.alb.alb.load_balancer_dns_name)
+"""
+
