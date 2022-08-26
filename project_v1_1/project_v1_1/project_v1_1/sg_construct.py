@@ -23,7 +23,7 @@ class webvpc_sg_construct(Construct):
         )
 
         # add rule to allow inbound SSH from only admin server,
-        self.webvpc_sg.connections.allow_from(ec2.Peer.ipv4("10.20.20.0/16"), ec2.Port.tcp(22))
+        self.webvpc_sg.connections.allow_from(ec2.Peer.ipv4("10.20.0.0/16"), ec2.Port.tcp(22))
 
 
 class adminvpc_sg_construct(Construct):

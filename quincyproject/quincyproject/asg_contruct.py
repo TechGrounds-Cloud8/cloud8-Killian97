@@ -25,6 +25,7 @@ class asg_construct(Construct):
             user_data=self.userdata_webserver,
             security_group=security_group,    
         )
+        
 
         self.auto_scaling_group = autoscaling.AutoScalingGroup(
             self, "Autoscalinggroup",

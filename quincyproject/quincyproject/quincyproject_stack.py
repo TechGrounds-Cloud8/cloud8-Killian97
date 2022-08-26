@@ -49,7 +49,7 @@ class QuincyprojectStack(Stack):
                 self, 
                 id = f"{subnet.node.id} Managementserver Route Table",
                 route_table_id = subnet.route_table.route_table_id,
-                destination_cidr_block = "10.10.0.0/24", 
+                destination_cidr_block = "10.10.0.0/16", 
                 vpc_peering_connection_id = VPC_Peering_connection.ref,
         )
         
@@ -59,7 +59,7 @@ class QuincyprojectStack(Stack):
                 self,
                 id = f"{subnet.node.id} Webserver public subnet Route Table",
                 route_table_id = subnet.route_table.route_table_id,
-                destination_cidr_block = "10.20.0.0/24", 
+                destination_cidr_block = "10.20.0.0/16", 
                 vpc_peering_connection_id = VPC_Peering_connection.ref,
         )
 
@@ -69,7 +69,7 @@ class QuincyprojectStack(Stack):
                 self,
                 id = f"{subnet.node.id} Webserver Private Subnet Route Table",
                 route_table_id = subnet.route_table.route_table_id,
-                destination_cidr_block = "10.20.0.0/24", 
+                destination_cidr_block = "10.20.0.0/16",
                 vpc_peering_connection_id = VPC_Peering_connection.ref,
         )
 
@@ -234,8 +234,8 @@ class QuincyprojectStack(Stack):
 
         self.auto_scaling_group.userdata_webserver.add_s3_download_command(
             bucket = self.bucket.bucket,
-            bucket_key = "index.html",
-            local_file = "/var/www/html/",
+            bucket_key = "index.zip",
+            local_file = "/tmp/index.zip",
         )
 
         self.auto_scaling_group.userdata_webserver.add_commands("chmod 755 -R /var/www/html/")
