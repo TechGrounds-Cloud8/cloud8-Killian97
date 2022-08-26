@@ -107,6 +107,17 @@ class QuincyprojectStack(Stack):
             ),    
         )
 
+        self.alb = lb_construct(
+            self, "Web server ALB",
+            vpc=self.vpc_webserver,
+            asg=self.auto_scaling_group.auto_scaling_group,
+        )
+
+        self.auto_scaling_group.auto_scaling_group.scale_on_request_count(
+            "request count auto scaling",
+            target_requests_per_minute=250,
+        )
+
         ###############################
         ###create webserver instance###
         ###############################
