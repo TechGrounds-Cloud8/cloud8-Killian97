@@ -25,7 +25,7 @@ This project is created with AWS CDK, if you have no experience with CDK, don't 
 
 # Editing the Files for your use
 1. In the AWS console create a keypair and name it webmin_key_pair like in the picture below. (Remember where you store the key pair.)
-![Keypair creation](../overview/Images/create_keypair.png)
+![Keypair creation](../overview_v1_0/Images/create_keypair.png)
 2. In the top of the stack.py file edit the my_ip variable, this will allow your PC to connect to the admin server.
 3. Re deploy the project with: CDK deploy
 

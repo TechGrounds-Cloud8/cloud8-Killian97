@@ -25,13 +25,10 @@ class backup_construct(Construct):
         )
 
         self.backup_plan.add_rule(backup.BackupPlanRule(
-            completion_window = Duration.hours(2),
-            start_window = Duration.hours(1),
-            schedule_expression = events.Schedule.cron(
-                day = "*",
-                month = "*",
-                hour = "12",
-                minute = "0"),
-            delete_after = Duration.days(7),    
-            )
+            delete_after=Duration.days(7),
+            enable_continuous_backup=True,
+            schedule_expression=events.Schedule.cron(
+                hour="17",
+                minute="1",
+            ))
         )

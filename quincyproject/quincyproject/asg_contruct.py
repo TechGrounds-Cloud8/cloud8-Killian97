@@ -43,8 +43,3 @@ class asg_construct(Construct):
             'CPU',
             target_utilization_percent = 75,
         )
-
-
-
-
-
