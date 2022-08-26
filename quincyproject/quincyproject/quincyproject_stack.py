@@ -78,12 +78,13 @@ class QuincyprojectStack(Stack):
         ###Adding NACL's to both VPC's###
         #################################
 
-        
+        '''
         self.nacl_construct = nacl_construct(
             self, "nacl",
             vpc_webserver=self.vpc_webserver,
             vpc_managementserver=self.vpc_managementserver,
         )
+        '''
         
 
         ##########################

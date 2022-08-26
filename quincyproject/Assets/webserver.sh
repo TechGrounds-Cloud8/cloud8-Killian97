@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # new user data
-yum update -y
-yum install -y httpd.x86_64
-systemctl start httpd.service
-systemctl enable httpd.service
+sudo yum update -y
+sudo yum install -y httpd.x86_64
+sudo systemctl start httpd.service
+sudo systemctl enable httpd.service
 
 # killian user data
 # yum update -y
