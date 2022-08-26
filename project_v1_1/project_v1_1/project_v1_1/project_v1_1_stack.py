@@ -120,8 +120,7 @@ class ProjectV11Stack(Stack):
             "request count auto scaling",
             target_requests_per_minute=250,
         )
-
-        # Create and configure webserver ec2 instance
+        
         web_instance = ec2.Instance(
             self, "Web-Instance",
             instance_type=ec2.InstanceType("t3.nano"),

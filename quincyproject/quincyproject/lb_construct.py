@@ -13,7 +13,7 @@ class lb_construct(Construct):
 
         self.alb = elbv2.ApplicationLoadBalancer(
             self, "alb",
-            vpc = vpc
+            vpc = vpc,
             internet_facing = True,
         )
 

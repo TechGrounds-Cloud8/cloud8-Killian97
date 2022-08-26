@@ -80,7 +80,7 @@ class QuincyprojectStack(Stack):
         self.nacl_construct = nacl_construct(
             self, "nacl",
             vpc_webserver=self.vpc_webserver,
-            vpc_adminserver=self.vpc_managementserver,
+            vpc_managementserver=self.vpc_managementserver,
         )
 
         ##########################
@@ -122,39 +122,146 @@ class QuincyprojectStack(Stack):
         ###create webserver instance###
         ###############################
 
-        
+         #This is where the webserver is deployed. 
+        instance_webserver = ec2.Instance(
+            self, "Webserver",
+            instance_type=ec2.InstanceType("t3.nano"),
+            vpc = self.vpc_webserver,
+            vpc_subnets = ec2.SubnetSelection(
+                subnet_type = ec2.SubnetType.PRIVATE_ISOLATED
+            ),
+             machine_image=ec2.AmazonLinuxImage(
+                generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
+            ),
+            security_group = self.SG_webserver.SG_webserver,
+            key_name = "webmin_key_pair",
+            role=iam.Role(
+                self, "Role for S3",
+                assumed_by=iam.ServicePrincipal("ec2.amazonaws.com"),
+                description="Webserver role"
+            ),
+            block_devices = [
+                ec2.BlockDevice(
+                    device_name = "/dev/xvda",
+                    volume = ec2.BlockDeviceVolume.ebs(
+                        volume_size = 8,
+                        encrypted = True,
+                        delete_on_termination = True,
+                    )
+                )
+            ]
+        )
+
         ######################################################
-        ###Creating adminserver instance and calling the SG###
+        ###Creating managementserver instance and calling the SG###
         ######################################################
 
-        self.manegementvpc_sg = managementvpc_sg_construct(
+        self.SG_managementserver = managementvpc_sg_construct(
             self, "managementvpc_sg",
             vpc=self.vpc_managementserver,
         )
 
-        # install user data open SSH on admin server
+        instance_managementserver = ec2.Instance(
+            self, "Managementserver",
+            instance_type= ec2.InstanceType("t3.nano"),
+            vpc = self.vpc_managementserver,
+            vpc_subnets = ec2.SubnetSelection(
+                subnet_type = ec2.SubnetType.PUBLIC
+            ),
+            machine_image=ec2.WindowsImage(ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE),
+            security_group = self.SG_managementserver.SG_managementserver,
+            key_name = "webmin_key_pair",
+            block_devices = [
+                ec2.BlockDevice(
+                    device_name = "/dev/xvda",
+                    volume = ec2.BlockDeviceVolume.ebs(
+                        volume_size = 30,
+                        encrypted = True,
+                        delete_on_termination = True,
+                    )
+                )
+            ]
+        )
 
+        # install user data open SSH on admin server
+        instance_managementserver.user_data.for_windows()
+        instance_managementserver.add_user_data(
+            "Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0",
+            "Start-Service sshd",
+            "Set-Service -Name sshd -StartupType 'Automatic'",
+            "New-NetFirewallRule -Name sshd -DisplayName 'Allow SSH' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22",
+        )
 
         ########################
         ###call on S3 bucket####
         ########################
 
+        self.bucket = s3_construct(self, "Bucket with scripts")
 
         #############################
         ###User data for webserver###
         #############################
 
+        file_script_path = instance_webserver.user_data.add_s3_download_command(
+            bucket = self.bucket.bucket,
+            bucket_key = "webserver.sh",            
+        )
+
+        instance_webserver.user_data.add_execute_file_command(file_path = file_script_path)
+
+        instance_webserver.user_data.add_s3_download_command(
+            bucket = self.bucket.bucket,
+            bucket_key = "index.html",
+            local_file = "/tmp/index.zip",
+        )
+
+        instance_webserver.user_data.add_commands("chmod 755 -R /var/www/html/")
+
+        instance_webserver.user_data.add_commands("unzip /tmp/index.zip -d /var/www/html/")
+
+        self.bucket.bucket.grant_read(instance_webserver)
+
         ###########################
         ###User data for ASGroup###
         ###########################
 
+        asg_userdata = self.auto_scaling_group.userdata_webserver.add_s3_download_command(
+            bucket = self.bucket.bucket,
+            bucket_key = "webserver.sh",
+        )
+
+        self.auto_scaling_group.userdata_webserver.add_execute_file_command(file_path = asg_userdata) 
+
+        self.auto_scaling_group.userdata_webserver.add_s3_download_command(
+            bucket = self.bucket.bucket,
+            bucket_key = "index.html",
+            local_file = "/var/www/html/",
+        )
+
+        self.auto_scaling_group.userdata_webserver.add_commands("chmod 755 -R /var/www/html/")
+
+        self.auto_scaling_group.userdata_webserver.add_commands("unzip /tmp/index.zip -d /var/www/html/")
+
+        self.bucket.bucket.grant_read(self.auto_scaling_group.auto_scaling_group)
+
+
         #########################
         ##########Back up#######
         #########################
+
+        backup_plan = backup_construct(
+            self, "backup_plan",
+        )
+
+        backup_plan.backup_plan.add_selection(
+            "webserver_instance",
+            resources=[backup.BackupResource.from_ec2_instance(instance_webserver)],
+            allow_restores=True,
+        )
 
        
         ##################################
         ###Show ALB DNS after deploying###
         ##################################
 
-        # CfnOutput(self, "DNS for lb", value=self.alb.alb.load_balancer_dns_name)
+        CfnOutput(self, "DNS for lb", value=self.alb.alb.load_balancer_dns_name)

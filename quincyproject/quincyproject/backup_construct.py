@@ -12,3 +12,26 @@ class backup_construct(Construct):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
+
+        self.vault = backup.BackupVault(
+            self, "Webserver_Backup_Vault",
+            backup_vault_name = "Webserver_Backup_Vault",
+            removal_policy = RemovalPolicy.DESTROY,
+        )
+
+        self.backup_plan = backup.BackupPlan(
+            self, "Daily_Backup",
+            backup_vault = self.vault,
+        )
+
+        self.backup_plan.add_rule(backup.BackupPlanRule(
+            completion_window = Duration.hours(2),
+            start_window = Duration.hours(1),
+            schedule_expression = events.Schedule.cron(
+                day = "*",
+                month = "*",
+                hour = "12",
+                minute = "0"),
+            delete_after = Duration.days(7),    
+            )
+        )
