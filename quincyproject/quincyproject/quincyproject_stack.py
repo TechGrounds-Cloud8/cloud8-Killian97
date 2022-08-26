@@ -17,6 +17,7 @@ from quincyproject.backup_construct import backup_construct
 from quincyproject.asg_contruct import asg_construct
 from quincyproject.lb_construct import lb_construct
 
+trusted_ip="84.85.157.1/32"
 
 class QuincyprojectStack(Stack):
 

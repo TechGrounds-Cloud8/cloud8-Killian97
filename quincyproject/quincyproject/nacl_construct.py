@@ -5,7 +5,7 @@ from aws_cdk import (
 from constructs import Construct
 
 
-trusted_ip="84.106.100.87/32"
+trusted_ip="84.85.157.1/32"
 
 
 class nacl_construct(Construct):

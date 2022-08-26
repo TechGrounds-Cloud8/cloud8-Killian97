@@ -5,7 +5,7 @@ from aws_cdk import (
 from constructs import Construct
 
 
-trusted_ip="84.106.100.87/32"
+trusted_ip="84.85.157.1/32"
 
 
 class vpc_webserver_construct(Construct):
@@ -17,7 +17,7 @@ class vpc_webserver_construct(Construct):
             self, "VPC_1",
             cidr="10.10.0.0/16",
             max_azs=3,
-            nat_gateways=0,
+            nat_gateways=1,
             subnet_configuration=[
                 ec2.SubnetConfiguration(
                     name="private", 
