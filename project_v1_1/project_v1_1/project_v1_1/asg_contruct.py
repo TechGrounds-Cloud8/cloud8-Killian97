@@ -10,8 +10,7 @@ class asg_construct(Construct):
 
     def __init__(self, scope: Construct, construct_id: str, vpc_webserver, security_group, role, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
-
-        
+  
         self.user_data = ec2.UserData.for_linux()
 
         # create and configure launch Template
@@ -38,7 +37,6 @@ class asg_construct(Construct):
             launch_template=self.launch_temp,
             min_capacity=1,
             max_capacity=3,
-            # associate_public_ip_address=False,
         )
 
         # scaling policy

@@ -95,9 +95,9 @@ class ProjectV11Stack(Stack):
             vpc=self.vpc_webserver,
         )
 
-        ##############################
-        ###Webserver Load balancing###
-        ##############################
+        ##############################################################
+        ###Webserver Load balancing and creating webserver instance###
+        ##############################################################
 
         self.as_group = asg_construct(
             self, "Auto_Scaling_Group",
@@ -107,8 +107,7 @@ class ProjectV11Stack(Stack):
                 self, "Web template Role for S3",
                 assumed_by=iam.ServicePrincipal("ec2.amazonaws.com"),
                 description="Webserver role"
-            ),
-            
+            ),    
         )
 
         self.alb = lb_construct(

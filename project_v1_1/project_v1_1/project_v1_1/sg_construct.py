@@ -22,22 +22,6 @@ class webvpc_sg_construct(Construct):
             allow_all_outbound=True,
         )
 
-        ## add inbound rules for the webvpc SG
-
-        # add rule for allow all inbound HTTP traffic
-        # self.webvpc_sg.add_ingress_rule(
-        #     peer=ec2.Peer.any_ipv4(),
-        #     connection=ec2.Port.tcp(80),
-        #     description="Allow all HTTP traffic from anywhere",
-        # )
-
-        # add rule for allow all inbound HTTPS traffic
-        # self.webvpc_sg.add_ingress_rule(
-        #     peer=ec2.Peer.any_ipv4(),
-        #     connection=ec2.Port.tcp(443),
-        #     description="Allow all HTTPS traffic from anywhere",
-        # )
-
         # add rule to allow inbound SSH from only admin server,
         self.webvpc_sg.connections.allow_from(ec2.Peer.ipv4("10.20.20.0/16"), ec2.Port.tcp(22))
 

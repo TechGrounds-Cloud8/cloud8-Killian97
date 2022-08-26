@@ -34,11 +34,6 @@ class vpc_webserver_construct(Construct):
                     subnet_type=ec2.SubnetType.PUBLIC,
                     ),
             ],
-            # gateway_endpoints={
-            #     's3_bucket': ec2.GatewayVpcEndpointOptions(
-            #         service=ec2.GatewayVpcEndpointAwsService.S3
-            #     )
-            # },
         )
 
 
