@@ -208,15 +208,15 @@ class QuincyprojectStack(Stack):
         
         file_script_path = instance_webserver.user_data.add_s3_download_command(
             bucket = self.bucket.bucket,
-            bucket_key = "webserver.sh",            
+            bucket_key = "web_data.sh",      
         )
 
         instance_webserver.user_data.add_execute_file_command(file_path = file_script_path)
 
         instance_webserver.user_data.add_s3_download_command(
             bucket = self.bucket.bucket,
-            bucket_key = "index.html",
-            local_file = "/tmp/index.zip",
+            bucket_key ="index.html",
+            local_file ="/tmp/index.zip",
         )
 
         instance_webserver.user_data.add_commands("chmod 755 -R /var/www/html/")
@@ -233,7 +233,7 @@ class QuincyprojectStack(Stack):
         # download the userdata for the auto scaling group instance
         asg_userdata = self.auto_scaling_group.user_data.add_s3_download_command(
             bucket=self.bucket.bucket,
-            bucket_key="webserver.sh"
+            bucket_key="web_data.sh"
         )
 
         # execute the userdata file
