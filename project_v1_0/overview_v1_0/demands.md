@@ -21,7 +21,7 @@
 
 
 ## Instances/EC2
-- EC2 needs to install a webserver automatically trough ***user data***. 
+- EC2 needs to install a webserver automatically trough user data.
 
 - The instances need to be encrypted
 

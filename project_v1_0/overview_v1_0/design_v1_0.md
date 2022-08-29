@@ -44,6 +44,5 @@ I have assumed that:
 - AWS Backup makes a daily backup that gets stored in a vault for 7 days.
 
 
-
 ## Suggestions
-I only have 1 suggestion and that is still to only use 1 subnet in each VPC's. This makes it cheaper and faster. And if you want more you can always add more later.
+I only have 1 suggestion and that is still to only use 1 subnet in each VPC's. This makes it cheaper and faster. And if you want more you can always add more later. 
