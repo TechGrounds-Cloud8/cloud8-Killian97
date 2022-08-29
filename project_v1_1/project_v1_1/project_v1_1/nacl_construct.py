@@ -30,7 +30,7 @@ class nacl_construct(Construct):
 
         webvpc_priv_nacl.add_entry(
             id="Allow Ephemeral inbound",
-            cidr=ec2.AclCidr.any_ipv4(), # add that only inside vpc cidr block can connect
+            cidr=ec2.AclCidr.ipv4(vpc_adminserver.vpc_cidr_block),
             rule_number=120,
             traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
             direction=ec2.TrafficDirection.INGRESS,
@@ -39,7 +39,7 @@ class nacl_construct(Construct):
 
         webvpc_priv_nacl.add_entry(
             id="Allow Ephemeral outbound",
-            cidr=ec2.AclCidr.any_ipv4(),
+            cidr=ec2.AclCidr.ipv4(vpc_adminserver.vpc_cidr_block),
             rule_number=120,
             traffic=ec2.AclTraffic.tcp_port_range(1024, 65535),
             direction=ec2.TrafficDirection.EGRESS,
@@ -48,7 +48,7 @@ class nacl_construct(Construct):
 
         webvpc_priv_nacl.add_entry(
             id="Allow SSH inbound from anywhere",
-            cidr=ec2.AclCidr.any_ipv4(),
+            cidr=ec2.AclCidr.ipv4(vpc_adminserver.vpc_cidr_block),
             rule_number=130,
             traffic=ec2.AclTraffic.tcp_port(22),
             direction=ec2.TrafficDirection.INGRESS,
@@ -126,14 +126,23 @@ class nacl_construct(Construct):
         )
 
         webvpc_pub_nacl.add_entry(
-            id="Allow SSH inbound from anywhere",
-            cidr=ec2.AclCidr.any_ipv4(),
+            id="Allow SSH inbound from admin vpc",
+            cidr=ec2.AclCidr.ipv4(vpc_adminserver.vpc_cidr_block),
             rule_number=130,
             traffic=ec2.AclTraffic.tcp_port(22),
             direction=ec2.TrafficDirection.INGRESS,
             rule_action=ec2.Action.ALLOW,
         )
 
+        webvpc_pub_nacl.add_entry(
+            id="Allow SSH outbound from admin vpc",
+            cidr=ec2.AclCidr.ipv4(vpc_adminserver.vpc_cidr_block),
+            rule_number=130,
+            traffic=ec2.AclTraffic.tcp_port(22),
+            direction=ec2.TrafficDirection.EGRESS,
+            rule_action=ec2.Action.ALLOW,
+        )
+        
 
         #################################
         ###Create NACL for adminserver###
