@@ -134,7 +134,7 @@ class QuincyprojectStack(Stack):
             vpc_subnets = ec2.SubnetSelection(
                 subnet_type = ec2.SubnetType.PRIVATE_ISOLATED
             ),
-             machine_image=ec2.AmazonLinuxImage(
+            machine_image=ec2.AmazonLinuxImage(
                 generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
             ),
             security_group = self.SG_webserver.SG_webserver,
@@ -205,7 +205,7 @@ class QuincyprojectStack(Stack):
         #############################
         ###User data for webserver###
         #############################
-
+        
         file_script_path = instance_webserver.user_data.add_s3_download_command(
             bucket = self.bucket.bucket,
             bucket_key = "webserver.sh",            
@@ -224,28 +224,34 @@ class QuincyprojectStack(Stack):
         instance_webserver.user_data.add_commands("unzip /tmp/index.zip -d /var/www/html/")
 
         self.bucket.bucket.grant_read(instance_webserver)
+        
 
         ###########################
         ###User data for ASGroup###
         ###########################
 
-        asg_userdata = self.auto_scaling_group.userdata_webserver.add_s3_download_command(
-            bucket = self.bucket.bucket,
-            bucket_key = "webserver.sh",
+        # download the userdata for the auto scaling group instance
+        asg_userdata = self.auto_scaling_group.user_data.add_s3_download_command(
+            bucket=self.bucket.bucket,
+            bucket_key="webserver.sh"
         )
 
-        self.auto_scaling_group.userdata_webserver.add_execute_file_command(file_path = asg_userdata) 
+        # execute the userdata file
+        self.auto_scaling_group.user_data.add_execute_file_command(file_path=asg_userdata)
 
-        self.auto_scaling_group.userdata_webserver.add_s3_download_command(
-            bucket = self.bucket.bucket,
-            bucket_key = "index.zip",
-            local_file = "/tmp/index.zip",
+        # download the webpage folder for the asg instance
+        self.auto_scaling_group.user_data.add_s3_download_command(
+            bucket=self.bucket.bucket,
+            bucket_key="index.zip",
+            local_file="/tmp/index.zip",
         )
 
-        self.auto_scaling_group.userdata_webserver.add_commands("chmod 755 -R /var/www/html/")
+        # add command for the CLI so the html folder of apache can be overwritten
+        self.auto_scaling_group.user_data.add_commands("chmod 755 -R /var/www/html/")
+        # add command for the CLI to unzip the website.zip in the s3 bucket into the html folder we just allowed to be overwritten
+        self.auto_scaling_group.user_data.add_commands("unzip /tmp/index.zip -d /var/www/html/")
 
-        self.auto_scaling_group.userdata_webserver.add_commands("unzip /tmp/index.zip -d /var/www/html/")
-
+        # give the web instance acces to read the s3 bucket
         self.bucket.bucket.grant_read(self.auto_scaling_group.auto_scaling_group)
 
 

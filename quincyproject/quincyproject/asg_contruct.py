@@ -11,7 +11,7 @@ class asg_construct(Construct):
     def __init__(self, scope: Construct, construct_id: str, vpc_webserver, security_group, role, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
         
-        self.userdata_webserver = ec2.UserData.for_linux()
+        self.user_data = ec2.UserData.for_linux()
 
         self.launch_template = ec2.LaunchTemplate(
             self, "Launch template",
@@ -22,20 +22,19 @@ class asg_construct(Construct):
                 generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
             ),
             role=role,
-            user_data=self.userdata_webserver,
-            security_group=security_group,    
+            user_data=self.user_data,
+            security_group=security_group,
         )
         
-
         self.auto_scaling_group = autoscaling.AutoScalingGroup(
             self, "Autoscalinggroup",
             vpc = vpc_webserver,
             vpc_subnets = ec2.SubnetSelection(
                 subnet_type = ec2.SubnetType.PUBLIC
             ),
+            launch_template=self.launch_template,
             min_capacity = 1,
             max_capacity = 3,
-            launch_template=self.launch_template,
         )
 
         # define caling policy

@@ -24,5 +24,5 @@ class s3_construct(Construct):
         self.user_data_upload = s3deploy.BucketDeployment(
             self, "Deploy_assets_dir",
             destination_bucket = self.bucket,
-            sources = [s3deploy.Source.asset("./Assets")],
+            sources = [s3deploy.Source.asset("./assets")],
         )
