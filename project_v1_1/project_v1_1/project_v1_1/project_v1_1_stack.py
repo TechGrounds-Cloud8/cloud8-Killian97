@@ -127,7 +127,7 @@ class ProjectV11Stack(Stack):
             instance_type=ec2.InstanceType("t3.nano"),
             vpc=self.vpc_webserver,
             vpc_subnets=ec2.SubnetSelection(
-                subnet_type=ec2.SubnetType.PRIVATE_WITH_NAT
+                subnet_type=ec2.SubnetType.PRIVATE_ISOLATED
             ),
             machine_image=ec2.AmazonLinuxImage(
                 generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2

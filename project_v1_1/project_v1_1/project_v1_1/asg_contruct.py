@@ -42,7 +42,7 @@ class asg_construct(Construct):
             self, "Auto_Scaling_Group",
             vpc=vpc_webserver,
             vpc_subnets=ec2.SubnetSelection(
-                subnet_type=ec2.SubnetType.PRIVATE_WITH_NAT
+                subnet_type=ec2.SubnetType.PUBLIC
             ),
             launch_template=self.launch_temp,
             min_capacity=1,

@@ -27,7 +27,7 @@ class vpc_webserver_construct(Construct):
                 ec2.SubnetConfiguration(
                     name="Private_Web_VPC", 
                     cidr_mask=24, 
-                    subnet_type=ec2.SubnetType.PRIVATE_WITH_NAT),
+                    subnet_type=ec2.SubnetType.PRIVATE_ISOLATED),
                 ec2.SubnetConfiguration(
                     name="Public_Web_VPC",
                     cidr_mask=24,
