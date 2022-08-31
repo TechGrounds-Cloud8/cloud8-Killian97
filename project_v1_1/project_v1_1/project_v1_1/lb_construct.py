@@ -15,7 +15,7 @@ class lb_construct(Construct):
         self.alb = elbv2.ApplicationLoadBalancer(
             self, "Application Load Balancer",
             vpc=vpc,
-            internet_facing=True,       
+            internet_facing=True,
         )
 
         # redirect all incoming port 80 http to port 443 https ( http to https = default)

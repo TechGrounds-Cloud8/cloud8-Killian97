@@ -121,12 +121,13 @@ class ProjectV11Stack(Stack):
             target_requests_per_minute=250,
         )
         
+        
         web_instance = ec2.Instance(
             self, "Web-Instance",
             instance_type=ec2.InstanceType("t3.nano"),
             vpc=self.vpc_webserver,
             vpc_subnets=ec2.SubnetSelection(
-                subnet_type=ec2.SubnetType.PRIVATE_ISOLATED
+                subnet_type=ec2.SubnetType.PRIVATE_WITH_NAT
             ),
             machine_image=ec2.AmazonLinuxImage(
                 generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
@@ -149,6 +150,7 @@ class ProjectV11Stack(Stack):
                 )
             ]
         )
+        
 
         
         ######################################################
@@ -204,7 +206,7 @@ class ProjectV11Stack(Stack):
         #############################
         ###User data for webserver###
         #############################
-
+        
         # download the userdata for the web instance
         web_userdata = web_instance.user_data.add_s3_download_command(
             bucket=self.postdeployments3.postdeployments3,
@@ -228,6 +230,7 @@ class ProjectV11Stack(Stack):
         
         # give the web instance acces to read the s3 bucket
         self.postdeployments3.postdeployments3.grant_read(web_instance)
+        
 
         ###########################
         ###User data for ASGroup###
@@ -262,6 +265,7 @@ class ProjectV11Stack(Stack):
         #########################
 
         # call on the back up plan
+        
         back_up_plan = backup_construct(
             self, "backup_plan",
         )
@@ -272,5 +276,6 @@ class ProjectV11Stack(Stack):
             resources=[backup.BackupResource.from_ec2_instance(web_instance)],
             allow_restores=True,
         )
+        
 
         CfnOutput(self, "DNS for lb", value=self.alb.alb.load_balancer_dns_name)
