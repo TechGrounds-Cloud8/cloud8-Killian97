@@ -210,7 +210,7 @@ class ProjectV11Stack(Stack):
         # download the userdata for the web instance
         web_userdata = web_instance.user_data.add_s3_download_command(
             bucket=self.postdeployments3.postdeployments3,
-            bucket_key="web_userdata.sh"
+            bucket_key="user_data_web.sh"
         )
 
         # execute the userdata file
@@ -239,7 +239,7 @@ class ProjectV11Stack(Stack):
         # download the userdata for the auto scaling group instance
         asg_userdata = self.as_group.user_data.add_s3_download_command(
             bucket=self.postdeployments3.postdeployments3,
-            bucket_key="web_userdata.sh"
+            bucket_key="user_data_web.sh"
         )
 
         # execute the userdata file
