@@ -47,7 +47,7 @@ class adminvpc_sg_construct(Construct):
         self.adminvpc_sg.add_ingress_rule(
             peer=ec2.Peer.ipv4(my_ip),
             connection=ec2.Port.tcp(3389),
-            description="Allow all RDP traffic from my anywhere",
+            description="Allow all RDP traffic from my IP",
         )
 
         self.adminvpc_sg.add_ingress_rule(

@@ -1,6 +1,5 @@
-# EDIT that rules for MY IP can be manually editted in the consonle incase of a admin swap in a company or multiple admins
 
-# README TG project V1.0
+# README TG project V1.1
 
 In this README you will get to know what to do to get this project running for yourself.
 This project is created with AWS CDK, if you have no experience with CDK, don't worry in the requirements steps you will learn the basics.
